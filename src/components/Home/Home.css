@@ -1,0 +1,446 @@
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 400vh;
+  overflow-x: hidden;
+  background: rgb(255, 255, 255);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  scrollbar-width: auto;
+  scrollbar-color: rgb(72, 230, 235) black;
+}
+
+/* Hintergrund-FOTO */
+#backgroundDIV {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 45vh;
+  margin-top: 2vw;
+}
+
+#bürgermenüDIV {
+  min-width: 3%;
+  max-width: 3%;
+  position: absolute;
+  top: 2%;
+  left: 20px;
+  height: fit-content;
+}
+
+#bürgermenü {
+  cursor: pointer;
+  width: 100%;
+  height: fit-content;
+}
+
+#background-pic {
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#FindShoe {
+  width: 35%;
+  background-color: #cabebc;
+  min-height: 100%;
+  display: inline-block;
+  position: absolute;
+}
+
+#ShoeEntdecken {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  top: 20%;
+  padding: 0;
+  height: 25%;
+  margin: 0;
+  margin-top: 10vh;
+}
+
+#ButtonShoeDIV {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+  margin-top: 8vh;
+}
+
+#ShoeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120%;
+  min-height: 8vh;
+  min-width: 50%;
+  background-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* Navbar*/
+
+#navbarDIV {
+  position: absolute;
+  top: 0px;
+  left: 10vw;
+  width: 90%;
+  height: 10%;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+}
+
+.navbarLI {
+  display: inline-block;
+  color: black;
+}
+
+#LILogin {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#LIWarenkorb {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#LIWunschliste {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Damen und Herren DIV unter dem BILD*/
+
+#DamenHerrenDIV {
+  position: absolute;
+  width: 100%;
+  height: 19%;
+  top: 60%;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+#WonachDIV {
+  padding: 0;
+  margin: 0;
+  position: static;
+  margin-top: 10px;
+}
+
+#Wonach {
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-size: 180%;
+  display: inline-block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+#DamenDIV {
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-direction: row;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+#DamenBtn {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20vw;
+  height: 45px;
+  font-size: 120%;
+  border: solid;
+  background-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#HerrenDIV {
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 40px;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+#HerrenBtn {
+  display: inline-block;
+  width: 20vw;
+  height: 45px;
+  font-size: 120%;
+  border: solid;
+  background-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* LogoRotate */
+#LogoDIV {
+  position: relative; /* Relative Positionierung innerhalb des Containers */
+  width: 100%;
+  height: 4%;
+  margin: 0;
+  margin-top: 100px;
+  display: flex; /* Flexbox zur Zentrierung */
+  justify-content: center; /* Zentriert das Logo horizontal */
+  align-items: center; /* Zentriert das Logo vertikal */
+  top: 20%;
+}
+
+#P-img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+#LogoRotate {
+  width: 120px;
+  height: 120px;
+  border: 10px solid;
+  border-radius: 100px;
+  animation: Rotate 2.5s linear infinite;
+}
+
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(190deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Secret */
+#SecretDIV {
+  position: relative;
+  top: 17%;
+  width: 100%;
+  height: auto; /* Dynamische Höhe basierend auf dem Inhalt */
+  text-align: center;
+  font-size: 200%;
+  margin: 130px 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Secret {
+  margin: 0;
+  display: inline-block;
+}
+
+/* 4 Images */
+#AllImagesDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 98.7%;
+  height: 17%;
+  position: relative;
+  top: 20%;
+  padding: 0;
+  margin: 0;
+}
+
+#ImageDIV1,
+#ImageDIV2,
+#ImageDIV3,
+#ImageDIV4,
+#ImageDIV5,
+#ImageDIV6,
+#ImageDIV7,
+#ImageDIV8 {
+  width: 16.5%;
+  padding: 0;
+  margin: 30px;
+  transform: scale(100%);
+}
+.img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+/* button unter den 4 Bildern */
+.Schuhe {
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 7px;
+  color: #2c9caf;
+  letter-spacing: 5px;
+  font-weight: bold;
+  outline: 2px solid #2c9caf;
+}
+
+.Schuh1DIV {
+  margin-top: 11px;
+  width: fit-content;
+  height: fit-content;
+}
+
+button:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(31, 112, 170) 10%,
+    rgb(130, 18, 199) 70%
+  );
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  color: #fff;
+  box-shadow: 0px 2px 15px 4px #268391;
+  transition: 0.6s;
+}
+
+/* MARKEN bereich */
+
+#markenDIV {
+  background-color: #fbd9ac;
+  width: 80%;
+  position: relative;
+  top: 15%;
+  height: 75%;
+  left: 0px;
+  padding: 0;
+  margin: 0;
+  margin-top: 5%;
+}
+
+#markePic {
+  position: absolute;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+}
+
+#FindBtn {
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  margin: 0;
+  padding: 0;
+}
+
+#textMarke {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vw;
+  top: 20%;
+  padding: 0;
+  height: 25%;
+  margin: 0;
+  margin-top: 15%;
+}
+
+#markeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  width: 100%;
+  margin-top: 10px;
+  background-color: inherit;
+}
+
+#buttonMarke {
+  font-size: 110%;
+  height: 100%;
+  width: 40%;
+  background-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* Marken Nike usw */
+#BrandsDIV {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 12vh;
+  width: 100%;
+  height: fit-content;
+  margin-top: 7%;
+}
+
+#Nike,
+#Adidas,
+#Jordan,
+#Puma,
+#Converse {
+  object-fit: cover;
+  width: 12vw;
+}
+
+#Nike {
+  display: flex;
+  align-self: self-end;
+  height: fit-content;
+}
+
+#Adidas {
+  height: fit-content;
+  display: flex;
+  align-self: self-end;
+}
+
+#Jordan {
+  display: flex;
+  align-self:self-end;
+  height: fit-content;
+}
+
+#Puma {
+  display: flex;
+  height: fit-content;
+  position: relative;
+  top: 3.2vw;
+}
+
+#Converse {
+  display: flex;
+  align-self: self-end;
+  height: fit-content;
+}
