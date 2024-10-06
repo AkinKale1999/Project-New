@@ -3,8 +3,8 @@ html,
 #root {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 400vh;
+  width: 100%;
+  height: 185vmax;
   overflow-x: hidden;
   background: rgb(255, 255, 255);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -12,221 +12,191 @@ html,
   font-weight: bold;
   scrollbar-width: auto;
   scrollbar-color: rgb(72, 230, 235) black;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.742) 20%,
+    black 80%
+  );
 }
 
-/* Hintergrund-FOTO */
-#backgroundDIV {
-  position: absolute;
-  top: 10%;
+#FirstDiv {
   width: 100%;
-  height: 45vh;
-  margin-top: 2vw;
+  margin-bottom: 1vmax;
+  height: 4vmax;
 }
-
-#bürgermenüDIV {
-  min-width: 3%;
-  max-width: 3%;
-  position: absolute;
-  top: 2%;
-  left: 20px;
-  height: fit-content;
-}
-
-#bürgermenü {
-  cursor: pointer;
-  width: 100%;
-  height: fit-content;
-}
-
-#background-pic {
-  width: 65%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#FindShoe {
-  width: 35%;
-  background-color: #cabebc;
-  min-height: 100%;
-  display: inline-block;
-  position: absolute;
-}
-
-#ShoeEntdecken {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2vw;
-  top: 20%;
-  padding: 0;
-  height: 25%;
-  margin: 0;
-  margin-top: 10vh;
-}
-
-#ButtonShoeDIV {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30%;
-  width: 100%;
-  margin-top: 8vh;
-}
-
-#ShoeButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 120%;
-  min-height: 8vh;
-  min-width: 50%;
-  background-color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-}
-
 /* Navbar*/
-
 #navbarDIV {
-  position: absolute;
-  top: 0px;
-  left: 10vw;
+  position: relative;
+  left: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 90%;
-  height: 10%;
+  top: 2vmax;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 #navbar {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  width: 95%;
+  width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .navbarLI {
-  display: inline-block;
+  display: flex;
+  margin: 0 1vmax;
+  padding: 0;
+  list-style-type: none;
   color: black;
+  font-size: 1.5vmax;
 }
 
-#LILogin {
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-#LIWarenkorb {
-  margin-right: 20px;
-  cursor: pointer;
-}
-
+#LILogin,
+#LIWarenkorb,
 #LIWunschliste {
-  margin-right: 20px;
+  display: inline-block;
+  margin-right: 1vmax;
   cursor: pointer;
+}
+
+#bürgermenüDIV {
+  min-width: 2vmax;
+  max-width: 2vmax;
+  position: absolute;
+  top: 2vmax;
+  left: 1%;
+  display: flex;
+  justify-content: left;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#bürgermenü {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+/* Hintergrund-FOTO */
+#backgroundDIV {
+  position: relative;
+  top: 0.5%;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 4vmax;
+  margin-top: 1vmax;
+}
+
+#background-pic {
+  width: 100%;
+  height: 18vw;
+  object-fit: cover;
 }
 
 /* Damen und Herren DIV unter dem BILD*/
-
 #DamenHerrenDIV {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 19%;
-  top: 60%;
+  min-width: 100%;
+  height: auto;
+  top: 4vmax;
   text-align: center;
-  margin-top: 5vh;
+  margin: 0;
+  padding: 0;
 }
 
 #WonachDIV {
+  position: relative;
   padding: 0;
   margin: 0;
-  position: static;
-  margin-top: 10px;
 }
 
 #Wonach {
   padding: 0;
   margin: 0;
   color: black;
-  font-size: 180%;
-  display: inline-block;
+  font-size: 2vmax;
+  display: block;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
-}
-
-#DamenDIV {
-  padding: 0;
-  margin: 0;
-  display: inline-flex;
-  flex-direction: row;
-  margin-right: 40px;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 #DamenBtn {
-  display: inline-block;
   margin: 0;
   padding: 0;
-  width: 20vw;
-  height: 45px;
-  font-size: 120%;
+  width: 16vmax;
+  height: fit-content;
+  font-size: 1.7vmax;
   border: solid;
   background-color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   cursor: pointer;
-}
-
-#HerrenDIV {
-  padding: 0;
-  margin-top: 20px;
-  margin-left: 40px;
-  display: inline-flex;
-  flex-direction: row;
+  margin-right: 3%;
 }
 
 #HerrenBtn {
-  display: inline-block;
-  width: 20vw;
-  height: 45px;
-  font-size: 120%;
+  margin: 0;
+  padding: 0;
+  width: 16vmax;
+  height: fit-content;
+  font-size: 1.7vmax;
   border: solid;
   background-color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 3%;
+  margin-top: 3vh;
 }
 
 /* LogoRotate */
 #LogoDIV {
-  position: relative; /* Relative Positionierung innerhalb des Containers */
+  position: relative;
   width: 100%;
-  height: 4%;
+  height: fit-content;
   margin: 0;
-  margin-top: 100px;
-  display: flex; /* Flexbox zur Zentrierung */
-  justify-content: center; /* Zentriert das Logo horizontal */
-  align-items: center; /* Zentriert das Logo vertikal */
-  top: 20%;
-}
-
-#P-img {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+  top: 10vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vmax;
 }
 
 #LogoRotate {
-  width: 120px;
-  height: 120px;
-  border: 10px solid;
-  border-radius: 100px;
-  animation: Rotate 2.5s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vmax;
+  width: 10vmax;
+  border: 1vmin solid black;
+  border-radius: 100%;
+  animation: Rotate infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  transform: rotate(0deg);
+  margin: 0;
+}
+
+/* Secret */
+#Secret {
+  font-size: 6vmin;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10vmax;
 }
 
 @keyframes Rotate {
@@ -241,38 +211,16 @@ html,
   }
 }
 
-/* Secret */
-#SecretDIV {
-  position: relative;
-  top: 17%;
-  width: 100%;
-  height: auto; /* Dynamische Höhe basierend auf dem Inhalt */
-  text-align: center;
-  font-size: 200%;
-  margin: 130px 0 0 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#Secret {
-  margin: 0;
-  display: inline-block;
-}
-
-/* 4 Images */
+/* 8 Images */
 #AllImagesDiv {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 98.7%;
-  height: 17%;
+  flex-wrap: wrap;
+  width: 100%;
   position: relative;
-  top: 20%;
+  top: 16vmax;
   padding: 0;
-  margin: 0;
+  height: auto;
 }
 
 #ImageDIV1,
@@ -280,38 +228,39 @@ html,
 #ImageDIV3,
 #ImageDIV4,
 #ImageDIV5,
-#ImageDIV6,
-#ImageDIV7,
-#ImageDIV8 {
-  width: 16.5%;
-  padding: 0;
-  margin: 30px;
-  transform: scale(100%);
+#ImageDIV6 {
+  min-width: 8vmax;
+  max-width: 18vmax;
+  max-height: 15vmax;
+  margin: 3.3vmax;
 }
+
 .img {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  object-fit: cover;
+  border-radius: 1vmax;
 }
 
-/* button unter den 4 Bildern */
+/* button unter den 8 Bildern */
 .Schuhe {
-  display: block;
+  position: relative;
+  left: -3%;
   cursor: pointer;
-  padding: 5px;
-  border-radius: 7px;
-  color: #2c9caf;
-  letter-spacing: 5px;
+  color: black;
+  letter-spacing: 0.5vmax;
   font-weight: bold;
-  outline: 2px solid #2c9caf;
+  outline: 0.5vmax solid black;
+  width: auto;
+  height: auto;
+  display: block;
+  font-size: 1vmax;
+  margin: 0.8vmax;
 }
 
 .Schuh1DIV {
-  margin-top: 11px;
   width: fit-content;
-  height: fit-content;
 }
 
 button:hover {
@@ -329,64 +278,68 @@ button:hover {
 
 /* MARKEN bereich */
 
+#DIVumGanzeSchuh {
+  position: relative;
+  top: 5%;
+  left: 0%;
+  width: 70%;
+  height: 25vmax;
+  margin: 0;
+  padding: 0;
+  margin-top: 10vh;
+}
+
 #markenDIV {
   background-color: #fbd9ac;
-  width: 80%;
-  position: relative;
-  top: 15%;
-  height: 75%;
-  left: 0px;
+  width: 60%;
+  height: 90%;
   padding: 0;
   margin: 0;
-  margin-top: 5%;
 }
 
 #markePic {
-  position: absolute;
-  right: 0;
-  width: 65%;
-  height: 100%;
   padding: 0;
   margin: 0;
-  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
-#FindBtn {
-  width: 35%;
-  height: 100%;
-  position: absolute;
-  top: 0%;
-  margin: 0;
-  padding: 0;
+#textBtnMarke {
+  position: relative;
+  background: linear-gradient(
+    40deg,
+    rgb(89, 113, 144) 20%,
+    rgb(47, 237, 177) 100%
+  );
+  top: -90%;
+  left: 60%;
+  width: 40%;
+  height: 90%;
 }
 
 #textMarke {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5vw;
-  top: 20%;
-  padding: 0;
-  height: 25%;
-  margin: 0;
-  margin-top: 15%;
-}
-
-#markeBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15%;
+  position: relative;
   width: 100%;
-  margin-top: 10px;
-  background-color: inherit;
+  top: 30%;
+  transform: translate(0%, -20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4vmax;
+  padding: 0;
+  margin: 0;
 }
 
 #buttonMarke {
-  font-size: 110%;
-  height: 100%;
-  width: 40%;
-  background-color: #fff;
+  position: absolute;
+  margin-top: 10%;
+  min-width: 60%;
+  min-height: 3.5vmax;
+  max-height: 4vmax;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3vmax;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
@@ -394,15 +347,98 @@ button:hover {
   border: none;
 }
 
+@media (max-width: 465px) {
+  #AllImagesDiv {
+    top: 5%;
+  }
+  #DIVumGanzeSchuh {
+    height: auto;
+    width: 85%;
+    margin-top: 6vmax;
+  }
+
+  #ImageDIV1,
+  #ImageDIV2,
+  #ImageDIV3,
+  #ImageDIV4,
+  #ImageDIV5,
+  #ImageDIV6 {
+    height: 9vmax;
+    width: 18vmax;
+    margin: 2.1vmax;
+  }
+
+  #DamenHerrenDIV {
+    top: 1%;
+  }
+
+  #LogoDIV {
+    top: 2.5%;
+  }
+}
+
+@media (max-width: 320px) {
+
+  #textMarke{
+    font-size: 10px;
+  }
+
+  #buttonMarke {
+    top: 55%;
+    width: 70%;
+    min-height: 2.8vmax;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 250px) {
+
+  #textMarke{
+    font-size: 8px;
+  }
+
+  #buttonMarke {
+    top: 55%;
+    width: 80%;
+    min-height: 2vmax;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 191px) {
+
+  #textMarke{
+    font-size: 7px;
+  }
+
+  #buttonMarke {
+    top: 55%;
+    width: 80%;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 172px) {
+
+  #textMarke{
+    font-size: 7px;
+  }
+
+  #buttonMarke {
+    top: 60%;
+    width: 83.482%;
+    font-size: 6px;
+  }
+}
+
 /* Marken Nike usw */
 #BrandsDIV {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  top: 12vh;
-  width: 100%;
+  top: 8vmax;
+  width: 100vmax;
   height: fit-content;
-  margin-top: 7%;
 }
 
 #Nike,
@@ -412,6 +448,11 @@ button:hover {
 #Converse {
   object-fit: cover;
   width: 12vw;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-name: arrows_animation;
+  transform: translateX(-90vw);
 }
 
 #Nike {
@@ -428,7 +469,7 @@ button:hover {
 
 #Jordan {
   display: flex;
-  align-self:self-end;
+  align-self: self-end;
   height: fit-content;
 }
 
@@ -436,11 +477,26 @@ button:hover {
   display: flex;
   height: fit-content;
   position: relative;
-  top: 3.2vw;
+  top: 2.5vw;
 }
 
 #Converse {
   display: flex;
   align-self: self-end;
   height: fit-content;
+}
+
+@keyframes arrows_animation {
+  0% {
+    animation-timing-function: linear;
+  }
+  10% {
+    animation-timing-function: linear;
+  }
+  90% {
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateX(100vw);
+  }
 }

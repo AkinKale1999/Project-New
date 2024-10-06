@@ -17,6 +17,8 @@ function Home() {
   }
   return (
     <>
+
+    <div id="FirstDiv">
       <div id="bürgermenüDIV">
         <img
           id="bürgermenü"
@@ -26,41 +28,7 @@ function Home() {
           alt=""
         />
       </div>
-      <div id="backgroundDIV">
-        <img id="background-pic" src="/img/NIKEWALLPAPER.jpg"></img>
-        <div id="FindShoe">
-          <p id="ShoeEntdecken">SCHUHE ENTDECKEN</p>
-
-          <div id="ButtonShoeDIV">
-            <button id="ShoeButton">Jetzt Entdecken</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="DamenHerrenDIV">
-        <div id="WonachDIV">
-          <p id="Wonach">Wonach suchst du ?</p>
-        </div>
-
-        <div id="DamenDIV">
-          <button id="DamenBtn">Damen</button>
-        </div>
-
-        <div id="HerrenDIV">
-          <button id="HerrenBtn">Herren</button>
-        </div>
-      </div>
-
-      <div id="LogoDIV">
-        <p id="P-img">
-          <img id="LogoRotate" src="/img/NUR_LOGO.png" alt="Logo" />
-        </p>
-      </div>
-
-      <div id="SecretDIV">
-        <p id="Secret">Secret</p>
-      </div>
-
+      {/* ---------------- */}
       <div id="navbarDIV">
         <nav id="navbar">
           <li className="navbarLI" id="LILogin">
@@ -74,16 +42,32 @@ function Home() {
           </li>
         </nav>
       </div>
+      </div>
+      {/* ---------------- */}
+      <div id="backgroundDIV">
+        <img id="background-pic" src="/img/NIKEWALLPAPER.jpg"></img>
+      </div>
+      {/* ---------------- */}
+      <div id="DamenHerrenDIV">
+        <p id="Wonach">Wonach suchst du ?</p>
 
+        <button id="DamenBtn">Damen</button>
+        <button id="HerrenBtn">Herren</button>
+      </div>
+      {/* ---------------- */}
+      <div id="LogoDIV">
+        <img id="LogoRotate" src="/img/NUR_LOGO.png" alt="Logo" />
+
+        <p id="Secret">Secret</p>
+      </div>
+      {/* ---------------- */}
       <div id="AllImagesDiv">
         <div id="ImageDIV1">
           <img id="img1" className="img" src="/img/Foto1.jpg" alt="" />
 
-          <div className="Schuh1DIV">
-            <button id="Schuhe1" className="Schuhe">
-              Schuh1
-            </button>
-          </div>
+          <button id="Schuhe1" className="Schuhe">
+            Schuh1
+          </button>
         </div>
 
         <div id="ImageDIV2">
@@ -136,34 +120,14 @@ function Home() {
           </div>
         </div>
 
-        <div id="ImageDIV7">
-          <img id="img7" className="img" src="/img/Foto7.jpg" alt="" />
-
-          <div className="Schuh1DIV">
-            <button id="Schuhe7" className="Schuhe">
-              Schuh7
-            </button>
+        <div id="DIVumGanzeSchuh">
+          <div id="markenDIV">
+            <img id="markePic" src="/img/MARKEN.jpg"></img>
           </div>
-        </div>
 
-        <div id="ImageDIV8">
-          <img id="img8" className="img" src="/img/Foto8.jpg" alt="" />
-
-          <div className="Schuh1DIV">
-            <button id="Schuhe8" className="Schuhe">
-              Schuh8
-            </button>
-          </div>
-        </div>
-
-        <div id="markenDIV">
-          <img id="markePic" src="/img/MARKEN.jpg"></img>
-          <div id="FindBtn">
+          <div id="textBtnMarke">
             <p id="textMarke">MARKEN</p>
-
-            <div id="markeBtn">
-              <button id="buttonMarke">Hier lang</button>
-            </div>
+            <button id="buttonMarke">Hier lang</button>
           </div>
         </div>
 
@@ -178,7 +142,7 @@ function Home() {
 
           <img id="Converse" src="/img/Converse.png" alt="Converse" />
         </div>
-      </div>
+      </div>{" "}
     </>
   );
 }
