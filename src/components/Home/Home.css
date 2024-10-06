@@ -378,8 +378,7 @@ button:hover {
 }
 
 @media (max-width: 320px) {
-
-  #textMarke{
+  #textMarke {
     font-size: 10px;
   }
 
@@ -392,8 +391,7 @@ button:hover {
 }
 
 @media (max-width: 250px) {
-
-  #textMarke{
+  #textMarke {
     font-size: 8px;
   }
 
@@ -406,8 +404,7 @@ button:hover {
 }
 
 @media (max-width: 191px) {
-
-  #textMarke{
+  #textMarke {
     font-size: 7px;
   }
 
@@ -419,8 +416,7 @@ button:hover {
 }
 
 @media (max-width: 172px) {
-
-  #textMarke{
+  #textMarke {
     font-size: 7px;
   }
 
