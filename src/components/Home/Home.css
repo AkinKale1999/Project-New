@@ -347,7 +347,7 @@ button:hover {
   border: non;
 }
 
-@media (max-width: 465p) {
+@media (max-width: 465px) {
   #AllImagesDiv {
     top: 5%;
   }
