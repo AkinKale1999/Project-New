@@ -337,7 +337,7 @@ button:hover {
   min-height: 3.5vmax;
   max-height: 4vmax;
   top: 50%;
-  left: 5%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.3vmax;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
