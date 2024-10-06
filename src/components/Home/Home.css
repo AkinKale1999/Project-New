@@ -344,7 +344,7 @@ button:hover {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   cursor: pointer;
-  border: none;
+  border: non;
 }
 
 @media (max-width: 465px) {
