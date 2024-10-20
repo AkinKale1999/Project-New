@@ -1,0 +1,18 @@
+#burgermenuDIV {
+  min-width: 2vmax;
+  max-width: 2vmax;
+  position: absolute;
+  top: 2vmax;
+  left: 1%;
+  display: flex;
+  justify-content: left;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#burgermenu {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
