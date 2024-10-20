@@ -1,9 +1,5 @@
-function Kontakt(){
-    
-    return(
-
-        <></>
-    )
+function Kontakt() {
+  return <></>;
 }
 
 export default Kontakt;
