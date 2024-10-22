@@ -5,7 +5,9 @@
   height: fit-content;
   position: relative;
   margin: 0;
-  margin-top: 17vmax;
+  position: relative;
+  top: 17vmax;
+  transform: translate(-0%,-0%);
 }
 
 .Footer_Elements {
@@ -31,6 +33,12 @@
 }
 
 
+@media(max-width: 770px) {
+  #Footer{
+  margin-top: 14vmax;
+  }
+}
+
 @media(max-width: 680px) {
   #Footer{
   margin-top: 23vmax;
@@ -40,7 +48,18 @@
 
 @media(max-width: 465px) {
   #Footer{
-  margin-top: 17vmax;
+  margin-top: 16vmax;
+  }
+}
+
+
+@media(max-width: 376px) {
+
+  #root{
+    min-height: 160vmax;
+  }
+  #Footer{
+  margin-top: 15vmax;
   }
 }
 
@@ -51,9 +70,13 @@
   }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 321px) {
+  #root{
+    min-height: 220vmax;
+  }
+
   #Footer{
-  margin-top: 15vmax;
+  margin-top: 12.5vmax;
   }
 }
 

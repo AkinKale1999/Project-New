@@ -1,13 +1,16 @@
 import "./Home.css";
 import React, { useEffect, useReducer, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../../Footer/Footer.jsx";
 
 function Home() {
   return (
     <>
       <div id="backgroundDIV">
-        <img id="background-pic" src="/img/NIKEWALLPAPER.jpg"></img>
+        <img
+          id="background-pic"
+          src="/img/NIKEWALLPAPER.jpg"
+          alt="Nike-Wallpaper"
+        ></img>
       </div>
       {/* ---------------- */}
       <div id="DamenHerrenDIV">
@@ -84,7 +87,7 @@ function Home() {
 
         <div id="DIVumGanzeSchuh">
           <div id="markenDIV">
-            <img id="markePic" src="/img/MARKEN.jpg"></img>
+            <img id="markePic" src="/img/MARKEN.jpg" alt="Brands"></img>
           </div>
 
           <div id="textBtnMarke">
@@ -104,8 +107,6 @@ function Home() {
 
           <img id="Converse" src="/img/Converse.png" alt="Converse" />
         </div>
-
-        <Footer />
       </div>
     </>
   );

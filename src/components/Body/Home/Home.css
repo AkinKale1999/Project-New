@@ -3,8 +3,8 @@ html,
 #root {
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 171.2vmax;
+  min-width: 100%;
+  min-height: 163vmax;
   overflow-x: hidden;
   background: rgb(255, 255, 255);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -90,6 +90,19 @@ html,
   cursor: pointer;
   margin-left: 3%;
   margin-top: 3vh;
+}
+
+button:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(31, 112, 170) 10%,
+    rgb(130, 18, 199) 70%
+  );
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  color: #fff;
+  box-shadow: 0px 2px 15px 4px #268391;
+  transition: 0.6s;
 }
 /* --------------------------- */
 
@@ -194,19 +207,6 @@ html,
   width: fit-content;
 }
 
-button:hover {
-  background: linear-gradient(
-    90deg,
-    rgb(31, 112, 170) 10%,
-    rgb(130, 18, 199) 70%
-  );
-  transform: scale(1.1);
-  outline: 2px solid #70bdca;
-  color: #fff;
-  box-shadow: 0px 2px 15px 4px #268391;
-  transition: 0.6s;
-}
-
 /* MARKEN bereich */
 
 #DIVumGanzeSchuh {
@@ -278,145 +278,6 @@ button:hover {
   border: non;
 }
 
-@media (max-width: 680px) {
-  #root {
-    min-height: 180vmax;
-  }
-}
-
-@media (max-width: 662px) {
-  #root {
-    min-height: 200vmax;
-  }
-}
-
-@media (max-width: 465px) {
-  #root {
-    min-height: 177vmax;
-  }
-
-  #DamenHerrenDIV {
-    top: 1vmax;
-  }
-
-  #LogoDIV {
-    top: 7vmax;
-  }
-
-  #AllImagesDiv {
-    margin-top: 30%;
-    top: 0;
-  }
-
-  #DIVumGanzeSchuh {
-    height: auto;
-    width: 85%;
-    margin-top: 6vmax;
-  }
-
-  #ImageDIV1,
-  #ImageDIV2,
-  #ImageDIV3,
-  #ImageDIV4,
-  #ImageDIV5,
-  #ImageDIV6 {
-    height: 100%;
-    width: 100%;
-    margin: 3.5vmax;
-  }
-
-  #BrandsDIV {
-    margin-top: 2%;
-  }
-}
-
-@media (max-width: 453px) {
-  #root {
-    min-height: 240vmax;
-  }
-
-  #ImageDIV1,
-  #ImageDIV2,
-  #ImageDIV3,
-  #ImageDIV4,
-  #ImageDIV5,
-  #ImageDIV6 {
-    height: 100%;
-    width: 100%;
-    margin-bottom: 3.4784vmax;
-  }
-}
-
-@media (max-width: 320px) {
-  #root {
-    min-height: 223vmax;
-  }
-  #HerrenBtn {
-    width: 35%;
-  }
-
-  #DamenBtn {
-    width: 35%;
-  }
-  #textMarke {
-    font-size: 10px;
-  }
-
-  #buttonMarke {
-    top: 55%;
-    width: 70%;
-    min-height: 2.8vmax;
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 250px) {
-
-  #root{
-    min-height: 220vmax;
-  }
-
-  #AllImagesDiv {
-    margin-top: 45%;
-    top: 0;
-  }
-
-  #textMarke {
-    font-size: 8px;
-  }
-
-  #buttonMarke {
-    top: 55%;
-    width: 80%;
-    min-height: 2vmax;
-    font-size: 8px;
-  }
-}
-
-@media (max-width: 191px) {
-  #textMarke {
-    font-size: 7px;
-  }
-
-  #buttonMarke {
-    top: 55%;
-    width: 80%;
-    font-size: 7px;
-  }
-}
-
-@media (max-width: 172px) {
-  #textMarke {
-    font-size: 7px;
-  }
-
-  #buttonMarke {
-    top: 60%;
-    width: 83.482%;
-    font-size: 6px;
-  }
-}
-
 /* Marken Nike usw */
 #BrandsDIV {
   display: flex;
@@ -484,5 +345,80 @@ button:hover {
   }
   100% {
     transform: translateX(100vw);
+  }
+}
+
+/* -------------------------------*/
+@media (max-width: 880px) {
+  #root {
+    min-height: 165vmax;
+  }
+}
+
+@media (max-width: 665px) {
+  #root {
+    min-height: 180vmax;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    min-height: 180vmax;
+  }
+}
+
+@media (max-width: 550px) {
+  #root {
+    min-height: 185vmax;
+  }
+}
+
+@media (max-width: 455px) {
+  #root {
+    min-height: 180vmax;
+  }
+}
+
+@media (max-width: 445px) {
+  #root {
+    min-height: 240vmax;
+  }
+}
+
+@media (max-width: 430px) {
+  #root {
+    min-height: 240vmax;
+  }
+}
+
+@media (max-width: 375px) {
+  #root {
+    min-height: 240vmax;
+  }
+}
+
+@media (max-width: 365px) {
+  #root {
+    min-height: 240vmax;
+  }
+}
+
+@media (max-width: 280px) {
+  #HerrenBtn {
+    width: 30%;
+  }
+
+  #DamenBtn {
+    width: 30%;
+  }
+}
+
+@media (max-width: 200px) {
+  #HerrenBtn {
+    width: 40%;
+  }
+
+  #DamenBtn {
+    width: 40%;
   }
 }
