@@ -12,14 +12,16 @@ function Home() {
           alt="Nike-Wallpaper"
         ></img>
       </div>
-      {/* ---------------- */}
+      {/* ------------------------------------------------ */}
+
       <div id="DamenHerrenDIV">
         <p id="Wonach">Wonach suchst du ?</p>
 
         <button id="DamenBtn">Damen</button>
         <button id="HerrenBtn">Herren</button>
       </div>
-      {/* ---------------- */}
+      {/* ------------------------------------------------ */}
+
       <div id="LogoDIV">
         <img id="LogoRotate" src="/img/NUR_LOGO.png" alt="Logo" />
 
