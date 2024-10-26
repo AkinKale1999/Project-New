@@ -16,3 +16,53 @@
   width: 100%;
   height: auto;
 }
+
+.menu_Container {
+  display: none;
+  background-color: black;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0%;
+  transition: min-width 1s linear;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-name: ClosingMenuContainer;
+}
+
+@keyframes ClosingMenuContainer {
+  0% {
+    min-width: 0%;
+  }
+  100% {
+    min-width: 100%;
+  }
+}
+
+@keyframes ClosingMenuContainerReverse {
+  0% {
+    min-width: 100%;
+  }
+  100% {
+    min-width: 0%;
+  }
+}
+
+#menu_Closing {
+  opacity: 0;
+  visibility: visible;
+  color: white;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  font-size: 3vmax;
+  position: relative;
+  top: 1vmax;
+  left: 10px;
+  width: fit-content;
+}
