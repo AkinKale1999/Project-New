@@ -1,25 +1,33 @@
-body,
 html,
+body,
 #root {
+  padding: 0;
+  scrollbar-width: auto;
+  scrollbar-color: rgb(72, 230, 235) black;
+  margin: 0;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+#Container_Home {
   margin: 0;
   padding: 0;
   min-width: 100%;
-  min-height: 163vmax;
+  min-height: 100%;
+  max-height: 100%;
   overflow-x: hidden;
   background: rgb(255, 255, 255);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
-  scrollbar-width: auto;
-  scrollbar-color: rgb(72, 230, 235) black;
-}
 
+}
 /* Hintergrund-FOTO */
 #backgroundDIV {
   position: relative;
-  top: 0.5%;
   width: 100%;
   height: fit-content;
+  margin: 0;
   margin-bottom: 4vmax;
   margin-top: 1vmax;
 }
@@ -36,7 +44,7 @@ html,
   width: 100%;
   min-width: 100%;
   height: auto;
-  top: 4vmax;
+  top: 0vmax;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -112,11 +120,10 @@ button:hover {
   width: 100%;
   height: fit-content;
   margin: 0;
-  top: 10vmax;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2vmax;
+  margin-top: 5vmax;
 }
 
 #LogoRotate {
@@ -136,11 +143,11 @@ button:hover {
 
 /* Secret */
 #Secret {
-  font-size: 6vmin;
+  font-size: 4vmax;
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 10vmax;
+  top: 10.5vmax;
 }
 
 @keyframes Rotate {
@@ -162,9 +169,8 @@ button:hover {
   flex-wrap: wrap;
   width: 100%;
   position: relative;
-  top: 16vmax;
+  margin-top: 5vmax;
   padding: 0;
-  height: auto;
 }
 
 #ImageDIV1,
@@ -211,19 +217,18 @@ button:hover {
 
 #DIVumGanzeSchuh {
   position: relative;
-  top: 5%;
   left: 0%;
   width: 70%;
-  height: 25vmax;
+  height: 20vmax;
   margin: 0;
   padding: 0;
-  margin-top: 10vh;
+  margin-top: 4vmax
 }
 
 #markenDIV {
   background-color: #fbd9ac;
   width: 60%;
-  height: 90%;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -242,10 +247,10 @@ button:hover {
     rgb(89, 113, 144) 20%,
     rgb(47, 237, 177) 100%
   );
-  top: -90%;
+  top: -100%;
   left: 60%;
   width: 40%;
-  height: 90%;
+  height: 100%;
 }
 
 #textMarke {
@@ -275,7 +280,7 @@ button:hover {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   cursor: pointer;
-  border: non;
+  border: none;
 }
 
 /* Marken Nike usw */
@@ -283,9 +288,9 @@ button:hover {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  top: 8vmax;
+  margin: 0;
+  margin-top: 8vmax;
   width: 100vmax;
-  height: fit-content;
 }
 
 #Nike,
@@ -345,80 +350,5 @@ button:hover {
   }
   100% {
     transform: translateX(100vw);
-  }
-}
-
-/* -------------------------------*/
-@media (max-width: 880px) {
-  #root {
-    min-height: 165vmax;
-  }
-}
-
-@media (max-width: 665px) {
-  #root {
-    min-height: 180vmax;
-  }
-}
-
-@media (max-width: 600px) {
-  #root {
-    min-height: 180vmax;
-  }
-}
-
-@media (max-width: 550px) {
-  #root {
-    min-height: 185vmax;
-  }
-}
-
-@media (max-width: 455px) {
-  #root {
-    min-height: 180vmax;
-  }
-}
-
-@media (max-width: 445px) {
-  #root {
-    min-height: 240vmax;
-  }
-}
-
-@media (max-width: 430px) {
-  #root {
-    min-height: 240vmax;
-  }
-}
-
-@media (max-width: 375px) {
-  #root {
-    min-height: 240vmax;
-  }
-}
-
-@media (max-width: 365px) {
-  #root {
-    min-height: 240vmax;
-  }
-}
-
-@media (max-width: 280px) {
-  #HerrenBtn {
-    width: 30%;
-  }
-
-  #DamenBtn {
-    width: 30%;
-  }
-}
-
-@media (max-width: 200px) {
-  #HerrenBtn {
-    width: 40%;
-  }
-
-  #DamenBtn {
-    width: 40%;
   }
 }

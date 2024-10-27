@@ -1,10 +1,10 @@
 import "./Home.css";
 import React, { useEffect, useReducer, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
+    <div id="Container_Home">
       <div id="backgroundDIV">
         <img
           id="background-pic"
@@ -109,6 +109,7 @@ function Home() {
 
           <img id="Converse" src="/img/Converse.png" alt="Converse" />
         </div>
+      </div>
       </div>
     </>
   );

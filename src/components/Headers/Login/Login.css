@@ -1,0 +1,21 @@
+#Login_Container{
+    display: inline-flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+
+#RegisterBtn{
+    display: inline-block;
+    text-decoration: underline;
+}

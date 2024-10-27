@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import "./Burgermenu.css";
+
 
 function Burgermenu() {
   const burgermenu = useRef(null);
@@ -11,8 +12,10 @@ function Burgermenu() {
     if (burgermenu.current) {
       Menu.current.style.opacity = "1";
       Menu.current.style.transition = "opacity 1s linear";
+
       burgermenu.current.style.transition = "opacity 1s linear";
       burgermenu.current.style.opacity = "0";
+
       menu_Container.current.style.animationName = "ClosingMenuContainer";
 
       setTimeout(() => {
@@ -29,15 +32,16 @@ function Burgermenu() {
     if (Menu.current) {
       menu_Container.current.style.animationName =
         "ClosingMenuContainerReverse";
+
       burgermenu.current.style.transition = "opacity 1s linear";
       burgermenu.current.style.opacity = "1";
       burgermenu.current.style.display = "block";
+
       Menu.current.style.opacity = "0";
       Menu.current.style.transition = "opacity 1s linear";
     }
 
     setTimeout(() => {
-      Menu.current.style.display = "none";
       menu_Container.current.style.display = "none";
     }, 1000);
   }
