@@ -12,9 +12,10 @@ app.use(Bodyparser.json());
 app.post("/login", async (req, res) => {
   const { Username, Password } = req.body;
 v
-  if (Username === "akin" && Password === 123) {
+  if (Username === "akin" && Password === "123") {
     return res.status(200).json({ message: "Login Gut" });
-  } else {
+  } 
+  else {
     return res.status(401).json({ message: "Fehler" });
   }
 });
