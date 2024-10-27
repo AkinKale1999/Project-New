@@ -1,32 +1,39 @@
+#Footer_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 1.5%;
+}
+
 #Footer {
   display: inline-flex;
   justify-content: space-around;
-  align-items: center;
   margin: 0;
   padding: 0;
   width: 50%;
-  margin-left: 25%;
-  color: green;
-  position: absolute;
-  top: 90%;
 }
 
 .Footer_Elements {
   list-style-type: none;
-  font-size: 2vmax;
+  font-size: 20px;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 .Footer_Elements:link {
-  color: inherit;
+  color: red;
   text-decoration: none;
-}
-
-.Footer_Elements:visited {
-  color: inherit;
 }
 
 .Footer_Elements:hover {
-  color: greenyellow;
+  color: rgb(54, 222, 16);
   text-decoration: none;
+}
+
+.Footer_Elements:active {
+  color: rgb(0, 218, 238);
 }
