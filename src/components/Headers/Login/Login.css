@@ -1,21 +1,63 @@
-#Login_Container{
-    display: inline-flex;
-    flex-direction: column;
-    width: 60%;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background-color: black;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
+#Login_Container {
+  display: inline-flex;
+  flex-direction: column;
+  width: 35%;
+  height: 45%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  gap: 10%;
+  padding: 5%;
+  background-color: black;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  transform: translate(62%, 30%);
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#Login_Title {
+  font-size: 3.5vmax;
+  margin: 0;
+  padding: 0;
+}
 
-#RegisterBtn{
-    display: inline-block;
-    text-decoration: underline;
+#User_Login {
+  font-size: 2vmax;
+  height: 3vmax;
+  margin: 0;
+  padding: 0;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px 6px #fff;
+}
+
+#Password_Login {
+  font-size: 2vmax;
+  height: 3vmax;
+  margin: 0;
+  padding: 0;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px 6px #fff;
+}
+
+#LoginBtn {
+  margin: 0;
+  padding: 2% 10%;
+  border-radius: 8px;
+  background-color: black;
+  box-shadow: 0px 0px 10px 6px #fff;
+  color: #fff;
+  font-size: 1.3vmax;
+  cursor: pointer;
+}
+
+#RegisterBtn {
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 1.8vmax;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }

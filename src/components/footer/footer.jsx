@@ -1,21 +1,36 @@
+import { useNavigate } from "react-router-dom";
 import "./Footer.css";
-import { Link } from "react-router-dom";
 
 function Footer() {
+  const Navigate_Impressum = useNavigate();
+  const Navigate_AGB = useNavigate();
+  const Navigate_Datenschutz = useNavigate();
+
+  function NavigateToImpressum() {
+    Navigate_Impressum("/Impressum");
+  }
+
+  function NavigateToAGB() {
+    Navigate_AGB("/AGB");
+  }
+
+  function NavigateToDatenschutz() {
+    Navigate_Datenschutz("/Datenschutz");
+  }
   return (
     <>
       <div id="Footer">
-        <Link className="Footer_Elements" to={"/Impressum"}>
-          <li>Impressum</li>
-        </Link>
+        <li className="Footer_Elements" onClick={NavigateToImpressum}>
+          Impressum
+        </li>
 
-        <Link className="Footer_Elements" to={"/AGB"}>
-          <li>AGB</li>
-        </Link>
+        <li className="Footer_Elements" onClick={NavigateToAGB}>
+          AGB
+        </li>
 
-        <Link className="Footer_Elements" to={"/Datenschutz"}>
-          <li>Datenschutz</li>
-        </Link>
+        <li className="Footer_Elements" onClick={NavigateToDatenschutz}>
+          Datenschutz
+        </li>
       </div>
     </>
   );
