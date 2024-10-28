@@ -1,26 +1,22 @@
 const express = require("express");
 const cors = require("cors");
-const Bodyparser = require("body-parser");
+const bodyParser = require("body-parser");
 const app = express();
 const PORT = 5000;
-// ---------------------------------------
-
+// Middleware
 app.use(cors());
-app.use(Bodyparser.json());
-
-// ---------------------------------------
-app.post("/login", async (req, res) => {
+app.use(bodyParser.json());
+// Login-Route
+app.post("/login", (req, res) => {
   const { Username, Password } = req.body;
-v
   if (Username === "akin" && Password === "123") {
-    return res.status(200).json({ message: "Login Gut" });
-  } 
-  else {
-    return res.status(401).json({ message: "Fehler" });
+    console.log(req.body)
+    return res.status(200).json({ message: "Login erfolgreich" });
+  } else {
+    return res.status(401).json({ message: "Fehler: Ungültige Anmeldedaten" });
   }
 });
-
-// ---------------------------------------
-app.listen(() => {
-  console.log(`Backend läuft auf ${PORT}`);
+// Start des Servers
+app.listen(PORT, () => {
+  console.log(`Backend läuft auf Port ${PORT}`);
 });

@@ -2,29 +2,29 @@ import { useState } from "react";
 import Footer from "../../Footer/Footer";
 import "./Login.css";
 import axios from "axios";
-
 function Login() {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-
   const handleLogin = async (e) => {
     e.preventDefault();
-
     try {
       let response = await axios.post("http://localhost:5000/login", {
         Username,
         Password,
       });
-
       console.log(response);
       setMessage(response.data.message);
     } catch (error) {
       console.log(error);
-      setMessage("Login fehlgeschlagen: " + error.response.data.message);
+      
+      if (error.response && error.response.data) {
+        setMessage("Login fehlgeschlagen: " + error.response.data.message);
+      } else {
+        setMessage("Ein Fehler ist aufgetreten.");
+      }
     }
   };
-
   return (
     <>
       <div id="Main_Container">
@@ -46,7 +46,7 @@ function Login() {
               value={Password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <input id="LoginBtn" type="submit"/>
+            <input id="LoginBtn" type="submit" value="Login" />
             <p id="RegisterBtn">Hier Registrieren</p>
           </div>
         </form>
