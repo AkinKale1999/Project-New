@@ -15,12 +15,11 @@ function Navbar() {
   }
 
   function handleClickToSiteShoppingCar() {
-    navigate_To_Shopping_Cart("/Einkaufswagen");
+    navigate_To_Shopping_Cart("/Warenkorb");
   }
 
   return (
     <>
-      <div id="FirstDiv">
         <div id="navbarDIV">
           <nav id="navbar">
             <li
@@ -66,7 +65,6 @@ function Navbar() {
             </li>
           </nav>
         </div>
-      </div>
     </>
   );
 }

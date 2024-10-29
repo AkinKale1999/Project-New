@@ -2,6 +2,8 @@ import { useState } from "react";
 import Footer from "../../Footer/Footer";
 import "./Login.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 function Login() {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
@@ -17,7 +19,7 @@ function Login() {
       setMessage(response.data.message);
     } catch (error) {
       console.log(error);
-      
+
       if (error.response && error.response.data) {
         setMessage("Login fehlgeschlagen: " + error.response.data.message);
       } else {
@@ -27,11 +29,10 @@ function Login() {
   };
   return (
     <>
-      <div id="Main_Container">
-        <p>{message}</p>
-        <form action="/login" id="Login_Form" onSubmit={handleLogin}>
-          <div id="Login_Container">
-            <h1 id="Login_Title">Login</h1>
+      <div id="Main_Container_Login">
+        <div id="Login_Container">
+          <form action="/login" id="Login_Form" onSubmit={handleLogin}>
+            <h1 id="Login_Title">Willkommen</h1>
             <input
               type="text"
               id="User_Login"
@@ -47,9 +48,12 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <input id="LoginBtn" type="submit" value="Login" />
-            <p id="RegisterBtn">Hier Registrieren</p>
-          </div>
-        </form>
+            <Link to={"/Registrierung"} id="RegisterBtn">
+              Hier Registrieren
+            </Link>
+            <p id="Message_Backend">{message}</p>
+          </form>
+        </div>
       </div>
       <div id="Footer_Container">
         <Footer />

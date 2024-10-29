@@ -6,7 +6,8 @@ import Navbar from "./components/Headers/Navbar/Navbar.jsx";
 import Burgermenu from "./components/Headers/Burgermenu/Burgermenu.jsx";
 import Login from "./components/Headers/Login/Login.jsx";
 import WishList from "./components/Headers/Wish_List/Wish_List.jsx";
-import ShoppingCart from "./components/Headers/Shopping_Cart/Shopping_Cart.jsx";
+import Shopping_Cart from "./components/Headers/Shopping_Cart/Shopping_Cart.jsx";
+import Register from "./components/Headers/Registrierung/Register.jsx";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Warenkorb" element={<ShoppingCart />} />
+        <Route path="/Registrierung" element={<Register />} />
+        <Route path="/Warenkorb" element={<Shopping_Cart />} />
         <Route path="/Wunschliste" element={<WishList />} />
         <Route path="/Kontakt" element={<Kontakt />} />
         <Route path="/Über-uns" element={<ÜberUns />} />

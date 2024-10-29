@@ -1,7 +1,5 @@
-import "./Shopping_Cart.css";
-
-function ShoppingCart() {
+function Shopping_Cart() {
   return <></>;
 }
 
-export default ShoppingCart;
+export default Shopping_Cart;
