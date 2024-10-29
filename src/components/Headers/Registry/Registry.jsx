@@ -50,11 +50,9 @@ function Register() {
     if (message !== "") {
       messageExist.current.style.display = "block";
       messageExist.current.style.marginTop = "1.5%";
-      messageExist.current.style.marginBottom= "2%";
-    }
-    else {
+      messageExist.current.style.marginBottom = "2%";
+    } else {
       messageExist.current.style.marginTop = "0%";
-
     }
   }, [message]);
 
