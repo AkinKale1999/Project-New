@@ -1,6 +1,6 @@
 import "./Registry.css";
 import Footer from "../../Footer/Footer.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 
@@ -13,11 +13,10 @@ function Register() {
   const [ConfirmPassword, setConfirmPassword] = useState("");
 
   const [message, setMessage] = useState("");
-  const message_error = useRef(null);
   const messageExist = useRef(null);
-  const check_Type_Of_Input_Field = useRef(null);
+  const Navigate = useNavigate();
 
-  const [ShowPassword, setShowPassword] = useState("password")
+  const [ShowPassword, setShowPassword] = useState("password");
   // ------------------------------------------------------
 
   useEffect(() => {
@@ -29,27 +28,27 @@ function Register() {
   // ------------------------------------------------------
 
   function changeVisibilityOfPassword() {
-    if(ShowPassword === "password") {
-      setShowPassword("text")
+    if (ShowPassword === "password") {
+      setShowPassword("text");
+    } else {
+      setShowPassword("password");
     }
-    else {
-      setShowPassword("password")
-    }
-
-    }
+  }
   // ------------------------------------------------------
 
   async function handleRegister(e) {
     e.preventDefault();
 
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!-])[A-Za-z\d?!-]{8,}$/;
+    if (
+      typeof Name !== "string" || !/^[a-zA-Z]+$/.test(Name) || typeof Family_Name !== "string" || !/^[a-zA-Z]+$/.test(Name)
+    ) {
+      setMessage("Der Name darf nur aus Klein und Großbuchstaben bestehen");
+      return;
+    }
 
-    if (Password.length < 8 || !passwordPattern.test(Password)) {
-      setMessage(
-        "Das Passwort muss mindestens 8 Zeichen, 1 Klein-, 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen (! oder ?) haben."
-      );
-    } else {
-      setMessage("Erfolgreich Registriert");
+    if (Username.length < 4) {
+      setMessage("Der Username muss mindestens 4 Zeichen haben.");
+      return;
     }
 
     if (Password !== ConfirmPassword) {
@@ -57,12 +56,13 @@ function Register() {
       return;
     }
 
-    if ( typeof Name !== "string" || !/^[a-zA-Z]+$/.test(Name) || typeof Family_Name !== "string" || !/^[a-zA-Z]+$/.test(Name)) 
-      {
-      setMessage("Der Name darf nur aus Klein und Großbuchstaben bestehen");
-    } 
-    else {
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!-])[A-Za-z\d?!-]{8,}$/;
+
+    if (Password.length < 8 || !passwordPattern.test(Password)) {
+      setMessage("Das Passwort muss mindestens 8 Zeichen, 1 Klein-, 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen (! oder ?) haben.");
       return;
+    } else {
+      setMessage("Erfolgreich Registriert");
     }
 
     try {
@@ -70,8 +70,8 @@ function Register() {
         Name,
         Family_Name,
         Username,
-        Email,
         Password,
+        Email,
       });
 
       console.log(response);
@@ -79,6 +79,7 @@ function Register() {
     } catch (error) {
       console.log(error);
       setMessage("Registrierung Fehlgeschlagen");
+      return;
     }
   }
 
@@ -131,10 +132,7 @@ function Register() {
                 value={Password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span
-                id="eye_show_password"
-                onClick={changeVisibilityOfPassword}
-              >
+              <span id="eye_show_password" onClick={changeVisibilityOfPassword}>
                 <p id="inner_eye">O</p>
               </span>
             </div>
@@ -148,16 +146,12 @@ function Register() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
 
-              <span id="eye_show_password"
-                onClick={changeVisibilityOfPassword}
-              >
+              <span id="eye_show_password" onClick={changeVisibilityOfPassword}>
                 <p id="inner_eye">O</p>
               </span>
             </div>
             <button id="Submit_Btn">Absenden</button>
-            <p id="error_message" ref={message_error}>
-              {message}
-            </p>
+            <p id="error_message">{message}</p>
             <p id="Navigate_To_Login" ref={messageExist}>
               Schon Angemeldet ? <Link to={"/Login"}>Logge dich ein</Link>
             </p>

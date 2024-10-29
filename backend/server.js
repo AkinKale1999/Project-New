@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // ------------------------------------
-app.post("/login", (req, res) => {
+app.post("/login", async (req, res) => {
   const { Username, Password } = req.body;
   if (Username === "akin" && Password === "123") {
     console.log(req.body);
@@ -19,9 +19,9 @@ app.post("/login", (req, res) => {
   }
 });
 
-app.post("/register", (req, res) => {
+app.post("/register", async (req, res) => {
   const { Name, Family_Name, Username, Password, Email } = req.body;
-  console.log(req.body)
+  console.log(req.body);
 });
 
 // ------------------------------------
