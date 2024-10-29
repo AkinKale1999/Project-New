@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./Footer.css";
+import { useRef } from "react";
 
 function Footer() {
   const Navigate_Impressum = useNavigate();
@@ -17,6 +18,7 @@ function Footer() {
   function NavigateToDatenschutz() {
     Navigate_Datenschutz("/Datenschutz");
   }
+
   return (
     <>
       <div id="Footer">

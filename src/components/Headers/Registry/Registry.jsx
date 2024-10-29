@@ -15,17 +15,53 @@ function Register() {
   const [message, setMessage] = useState("");
   const message_error = useRef(null);
   const messageExist = useRef(null);
+  const check_Type_Of_Input_Field = useRef(null);
+
+  const [ShowPassword, setShowPassword] = useState("password")
+  // ------------------------------------------------------
+
+  useEffect(() => {
+    if (message !== "") {
+      messageExist.current.style.display = "block";
+      messageExist.current.style.marginTop = "2%";
+    }
+  }, [message]);
+  // ------------------------------------------------------
+
+  function changeVisibilityOfPassword() {
+    if(ShowPassword === "password") {
+      setShowPassword("text")
+    }
+    else {
+      setShowPassword("password")
+    }
+
+    }
+  // ------------------------------------------------------
 
   async function handleRegister(e) {
     e.preventDefault();
+
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!-])[A-Za-z\d?!-]{8,}$/;
+
+    if (Password.length < 8 || !passwordPattern.test(Password)) {
+      setMessage(
+        "Das Passwort muss mindestens 8 Zeichen, 1 Klein-, 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen (! oder ?) haben."
+      );
+    } else {
+      setMessage("Erfolgreich Registriert");
+    }
 
     if (Password !== ConfirmPassword) {
       setMessage("Passwörter stimmen nicht überein");
       return;
     }
 
-    if (typeof Name !== "string" || !/^[a-zA-Z]+$/.test(Name)) {
+    if ( typeof Name !== "string" || !/^[a-zA-Z]+$/.test(Name) || typeof Family_Name !== "string" || !/^[a-zA-Z]+$/.test(Name)) 
+      {
       setMessage("Der Name darf nur aus Klein und Großbuchstaben bestehen");
+    } 
+    else {
       return;
     }
 
@@ -46,15 +82,7 @@ function Register() {
     }
   }
 
-  useEffect(() => {
-    if (message !== "") {
-      messageExist.current.style.display = "block";
-      messageExist.current.style.marginTop = "1.5%";
-      messageExist.current.style.marginBottom = "2%";
-    } else {
-      messageExist.current.style.marginTop = "0%";
-    }
-  }, [message]);
+  // ------------------------------------------------------
 
   return (
     <>
@@ -94,23 +122,40 @@ function Register() {
               value={Email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <input
-              type="password"
-              name="password"
-              className="input_registry"
-              placeholder="Passwort"
-              value={Password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <input
-              type="password"
-              name="confirm password"
-              className="input_registry"
-              placeholder="Passwort Bestätigen"
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
+            <div id="password_container">
+              <input
+                type={ShowPassword}
+                name="password"
+                className="input_registry"
+                placeholder="Passwort"
+                value={Password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span
+                id="eye_show_password"
+                onClick={changeVisibilityOfPassword}
+              >
+                <p id="inner_eye">O</p>
+              </span>
+            </div>
+
+            <div id="password_container">
+              <input
+                type={ShowPassword}
+                name="confirm password"
+                className="input_registry"
+                placeholder="Passwort Bestätigen"
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+
+              <span id="eye_show_password"
+                onClick={changeVisibilityOfPassword}
+              >
+                <p id="inner_eye">O</p>
+              </span>
+            </div>
             <button id="Submit_Btn">Absenden</button>
-            <p id="Navigate_To_Login" ref={message_error}>
+            <p id="error_message" ref={message_error}>
               {message}
             </p>
             <p id="Navigate_To_Login" ref={messageExist}>
