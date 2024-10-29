@@ -6,8 +6,8 @@ import Navbar from "./components/Headers/Navbar/Navbar.jsx";
 import Burgermenu from "./components/Headers/Burgermenu/Burgermenu.jsx";
 import Login from "./components/Headers/Login/Login.jsx";
 import WishList from "./components/Headers/Wish_List/Wish_List.jsx";
-import Shopping_Cart from "./components/Headers/Shopping_Cart/Shopping_Cart.jsx";
-import Register from "./components/Headers/Registrierung/Register.jsx";
+import Shopping_Cart from "./components/Headers/ShoppingCart/Shopping_Cart.jsx";
+import Register from "./components/Headers/Registry/Registry.jsx";
 
 function App() {
   return (

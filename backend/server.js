@@ -19,6 +19,11 @@ app.post("/login", (req, res) => {
   }
 });
 
+app.post("/register", (req, res) => {
+  const { Name, Family_Name, Username, Password, Email } = req.body;
+  console.log(req.body)
+});
+
 // ------------------------------------
 app.listen(PORT, () => {
   console.log(`Backend läuft auf Port ${PORT}`);
