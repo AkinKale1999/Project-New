@@ -1,6 +1,6 @@
 import "./Registry.css";
 import Footer from "../../Footer/Footer.jsx";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 
@@ -12,11 +12,9 @@ function Register() {
   const [Password, setPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
 
+  const [ShowPassword, setShowPassword] = useState("password");
   const [message, setMessage] = useState("");
   const messageExist = useRef(null);
-  const Navigate = useNavigate();
-
-  const [ShowPassword, setShowPassword] = useState("password");
   // ------------------------------------------------------
 
   useEffect(() => {
@@ -25,6 +23,7 @@ function Register() {
       messageExist.current.style.marginTop = "2%";
     }
   }, [message]);
+
   // ------------------------------------------------------
 
   function changeVisibilityOfPassword() {
@@ -34,6 +33,7 @@ function Register() {
       setShowPassword("password");
     }
   }
+
   // ------------------------------------------------------
 
   async function handleRegister(e) {
@@ -82,7 +82,6 @@ function Register() {
       return;
     }
   }
-
   // ------------------------------------------------------
 
   return (
