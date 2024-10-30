@@ -125,6 +125,7 @@
   border-radius: 5px;
   border: 2px solid #fefefe;
   box-shadow: 4px 4px #fefefe;
+  margin-bottom: 2%;
 }
 
 #RegisterBtn:hover {
@@ -141,11 +142,11 @@
   text-align: center;
   font-size: 1.5vmax;
   margin: 0;
-  padding: 5px 5px;
-  margin-bottom: 0.8%;
+  padding: 3px 3px;
   border-radius: 5px;
   border: 2px solid #fefefe;
   box-shadow: 4px 4px #fefefe;
-  margin-left: 5%;
-  margin-right: 6%;
+  margin-left: 2%;
+  margin-right: 3%;
+  margin-bottom: 2%;
 }
