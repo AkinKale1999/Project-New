@@ -1,6 +1,6 @@
 import "./Registry.css";
 import Footer from "../../Footer/Footer.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 
@@ -15,12 +15,13 @@ function Register() {
   const [ShowPassword, setShowPassword] = useState("password");
   const [message, setMessage] = useState("");
   const messageExist = useRef(null);
+  const navigate = useNavigate();
   // ------------------------------------------------------
 
   useEffect(() => {
     if (message !== "") {
       messageExist.current.style.display = "block";
-      messageExist.current.style.marginTop = "2%";
+      messageExist.current.style.marginTop = "1vmax";
     }
   }, [message]);
 
@@ -43,9 +44,9 @@ function Register() {
       typeof Name !== "string" ||
       !/^[a-zA-Z]+$/.test(Name) ||
       typeof Family_Name !== "string" ||
-      !/^[a-zA-Z]+$/.test(Name)
+      !/^[a-zA-Z]+$/.test(Family_Name)
     ) {
-      setMessage("Der Name darf nur aus Klein und Großbuchstaben bestehen");
+      setMessage("Vorname und/oder Nachname darf nicht Leer sein");
       return;
     }
 
@@ -82,6 +83,11 @@ function Register() {
       setMessage(response.data.message);
       // hier kommt "Erfolgreich Registriert" als Nachricht
       // (res.status(201) in /register(Backend))
+
+      setTimeout(() => {
+        navigate("/Login");
+      }, 3000);
+    
     } catch (error) {
       console.log(error);
       setMessage(error.response.data.message);
@@ -160,7 +166,10 @@ function Register() {
             <button id="Submit_Btn">Absenden</button>
             <p id="error_message">{message}</p>
             <p id="Navigate_To_Login" ref={messageExist}>
-              Schon Angemeldet ? <Link to={"/Login"}>Logge dich ein</Link>
+              Schon Angemeldet ?{" "}
+              <Link to={"/Login"} id="Sign_In">
+                Logge dich ein
+              </Link>
             </p>
           </form>
         </div>

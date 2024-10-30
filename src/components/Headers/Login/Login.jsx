@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Footer from "../../Footer/Footer";
 import "./Login.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -18,12 +19,20 @@ function Login() {
         Password,
       });
       console.log(response);
-      setMessage(response.data.message);
+      setMessage(response.data.message + ", Sie werden in Kürze weitergeleitet");
+      // hier kommt "Erfolgreich angemeldet" als Nachricht
+      // res.status(200).json({message: "Erfolgreich angemeldet"}) vom Backend
+
+      // setTimeout(() => {
+      //   navigate("/registrierung");
+      // }, 1000);
     } catch (error) {
       console.log(error);
 
       if (error.response && error.response.data) {
         setMessage("Login fehlgeschlagen: " + error.response.data.message);
+        // hier kommt "Username oder Password nicht gültig" vom Backend
+        // res.status(401).json({ message: "Username oder Password nicht gültig" });
       } else {
         setMessage("Ein Fehler ist aufgetreten.");
       }
@@ -54,7 +63,9 @@ function Login() {
             <Link to={"/Registrierung"} id="RegisterBtn">
               Hier Registrieren
             </Link>
-            <p id="Message_Backend">{message}</p>
+
+            {message && <div id="Message_Backend">{message}</div>}
+            {/* wenn message einen Wert hat, erstellt er das div usw. */}
           </form>
         </div>
       </div>

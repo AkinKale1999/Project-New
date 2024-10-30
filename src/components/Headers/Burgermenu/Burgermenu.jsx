@@ -46,13 +46,13 @@ function Burgermenu() {
     menu_Links.current.style.opacity = "1";
 
     setTimeout(() => {
-      menu_Links.current.style.transition = "opacity 0.2s linear";
+      menu_Links.current.style.transition = "opacity 0.3s linear";
       menu_Links.current.style.opacity = "0";
-    }, 600);
+    }, 10);
 
     setTimeout(() => {
       menu_Container.current.style.display = "none";
-    }, 900);
+    }, 990);
   }
 
   // ------------------------------------------------

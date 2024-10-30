@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+const { useNavigate } = require("react-router-dom");
 const app = express();
 const PORT = 5000;
 // ------------------------------------
@@ -39,7 +40,7 @@ app.post("/login", async (req, res) => {
     if (user) {
       res.status(200).json({ message: "Erfolgreich angemeldet" });
     } else {
-      res.status(401).json({ message: "User oder Password nicht gültig" });
+      res.status(401).json({ message: "Username oder Password nicht gültig" });
     }
   } catch (error) {
     console.log(error);
@@ -65,11 +66,16 @@ app.post("/register", async (req, res) => {
         Password,
       });
 
-      console.log("Erfolgreich Registriert", newUser);
-
       await newUser.save();
 
-      res.status(201).json({ message: "Erfolgreich Registriert" });
+      console.log("Erfolgreich Registriert", newUser);
+
+      res
+        .status(201)
+        .json({
+          message:
+            "Erfolgreich Registriert, Sie werden zum Login weitergeleitet",
+        });
     }
   } catch (error) {
     console.log(error);

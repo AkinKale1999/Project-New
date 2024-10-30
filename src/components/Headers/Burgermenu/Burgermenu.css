@@ -74,9 +74,9 @@
   padding: 0;
   width: fit-content;
   height: fit-content;
-  font-size: 2rem;
-  margin-left: 20px;
-  margin-top: 25px;
+  font-size: 3vmax;
+  margin-top: 1vmax;
+  margin-left: 10px;
   pointer-events: all;
   cursor: pointer;
   transform: rotate(90deg);
@@ -93,8 +93,8 @@
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
-  font-size: 250%;
-  gap: 5vmax;
+  font-size: 2.5rem;
+  gap: 3vmax;
   width: 100%;
 }
 
