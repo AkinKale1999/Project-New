@@ -19,12 +19,11 @@ function Burgermenu() {
       menu_Links.current.style.opacity = "0";
 
       setTimeout(() => {
-        menu_Links.current.style.transition = "opacity 1s linear";
+        menu_Links.current.style.transition = "opacity 0.2s linear";
         menu_Links.current.style.opacity = "1";
       }, 1500);
 
       setTimeout(() => {
-        burgermenu.current.style.display = "none";
         menu_Container.current.style.display = "block";
         Menu.current.style.display = "block";
       }, 1000);
@@ -47,13 +46,21 @@ function Burgermenu() {
     menu_Links.current.style.opacity = "1";
 
     setTimeout(() => {
-      menu_Links.current.style.transition = "opacity 0.3s linear";
+      menu_Links.current.style.transition = "opacity 0.2s linear";
       menu_Links.current.style.opacity = "0";
     }, 600);
 
     setTimeout(() => {
       menu_Container.current.style.display = "none";
     }, 900);
+  }
+
+  // ------------------------------------------------
+  function removeMenu() {
+    const URL = ["/Warenkorb", "/Wunschliste", "/Home", "/"];
+    if (URL.some((path) => window.location.href.includes(path))) {
+      menu_Container.current.style.display = "none";
+    }
   }
   // ----------------------------------------
 
@@ -75,19 +82,31 @@ function Burgermenu() {
         </div>
         <div id="menu_Links" ref={menu_Links}>
           <div id="Menu_Link_Home">
-            <Link className="Menu_Links_For_Navigation" to={"/Home"}>
+            <Link
+              className="Menu_Links_For_Navigation"
+              to={"/Home"}
+              onClick={removeMenu}
+            >
               <span>I</span> Home
             </Link>
           </div>
 
           <div id="Menu_Link_ShoppingCart">
-            <Link className="Menu_Links_For_Navigation" to={"/Warenkorb"}>
+            <Link
+              className="Menu_Links_For_Navigation"
+              to={"/Warenkorb"}
+              onClick={removeMenu}
+            >
               <span>I</span> Warenkorb
             </Link>
           </div>
 
           <div id="Menu_Link_Wishlist">
-            <Link className="Menu_Links_For_Navigation" to={"/Wunschliste"}>
+            <Link
+              className="Menu_Links_For_Navigation"
+              to={"/Wunschliste"}
+              onClick={removeMenu}
+            >
               <span>I</span> Wunschliste
             </Link>
           </div>

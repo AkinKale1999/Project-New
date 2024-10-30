@@ -56,8 +56,7 @@ app.post("/register", async (req, res) => {
     if (existingUser) {
       res.status(400).json({ message: "Benutzername existiert bereits" });
       return;
-    }
-    else {
+    } else {
       const newUser = new User({
         Name,
         Family_Name,
@@ -66,11 +65,11 @@ app.post("/register", async (req, res) => {
         Password,
       });
 
-      console.log("Erfolgreich registriert", newUser);
+      console.log("Erfolgreich Registriert", newUser);
 
       await newUser.save();
 
-      res.status(201).json({ message: "Erfolgreich registriert" });
+      res.status(201).json({ message: "Erfolgreich Registriert" });
     }
   } catch (error) {
     console.log(error);

@@ -40,7 +40,10 @@ function Register() {
     e.preventDefault();
 
     if (
-      typeof Name !== "string" || !/^[a-zA-Z]+$/.test(Name) || typeof Family_Name !== "string" || !/^[a-zA-Z]+$/.test(Name)
+      typeof Name !== "string" ||
+      !/^[a-zA-Z]+$/.test(Name) ||
+      typeof Family_Name !== "string" ||
+      !/^[a-zA-Z]+$/.test(Name)
     ) {
       setMessage("Der Name darf nur aus Klein und Großbuchstaben bestehen");
       return;
@@ -56,13 +59,14 @@ function Register() {
       return;
     }
 
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!-])[A-Za-z\d?!-]{8,}$/;
+    const passwordPattern =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!-])[A-Za-z\d?!-]{8,}$/;
 
     if (Password.length < 8 || !passwordPattern.test(Password)) {
-      setMessage("Das Passwort muss mindestens 8 Zeichen, 1 Klein-, 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen (! oder ?) haben.");
+      setMessage(
+        "Das Passwort muss mindestens 8 Zeichen, 1 Klein-, 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen (! oder ?) haben."
+      );
       return;
-    } else {
-      setMessage("Erfolgreich Registriert");
     }
 
     try {
@@ -76,9 +80,13 @@ function Register() {
 
       console.log(response);
       setMessage(response.data.message);
+      // hier kommt "Erfolgreich Registriert" als Nachricht
+      // (res.status(201) in /register(Backend))
     } catch (error) {
       console.log(error);
-      setMessage("Registrierung Fehlgeschlagen");
+      setMessage(error.response.data.message);
+      // hier kommt Benutzername existiert als Nachricht
+      // res.status(400) in /register(Backend)
       return;
     }
   }

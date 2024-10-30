@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Body/Home/Home.jsx";
-import Kontakt from "./components/Kontakt/Kontakt.jsx";
+import Kontact from "./components//Headers/Kontact/Kontact.jsx";
 import ÜberUns from "./components/Headers/Über_uns/Über_uns.jsx";
 import Navbar from "./components/Headers/Navbar/Navbar.jsx";
 import Burgermenu from "./components/Headers/Burgermenu/Burgermenu.jsx";
@@ -24,7 +24,7 @@ function App() {
         <Route path="/Registrierung" element={<Register />} />
         <Route path="/Warenkorb" element={<Shopping_Cart />} />
         <Route path="/Wunschliste" element={<WishList />} />
-        <Route path="/Kontakt" element={<Kontakt />} />
+        <Route path="/Kontakt" element={<Kontact />} />
         <Route path="/Über-uns" element={<ÜberUns />} />
         <Route path="/Datenschutz" element={<DataProtection />} />
         <Route path="/AGB" element={<AGB />} />

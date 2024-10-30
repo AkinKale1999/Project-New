@@ -102,48 +102,29 @@
 
 #password_container {
   margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-width: 100%;
   max-width: 100%;
-}
-
-#eye_show_password {
-  width: 30px;
-  height: 25px;
-  background-color: #fff;
-  border-radius: 100%;
-  border: 3px solid black;
-  z-index: 999;
-  margin: 0;
-}
-
-#password_container {
   position: relative;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+  left: 3%;
 }
 
 #eye_show_password {
-  position: absolute;
-  top: 50%;
-  right: 4%;
   background-color: #fff;
   border: 3px solid black;
-  transform: translateY(-50%);
-  cursor: pointer;
   z-index: 1;
   border-radius: 100%;
   height: 1.8vmax;
   width: 2.5vmax;
   min-width: 2.5vmax;
   max-width: 2.5vmax;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: black;
+  pointer-events: all;
+  cursor: pointer;
+  transform: translate(-150%);
 }
 
 #inner_eye {
@@ -151,6 +132,11 @@
   align-items: center;
   justify-content: center;
   font-size: 2.3vmax;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
+  transform: translate(0%, 1%);
 }

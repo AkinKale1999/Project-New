@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  margin-top: 2.5%;
+  margin-top: 3vmax;
 }
 
 #Login_Container {
@@ -143,4 +143,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
