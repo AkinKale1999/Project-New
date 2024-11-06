@@ -189,7 +189,7 @@ button:hover {
   height: 100%;
   margin: 0;
   padding: 0;
-  border-radius: 1vmax;
+  border-radius: 5vmax;
 }
 
 /* button unter den 8 Bildern */
@@ -200,9 +200,8 @@ button:hover {
   color: black;
   letter-spacing: 0.5vmax;
   font-weight: bold;
-  outline: 0.5vmax solid black;
+  outline: 0.3vmax solid black;
   width: auto;
-  height: auto;
   display: block;
   font-size: 1.2vmax;
   margin: 0.8vmax;

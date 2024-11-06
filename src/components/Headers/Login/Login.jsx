@@ -12,25 +12,25 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
+    
     try {
       let response = await axios.post("http://localhost:5000/login", {
         Username,
         Password,
       });
-      console.log(response);
-      setMessage(response.data.message + ", Sie werden in Kürze weitergeleitet");
+      setMessage(response.data.message);
       // hier kommt "Erfolgreich angemeldet" als Nachricht
       // res.status(200).json({message: "Erfolgreich angemeldet"}) vom Backend
+      
+      const token = response.data.token;
+      localStorage.setItem("token", token);
 
-      // setTimeout(() => {
-      //   navigate("/registrierung");
-      // }, 1000);
+
     } catch (error) {
       console.log(error);
 
       if (error.response && error.response.data) {
-        setMessage("Login fehlgeschlagen: " + error.response.data.message);
+        setMessage(error.response.data.message);
         // hier kommt "Username oder Password nicht gültig" vom Backend
         // res.status(401).json({ message: "Username oder Password nicht gültig" });
       } else {
@@ -38,6 +38,23 @@ function Login() {
       }
     }
   };
+
+  async function fetchProtectedData() {
+    const token = localStorage.getItem("token");
+
+    try {
+      const response = await axios.get("http://localhost:5000/protected", {
+        headers: {
+          Authorization: token,
+        },
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error("Fehler beim Abrufen der geschützen Daten: ", error);
+    }
+  }
+
+  fetchProtectedData();
 
   return (
     <>
