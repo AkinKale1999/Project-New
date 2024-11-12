@@ -38,9 +38,9 @@ function Shopping_Cart() {
 
       {ShoppingCartisClick && (
         <div id="shoppingCartMenu" ref={shoppingCartMenu}>
-          <div id="shoppingCartMenuHeader">
-            <h1>WARENKORB</h1>
-            <p title="Schließen" onClick={handleClickOnClosingShoppingMenu}>
+          <div id="shoppingCartMenuDIV">
+            <h1 id="shoppingCartMenuHeader" >WARENKORB</h1>
+            <p id="shoppingCartMenuX" title="Schließen" onClick={handleClickOnClosingShoppingMenu}>
               X
             </p>
           </div>

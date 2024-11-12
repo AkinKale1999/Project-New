@@ -1,14 +1,4 @@
-import { useNavigate } from "react-router-dom";
-import Login from "../../Headers/Login/Login";
 import "./Home.css";
-import React, {
-  useEffect,
-  useInsertionEffect,
-  useReducer,
-  useRef,
-  useState,
-} from "react";
-import mongoose from "mongoose";
 import Footer from "../../Footer/Footer";
 
 function Home() {
