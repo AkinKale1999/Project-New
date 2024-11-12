@@ -9,6 +9,7 @@ import React, {
   useState,
 } from "react";
 import mongoose from "mongoose";
+import Footer from "../../Footer/Footer";
 
 function Home() {
   return (
@@ -120,6 +121,8 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

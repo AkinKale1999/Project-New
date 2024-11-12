@@ -1,0 +1,9 @@
+#Wish-list {
+  cursor: pointer;
+  width: 2vmax;
+  height: fit-content;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 2vmax;
+}

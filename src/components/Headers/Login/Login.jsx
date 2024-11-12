@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "../../Footer/Footer";
 import "./Login.css";
 import axios from "axios";
@@ -8,11 +8,13 @@ function Login() {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const Main_Container = useRef(null)
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    
+
     try {
       let response = await axios.post("http://localhost:5000/login", {
         Username,
@@ -21,11 +23,10 @@ function Login() {
       setMessage(response.data.message);
       // hier kommt "Erfolgreich angemeldet" als Nachricht
       // res.status(200).json({message: "Erfolgreich angemeldet"}) vom Backend
-      
+
       const token = response.data.token;
       localStorage.setItem("token", token);
-
-
+      setIsLoggedIn(true);
     } catch (error) {
       console.log(error);
 
@@ -38,6 +39,12 @@ function Login() {
       }
     }
   };
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      fetchProtectedData();
+    }
+  }, [isLoggedIn]);
 
   async function fetchProtectedData() {
     const token = localStorage.getItem("token");
@@ -54,11 +61,9 @@ function Login() {
     }
   }
 
-  fetchProtectedData();
-
   return (
     <>
-      <div id="Main_Container_Login">
+      <div id="Main_Container_Login" ref={Main_Container}>
         <div id="Login_Container">
           <form action="/login" id="Login_Form" onSubmit={handleLogin}>
             <h1 id="Login_Title">Willkommen</h1>
@@ -86,9 +91,7 @@ function Login() {
           </form>
         </div>
       </div>
-      <div id="Footer_Container">
-        <Footer />
-      </div>
+      <Footer/>
     </>
   );
 }

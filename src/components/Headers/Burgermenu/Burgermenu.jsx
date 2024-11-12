@@ -73,6 +73,7 @@ function Burgermenu() {
           onClick={OpenMenu}
           src="/img/Burgermenu.png"
           alt="burgermenu"
+          title="Menü"
         />
       </div>
 
