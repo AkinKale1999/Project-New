@@ -57,7 +57,7 @@ function Burgermenu() {
 
   // ------------------------------------------------
   function removeMenu() {
-    const URL = ["/Warenkorb", "/Wunschliste", "/Home", "/"];
+    const URL = ["/Home", "/"];
     if (URL.some((path) => window.location.href.includes(path))) {
       menu_Container.current.style.display = "none";
     }
@@ -88,7 +88,7 @@ function Burgermenu() {
               to={"/Home"}
               onClick={removeMenu}
             >
-              <span>I</span> Home
+              <span id="animated-I">I</span> Home
             </Link>
           </div>
         </div>

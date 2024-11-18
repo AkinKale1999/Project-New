@@ -40,7 +40,7 @@ function Home() {
           <div id="ImageDIV2">
             <img id="img2" className="img" src="/img/Foto2.jpg" alt="" />
 
-            <div className="Schuh1DIV">
+            <div>
               <button id="Schuhe2" className="Schuhe">
                 Schuh2
               </button>
@@ -50,7 +50,7 @@ function Home() {
           <div id="ImageDIV3">
             <img id="img3" className="img" src="/img/Foto3.jpg" alt="" />
 
-            <div className="Schuh1DIV">
+            <div>
               <button id="Schuhe3" className="Schuhe">
                 Schuh3
               </button>
@@ -60,7 +60,7 @@ function Home() {
           <div id="ImageDIV4">
             <img id="img4" className="img" src="/img/Foto4.jpg" alt="" />
 
-            <div className="Schuh1DIV">
+            <div>
               <button id="Schuhe4" className="Schuhe">
                 Schuh4
               </button>
@@ -70,7 +70,7 @@ function Home() {
           <div id="ImageDIV5">
             <img id="img5" className="img" src="/img/Foto5.jpg" alt="" />
 
-            <div className="Schuh1DIV">
+            <div>
               <button id="Schuhe5" className="Schuhe">
                 Schuh5
               </button>
@@ -80,7 +80,7 @@ function Home() {
           <div id="ImageDIV6">
             <img id="img6" className="img" src="/img/Foto6.jpg" alt="" />
 
-            <div className="Schuh1DIV">
+            <div>
               <button id="Schuhe6" className="Schuhe">
                 Schuh6
               </button>

@@ -5,9 +5,9 @@
   width: 100%;
   min-width: 100%;
   max-width: 100%;
-  height: 85%;
-  min-height: 85%;
-  max-height: 85%;
+  height: 50vmax;
+  min-height: 50vmax;
+  max-height: 50vmax;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -15,9 +15,6 @@
 }
 
 #Login_Container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50%;
   min-width: 50%;
   max-width: 50%;
@@ -42,8 +39,7 @@
   margin: 0;
   padding: 0;
   gap: 5%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 #Login_Title {
@@ -159,4 +155,17 @@
   margin: 0;
   padding: 0;
   margin-right: 2vmax;
+}
+
+@media (max-width: 1120px) {
+  #Main_Container_Login {
+    margin-top: 10%;
+  }
+}
+
+
+@media (max-width: 915px) {
+  #Main_Container_Login {
+    margin-top: 20%;
+  }
 }

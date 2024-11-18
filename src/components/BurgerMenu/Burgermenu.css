@@ -103,10 +103,6 @@
   color: #fff;
 }
 
-.Menu_Links_For_Navigation:hover {
-  color: rgb(0, 217, 255);
-}
-
 #Menu_Link_Home {
   margin: 0;
   padding: 0;
@@ -125,7 +121,7 @@
   width: fit-content;
 }
 
-span {
+#animated-I {
   color: color-mix(in srgb, rgb(0, 251, 255) 50%, rgb(64, 255, 0) 50%);
   position: relative;
   left: 0%;

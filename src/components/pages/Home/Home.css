@@ -6,9 +6,9 @@ body,
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
+  height: fit-content;
+  min-height: fit-content;
+  max-height: fit-content;
 }
 
 #Container_Home {
@@ -166,9 +166,8 @@ button:hover {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-  position: relative;
   margin-top: 5vmax;
-  padding: 0;
+  padding: 0px;
 }
 
 #ImageDIV1,
@@ -177,10 +176,13 @@ button:hover {
 #ImageDIV4,
 #ImageDIV5,
 #ImageDIV6 {
-  min-width: 8vmax;
-  max-width: 18vmax;
-  max-height: 15vmax;
-  margin: 3.3vmax;
+  width: 25vmax;
+  min-width: 25vmax;
+  max-width: 25vmax;
+  height: 25vmax;
+  min-height: 25vmax;
+  max-height: 25vmax;
+  margin: 7.5vmax;
 }
 
 .img {
@@ -188,26 +190,21 @@ button:hover {
   height: 100%;
   margin: 0;
   padding: 0;
-  border-radius: 5vmax;
+  border-radius: 5px;
 }
 
 /* button unter den 8 Bildern */
 .Schuhe {
-  position: relative;
-  left: -3%;
   cursor: pointer;
   color: black;
   letter-spacing: 0.5vmax;
   font-weight: bold;
   outline: 0.3vmax solid black;
-  width: auto;
-  display: block;
-  font-size: 1.2vmax;
-  margin: 0.8vmax;
-}
-
-.Schuh1DIV {
   width: fit-content;
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 2px;
 }
 
 /* MARKEN bereich */
