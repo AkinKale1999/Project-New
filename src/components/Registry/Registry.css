@@ -108,6 +108,7 @@
 
 #Sign_In {
   color: green;
+  margin-left: 4px;
 }
 
 #Sign_In:hover {

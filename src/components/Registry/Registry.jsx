@@ -1,5 +1,5 @@
 import "./Registry.css";
-import Footer from "../../Footer/Footer.jsx";
+import Footer from "../Footer/Footer.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
@@ -87,7 +87,6 @@ function Register() {
       setTimeout(() => {
         navigate("/Login");
       }, 3000);
-    
     } catch (error) {
       console.log(error);
       setMessage(error.response.data.message);
@@ -166,9 +165,9 @@ function Register() {
             <button id="Submit_Btn">Absenden</button>
             <p id="error_message">{message}</p>
             <p id="Navigate_To_Login" ref={messageExist}>
-              Schon Angemeldet ?{" "}
+              Du hast bereits ein Konto ?
               <Link to={"/Login"} id="Sign_In">
-                Logge dich ein
+              Logge dich ein
               </Link>
             </p>
           </form>

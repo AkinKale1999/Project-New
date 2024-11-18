@@ -9,6 +9,7 @@ function Shopping_Cart() {
   function handleClickOnShoppingCart() {
     if (shoppingCart.current) {
       shoppingCart.current.style.display = "none";
+      document.body.style.overflowY = "hidden";
       setShoppingCartIsClick(true);
     }
   }
@@ -16,6 +17,7 @@ function Shopping_Cart() {
   function handleClickOnClosingShoppingMenu() {
     if (shoppingCartMenu.current) {
       shoppingCart.current.style.display = "block";
+      document.body.style.overflowY = "scroll";
       setShoppingCartIsClick(false);
     }
   }
@@ -39,10 +41,37 @@ function Shopping_Cart() {
       {ShoppingCartisClick && (
         <div id="shoppingCartMenu" ref={shoppingCartMenu}>
           <div id="shoppingCartMenuDIV">
-            <h1 id="shoppingCartMenuHeader" >WARENKORB</h1>
-            <p id="shoppingCartMenuX" title="Schließen" onClick={handleClickOnClosingShoppingMenu}>
+            <h1 id="shoppingCartMenuHeader">WARENKORB</h1>
+            <p
+              id="shoppingCartMenuX"
+              title="Schließen"
+              onClick={handleClickOnClosingShoppingMenu}
+            >
               X
             </p>
+          </div>
+          <div id="shoppingCartMenuInnerDiv">
+            <p
+              style={{
+                textAlign: "center",
+                marginBottom: "20px",
+                fontSize: "2vmax",
+              }}
+            >
+              Dein Warenkorb ist leer
+            </p>
+            <button
+              style={{
+                textAlign: "center",
+                padding: "5px 5%",
+                backgroundColor: "black",
+                color: "#fff",
+                cursor: "pointer",
+                fontSize: "1rem",
+              }}
+            >
+              JETZT EINKAUFEN
+            </button>
           </div>
         </div>
       )}

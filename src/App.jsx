@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Body/Home/Home.jsx";
-import Kontact from "./components//Headers/Kontact/Kontact.jsx";
-import ÜberUns from "./components/Headers/Über_uns/Über_uns.jsx";
-import Navbar from "./components/Headers/Navbar/Navbar.jsx";
-import Login from "./components/Headers/Login/Login.jsx";
-import Register from "./components/Headers/Registry/Registry.jsx";
-import DataProtection from "./components/Headers/Data_Protection/Data_Protection.jsx";
-import AGB from "./components/Headers/AGB/AGB.jsx";
-import TermsConditions from "./components/Headers/Terms_Conditions/Terms_Conditions.jsx";
+import Home from "./components/pages/Home/Home.jsx";
+import Kontact from "./components/pages/Contact/Kontact.jsx";
+import ÜberUns from "./components/pages/AboutUs/Über_uns.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Login from "./components/Login/Login.jsx";
+import Register from "./components/Registry/Registry.jsx";
+import DataProtection from "./components/pages/Data_Protection/Data_Protection.jsx";
+import AGB from "./components/pages/AGB/AGB.jsx";
+import TermsConditions from "./components/pages/Terms_Conditions/Terms_Conditions.jsx";
 
 function App() {
   return (

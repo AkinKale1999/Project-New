@@ -91,26 +91,6 @@ function Burgermenu() {
               <span>I</span> Home
             </Link>
           </div>
-
-          <div id="Menu_Link_ShoppingCart">
-            <Link
-              className="Menu_Links_For_Navigation"
-              to={"/Warenkorb"}
-              onClick={removeMenu}
-            >
-              <span>I</span> Warenkorb
-            </Link>
-          </div>
-
-          <div id="Menu_Link_Wishlist">
-            <Link
-              className="Menu_Links_For_Navigation"
-              to={"/Wunschliste"}
-              onClick={removeMenu}
-            >
-              <span>I</span> Wunschliste
-            </Link>
-          </div>
         </div>
       </div>
     </>

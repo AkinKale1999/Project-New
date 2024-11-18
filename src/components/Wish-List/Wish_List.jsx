@@ -1,9 +1,36 @@
+import { useRef } from "react";
 import "./Wish_List.css";
+import { useState } from "react";
 
 function Wish_List() {
+  const [WishListisClick, setWishListIsClick] = useState(false);
+  const WishList = useRef(null);
+  const WishListMenu = useRef(null);
+
+  function handleClickOnWishList() {
+    if (WishList.current) {
+      WishList.current.style.display = "none";
+      document.body.style.overflowY = "hidden";
+      setWishListIsClick(true);
+    }
+  }
+
+  function handleClickOnClosingWishListMenu() {
+    if (WishListMenu.current) {
+      WishList.current.style.display = "block";
+      document.body.style.overflowY = "scroll";
+      setWishListIsClick(false);
+    }
+  }
+
   return (
     <>
-      <li id="Wish-list" title="Wunschliste">
+      <li
+        id="Wish-list"
+        title="Wunschliste"
+        onClick={handleClickOnWishList}
+        ref={WishList}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.14 64">
           <g data-name="Layer 2">
             <g data-name="to do list">
@@ -13,6 +40,38 @@ function Wish_List() {
           </g>
         </svg>
       </li>
+
+      {WishListisClick && (
+        <div id="WishListDIV" ref={WishListMenu}>
+          <div id="WishListHeaderDIV">
+            <h1
+              style={{
+                marginLeft: "2vmax",
+                fontSize: "2vmax",
+                fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+              }}
+            >
+              WUNSCHLISTE
+            </h1>
+            <p
+              onClick={handleClickOnClosingWishListMenu}
+              style={{
+                cursor: "pointer",
+                width: "fit-content",
+                marginTop: "0",
+                padding: "0",
+                fontSize: "2.5vmax",
+                transform: "rotate(90deg)",
+                fontFamily: "verdana, sans-serif, sans",
+                margin: "2vmax",
+              }}
+            >
+              X
+            </p>
+          </div>
+          <p id="WishListContent">Du hast derzeit keine Artikel auf deiner Wunschliste.</p>
+        </div>
+      )}
     </>
   );
 }

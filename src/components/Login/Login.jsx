@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Footer from "../../Footer/Footer";
+import Footer from "../Footer/Footer";
 import "./Login.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ function Login() {
   const [message, setMessage] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
-  const Main_Container = useRef(null)
+  const Main_Container = useRef(null);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -91,7 +91,7 @@ function Login() {
           </form>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
