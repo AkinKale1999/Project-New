@@ -1,16 +1,3 @@
-html,
-body,
-#root {
-  scrollbar-width: auto;
-  scrollbar-color: rgb(72, 230, 235) black;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: fit-content;
-  min-height: fit-content;
-  max-height: fit-content;
-}
-
 #Container_Home {
   margin: 0;
   padding: 0;

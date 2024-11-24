@@ -21,19 +21,9 @@ function Register() {
   useEffect(() => {
     if (message !== "") {
       messageExist.current.style.display = "block";
-      messageExist.current.style.marginTop = "1vmax";
+      messageExist.current.style.marginTop = "0";
     }
   }, [message]);
-
-  // ------------------------------------------------------
-
-  function changeVisibilityOfPassword() {
-    if (ShowPassword === "password") {
-      setShowPassword("text");
-    } else {
-      setShowPassword("password");
-    }
-  }
 
   // ------------------------------------------------------
 
@@ -144,9 +134,6 @@ function Register() {
                 value={Password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span id="eye_show_password" onClick={changeVisibilityOfPassword}>
-                <p id="inner_eye">O</p>
-              </span>
             </div>
 
             <div id="password_container">
@@ -157,25 +144,25 @@ function Register() {
                 placeholder="Passwort Bestätigen"
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
-
-              <span id="eye_show_password" onClick={changeVisibilityOfPassword}>
-                <p id="inner_eye">O</p>
-              </span>
             </div>
-            <button id="Submit_Btn">Absenden</button>
-            <p id="error_message">{message}</p>
-            <p id="Navigate_To_Login" ref={messageExist}>
-              Du hast bereits ein Konto ?
-              <Link to={"/Login"} id="Sign_In">
-              Logge dich ein
-              </Link>
-            </p>
+            <div id="Submit_Btn_DIV">
+              <button id="Submit_Btn" ref={messageExist}>Absenden</button>
+            </div>
+
+            <div>
+              <p id="error_message">{message}</p>
+            </div>
+            <div>
+              <div id="Navigate_To_LoginDIV">
+                  <Link to={"/Login"} id="Sign_In">
+                    Du hast bereits ein Konto ? Logge dich ein
+                  </Link>
+              </div>
+            </div>
           </form>
         </div>
       </div>
-      <div id="Footer_Container">
         <Footer />
-      </div>
     </>
   );
 }

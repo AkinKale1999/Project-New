@@ -1,172 +1,95 @@
 #Main_Container_Registry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  height: fit-content;
-  min-height: fit-content;
-  max-height: fit-content;
-  margin: 0;
-  padding: 0;
-  margin-top: 2vmax;
+  height: 768.8px;
 }
 
 #Registry_Container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  margin: 0;
-  padding: 0;
-  height: fit-content;
-  min-height: fit-content;
-  max-height: fit-content;
+  flex-direction: column;
+  background: #fff;
+  height: 500px;
+  width: 400px;
+  min-width: 300px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
 }
 
 #Registry_Form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  min-width: 50%;
-  max-width: 50%;
-  background: linear-gradient(180deg, rgb(32, 126, 150) 10%, rgb(0, 0, 0) 90%);
-  border-radius: 15px;
-  overflow: hidden;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  margin: 0;
-  padding: 0;
-  margin-top: 1vmax;
-  gap: 0.04%;
+  width: 100%;
 }
 
 #Registry_Title {
-  font-size: 2vmax;
-  margin: 0;
-  margin-left: 2.5%;
-  margin-top: 2%;
-  padding: 1%;
-  width: fit-content;
-  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#Registry_Subtitle {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
 .input_registry {
-  padding: 2%;
-  margin: 2.3%;
-  border-radius: 30px;
-  width: 90%;
-  min-width: 90%;
-  max-width: 90%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#remember_me_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#remember_me {
+  margin-right: 0.5rem;
+}
+
+#remember_me_label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+#Submit_Btn_DIV{
+  width: 100%;
 }
 
 #Submit_Btn {
-  display: block;
-  width: 96%;
-  padding: 2%;
-  margin: 0;
-  margin-left: 2%;
-  margin-bottom: 1%;
-  margin-top: 2%;
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  background-color: black;
+  padding: 10px;
+  background-color: #007bff;
   color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 #Submit_Btn:hover {
-  width: 88%;
-  margin-left: 6%;
-  border: none;
+  background-color: #0056b3;
 }
 
 #error_message {
-  margin: 0;
-  padding: 0;
-  margin-top: 3%;
-  color: rgb(255, 0, 0);
-  font-size: 1.6vmax;
-  margin-left: 3%;
-  margin-right: 3%;
+  color: red;
 }
 
 #Navigate_To_Login {
-  margin: 0;
-  margin-left: 3%;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  font-size: 1.6vmax;
-  color: #fff;
-}
-
-#Sign_In {
-  color: green;
-  margin-left: 4px;
-}
-
-#Sign_In:hover {
-  color: rgb(138, 201, 226);
-}
-
-#Sign_In:active {
-  color: rgb(255, 0, 179);
-}
-
-#password_container {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  margin-left: 1.4vmax;
-}
-
-#eye_show_password {
-  background-color: #fff;
-  border: 3px solid black;
-  z-index: 1;
-  border-radius: 100%;
-  height: 40%;
-  width: 2.5vmax;
-  min-width: 2.5vmax;
-  max-width: 2.5vmax;
-  color: black;
-  pointer-events: all;
-  cursor: pointer;
-  transform: translate(-150%);
-}
-
-#inner_eye {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.3vmax;
-  height: 100%;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  margin: 0;
   padding: 0;
-  transform: translate(0px, 0px);
-}
-
-
-
-@media (max-width: 1000px )
-{
-  #Registry_Container {
-    margin-top: 20%;
-  }
-}
-
-
-
-@media (max-width: 500px )
-{
-  #Registry_Container {
-  }
+  margin: 0;
 }

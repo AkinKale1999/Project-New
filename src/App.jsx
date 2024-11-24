@@ -8,6 +8,8 @@ import Register from "./components/Registry/Registry.jsx";
 import DataProtection from "./components/pages/Data_Protection/Data_Protection.jsx";
 import AGB from "./components/pages/AGB/AGB.jsx";
 import TermsConditions from "./components/pages/Terms_Conditions/Terms_Conditions.jsx";
+import "./App.css";
+import Account from "./components/Account/Account.jsx";
 
 function App() {
   return (
@@ -16,12 +18,21 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
+
+        <Route path="/Account" element={<Account />} />
+
         <Route path="/login" element={<Login />} />
+
         <Route path="/Registrierung" element={<Register />} />
+
         <Route path="/Kontakt" element={<Kontact />} />
+
         <Route path="/Über-uns" element={<ÜberUns />} />
+
         <Route path="/Datenschutz" element={<DataProtection />} />
+
         <Route path="/AGB" element={<AGB />} />
+
         <Route path="/Impressum" element={<TermsConditions />} />
       </Routes>
     </BrowserRouter>

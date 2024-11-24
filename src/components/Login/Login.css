@@ -1,150 +1,92 @@
 #Main_Container_Login {
+  width: 100%;
+  height: 768.8px;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  height: 50vmax;
-  min-height: 50vmax;
-  max-height: 50vmax;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  margin-top: 3vmax;
 }
 
 #Login_Container {
-  width: 50%;
-  min-width: 50%;
-  max-width: 50%;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  border-radius: 15px;
-  background-color: #111;
-  font-weight: 900;
+  position: relative;
   margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  height: 500px;
+  width: 400px;
+  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+  border-radius: 8px;
 }
 
 #Login_Form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  gap: 5%;
-  overflow: hidden;
+  gap: 20px;
 }
 
+/* Titel und Beschreibung */
 #Login_Title {
-  font-size: 1.8vmax;
-  margin: 0;
-  padding: 0.5% 2%;
-  margin-top: 10%;
-  color: #fff;
-  font-weight: 900;
-  border-radius: 5px;
-  border: 2px solid #fefefe;
-  box-shadow: 4px 4px #fefefe;
+  font-size: 2rem;
+  color: #333;
 }
 
-#User_Login {
-  font-size: 1.5vmax;
-  height: 2.5vmax;
-  width: 70%;
-  margin: 0;
-  padding: 1%;
-  background-color: black;
-  color: #fff;
-  border-radius: 5px;
-  border: 2px solid #fefefe;
-  box-shadow: 4px 4px #fefefe;
-  outline: none;
-  font-weight: 900;
+#Login_Description {
+  font-size: 1rem;
+  color: #666;
 }
 
-#Password_Login::placeholder,
-#User_Login::placeholder {
-  color: #999;
-  font-weight: 900;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* Input-Felder */
+#User_Login,
 #Password_Login {
-  font-size: 1.5vmax;
-  height: 2.5vmax;
-  width: 70%;
-  margin: 0;
-  padding: 1%;
-  background-color: black;
-  color: #fff;
-  border-radius: 5px;
-  border: 2px solid #fefefe;
-  box-shadow: 4px 4px #fefefe;
-  outline: none;
-  font-weight: 900;
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
+/* Checkbox */
+#Remember_Me_Container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+#Remember_Me {
+  width: auto;
+}
+
+/* Login-Button */
 #LoginBtn {
-  margin: 0;
-  padding: 0.5% 5%;
-  background-color: black;
-  color: #fff;
-  font-size: 1.5vmax;
+  width: 105%;
+  font-size: 1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
-  border-radius: 5px;
-  border: 2px solid #fefefe;
-  box-shadow: 4px 4px #fefefe;
+  transition: background-color 0.3s;
 }
 
 #LoginBtn:hover {
-  color: #fff;
-  background: linear-gradient(
-    340deg,
-    rgb(37, 75, 119) 30%,
-    rgba(255, 255, 255, 0.39) 100%
-  );
+  background-color: #0056b3;
 }
 
-#RegisterBtn {
-  font-size: 1.5vmax;
-  margin: 0;
-  padding: 0.5% 2%;
-  cursor: pointer;
-  color: #fff;
-  border-radius: 5px;
-  border: 2px solid #fefefe;
-  box-shadow: 4px 4px #fefefe;
-  margin-bottom: 2%;
-}
-
-#RegisterBtn:hover {
-  background: linear-gradient(
-    340deg,
-    rgb(37, 75, 119) 30%,
-    rgba(255, 255, 255, 0.39) 100%
-  );
-}
-
+/* Backend-Nachricht */
 #Message_Backend {
-  color: greenyellow;
-  width: fit-content;
-  text-align: center;
-  font-size: 1.5vmax;
+  font-size: 1rem;
+  color: red;
   margin: 0;
-  border-radius: 5px;
-  border: 2px solid #fefefe;
-  box-shadow: 4px 4px #fefefe;
-  padding: 2px;
-  margin-left: 2%;
-  margin-right: 3%;
-  margin-bottom: 2%;
 }
 
 #user_icon {
@@ -155,17 +97,4 @@
   margin: 0;
   padding: 0;
   margin-right: 2vmax;
-}
-
-@media (max-width: 1120px) {
-  #Main_Container_Login {
-    margin-top: 10%;
-  }
-}
-
-
-@media (max-width: 915px) {
-  #Main_Container_Login {
-    margin-top: 20%;
-  }
 }

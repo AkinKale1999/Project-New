@@ -9,12 +9,13 @@
 }
 
 #WishListDIV {
-  width: 40%;
+  width: 350px;
   height: 100vh;
   z-index: 999;
-  background-color: #fff;
+  background-color: black;
   position: fixed;
   top: 0;
+  color: #fff;
 }
 
 #WishListHeaderDIV {
@@ -24,19 +25,16 @@
   margin: 0;
   padding: 0;
   border: 2px solid #c1c1c1;
-  border-left-color: #fff;
-  border-right-color: #fff;
   width: 100%;
 }
 
 #WishListContent {
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  align-items: center;
+  height: 91%;
   width: 100%;
-  font-size: 2vmax;
-  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
 }

@@ -22,7 +22,6 @@ function Login() {
       });
       setMessage(response.data.message);
       // hier kommt "Erfolgreich angemeldet" als Nachricht
-      // res.status(200).json({message: "Erfolgreich angemeldet"}) vom Backend
 
       const token = response.data.token;
       localStorage.setItem("token", token);
@@ -33,7 +32,6 @@ function Login() {
       if (error.response && error.response.data) {
         setMessage(error.response.data.message);
         // hier kommt "Username oder Password nicht gültig" vom Backend
-        // res.status(401).json({ message: "Username oder Password nicht gültig" });
       } else {
         setMessage("Ein Fehler ist aufgetreten.");
       }
@@ -55,7 +53,8 @@ function Login() {
           Authorization: token,
         },
       });
-      console.log(response.data);
+      console.log("TOKEN : ", token);
+      navigate("/Account");
     } catch (error) {
       console.error("Fehler beim Abrufen der geschützen Daten: ", error);
     }
@@ -66,28 +65,35 @@ function Login() {
       <div id="Main_Container_Login" ref={Main_Container}>
         <div id="Login_Container">
           <form action="/login" id="Login_Form" onSubmit={handleLogin}>
-            <h1 id="Login_Title">Willkommen</h1>
+            <h1 id="Login_Title">Anmelden</h1>
             <input
               type="text"
               id="User_Login"
-              placeholder="Username"
+              placeholder="Email *"
               value={Username}
               onChange={(e) => setUsername(e.target.value)}
             />
             <input
               type="password"
               id="Password_Login"
-              placeholder="Password"
+              placeholder="Password *"
               value={Password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <input id="LoginBtn" type="submit" value="Login" />
-            <Link to={"/Registrierung"} id="RegisterBtn">
-              Hier Registrieren
-            </Link>
-
+            <div id="Remember_Me_Container">
+              <input type="checkbox" id="Remember_Me" />
+              <label htmlFor="Remember_Me">Remember me</label>
+            </div>
+            <div>
+              <Link to={"/Registrierung"}>Password vergessen ?</Link>
+            </div>
+            <div>
+              <Link to={"/Registrierung"}>
+                Kein Account ? Hier zum Registrieren
+              </Link>
+            </div>
+            <input id="LoginBtn" type="submit" value="Sign In" />
             {message && <div id="Message_Backend">{message}</div>}
-            {/* wenn message einen Wert hat, erstellt er das div usw. */}
           </form>
         </div>
       </div>

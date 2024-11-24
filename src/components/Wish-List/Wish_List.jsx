@@ -10,7 +10,6 @@ function Wish_List() {
   function handleClickOnWishList() {
     if (WishList.current) {
       WishList.current.style.display = "none";
-      document.body.style.overflowY = "hidden";
       setWishListIsClick(true);
     }
   }
@@ -18,7 +17,6 @@ function Wish_List() {
   function handleClickOnClosingWishListMenu() {
     if (WishListMenu.current) {
       WishList.current.style.display = "block";
-      document.body.style.overflowY = "scroll";
       setWishListIsClick(false);
     }
   }
@@ -47,7 +45,7 @@ function Wish_List() {
             <h1
               style={{
                 marginLeft: "2vmax",
-                fontSize: "2vmax",
+                fontSize: "1rem",
                 fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
               }}
             >
@@ -58,18 +56,18 @@ function Wish_List() {
               style={{
                 cursor: "pointer",
                 width: "fit-content",
-                marginTop: "0",
-                padding: "0",
-                fontSize: "2.5vmax",
+                fontSize: "1.5rem",
                 transform: "rotate(90deg)",
                 fontFamily: "verdana, sans-serif, sans",
-                margin: "2vmax",
+                marginRight: "2vmax",
               }}
             >
               X
             </p>
           </div>
-          <p id="WishListContent">Du hast derzeit keine Artikel auf deiner Wunschliste.</p>
+          <p id="WishListContent">
+            Du hast derzeit keine Artikel auf deiner Wunschliste.
+          </p>
         </div>
       )}
     </>

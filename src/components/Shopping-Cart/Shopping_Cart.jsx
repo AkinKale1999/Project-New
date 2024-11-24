@@ -9,7 +9,6 @@ function Shopping_Cart() {
   function handleClickOnShoppingCart() {
     if (shoppingCart.current) {
       shoppingCart.current.style.display = "none";
-      document.body.style.overflowY = "hidden";
       setShoppingCartIsClick(true);
     }
   }
@@ -17,7 +16,6 @@ function Shopping_Cart() {
   function handleClickOnClosingShoppingMenu() {
     if (shoppingCartMenu.current) {
       shoppingCart.current.style.display = "block";
-      document.body.style.overflowY = "scroll";
       setShoppingCartIsClick(false);
     }
   }
@@ -53,16 +51,13 @@ function Shopping_Cart() {
           <div id="shoppingCartMenuInnerDiv">
             <p
               style={{
-                textAlign: "center",
-                marginBottom: "20px",
-                fontSize: "2vmax",
+                fontSize: "1.2rem",
               }}
             >
               Dein Warenkorb ist leer
             </p>
             <button
               style={{
-                textAlign: "center",
                 padding: "5px 5%",
                 backgroundColor: "black",
                 color: "#fff",
