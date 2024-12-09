@@ -58,7 +58,7 @@ app.post("/login", async (req, res) => {
 
     if (user) {
       const token = jwt.sign({ userId: user._id }, SECRET_KEY, {
-        expiresIn: "1h",
+        expiresIn: "1d",
       });
       // const token usw. wird an das frontend als response geschickt und aktualisiert
       // dadurch den const token im frontend sodass man dem Angemeldeten User einen gültigen token gibt

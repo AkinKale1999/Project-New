@@ -1,6 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/pages/Home/Home.jsx";
-import Kontact from "./components/pages/Contact/Kontact.jsx";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Contact from "./components/pages/Contact/Contact.jsx";
 import ÜberUns from "./components/pages/AboutUs/Über_uns.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Login from "./components/Login/Login.jsx";
@@ -10,22 +9,24 @@ import AGB from "./components/pages/AGB/AGB.jsx";
 import TermsConditions from "./components/pages/Terms_Conditions/Terms_Conditions.jsx";
 import "./App.css";
 import Account from "./components/Account/Account.jsx";
+import Footer from "./components/Footer/Footer.jsx"
 
 function App() {
+
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
 
-        <Route path="/Account" element={<Account />} />
+        <Route path="/Account" element={
+          <Account />
+        } />
 
         <Route path="/login" element={<Login />} />
 
         <Route path="/Registrierung" element={<Register />} />
 
-        <Route path="/Kontakt" element={<Kontact />} />
+        <Route path="/Kontakt" element={<Contact />} />
 
         <Route path="/Über-uns" element={<ÜberUns />} />
 
@@ -34,9 +35,12 @@ function App() {
         <Route path="/AGB" element={<AGB />} />
 
         <Route path="/Impressum" element={<TermsConditions />} />
+
       </Routes>
+      <Footer />
     </BrowserRouter>
-  );
+  )
 }
+
 
 export default App;

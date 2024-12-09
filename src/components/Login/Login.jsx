@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Footer from "../Footer/Footer";
-import "./Login.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -53,8 +51,10 @@ function Login() {
           Authorization: token,
         },
       });
-      console.log("TOKEN : ", token);
-      navigate("/Account");
+
+      setTimeout(() => {
+        navigate("/Account");
+      }, 1000);
     } catch (error) {
       console.error("Fehler beim Abrufen der geschützen Daten: ", error);
     }
@@ -97,7 +97,8 @@ function Login() {
           </form>
         </div>
       </div>
-      <Footer />
+      <div style={{ marginTop: "20px" }}>
+      </div>
     </>
   );
 }

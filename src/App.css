@@ -1,12 +1,907 @@
+:root {
+  --height: 100vh;
+  --height-fit-content: fit-content;
+  --margin-right: 2vmax;
+  --width: 100%;
+  --margin: 0;
+  --padding: 0;
+  --cursor-pointer: pointer;
+  --display--flex: flex;
+  --color: #fff;
+  --align-items: center;
+  --justify-content: center;
+  --font-size: 1rem;
+}
+
 html,
 body,
 #root {
   scrollbar-width: auto;
   scrollbar-color: rgb(72, 230, 235) black;
+  margin: var(--margin);
+  padding: var(--padding);
+  width: var(--width);
+  height: var(--height);
+  min-height: var(--height);
+  max-height: var(--height);
+}
+/* ----------------------------- */
+
+#Wish-list {
+  cursor: var(--cursor-pointer);
+  width: 2vmax;
+  height: var(--height-fit-content);
+  display: var(--display--flex);
+  margin: var(--margin);
+  padding: var(--padding);
+  margin-right: var(--margin-right);
+}
+
+#WishListDIV {
+  width: 30%;
+  height: var(--height);
+  z-index: 999;
+  background-color: rgb(39, 114, 119);
+  position: fixed;
+  color: var(--color);
+  top: 0;
+}
+
+#WishListHeaderDIV {
+  display: var(--display--flex);
+  align-items: var(--align-items);
+  justify-content: space-between;
+  border: 2px solid #c1c1c1;
+}
+
+#WishListContent {
+  display: var(--display--flex);
+  align-items: var(--align-items);
+  justify-content: center;
+  align-self: center;
+  height: 90%;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100vh;
-  min-height: 100vh;
-  max-height: 100vh;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+/* --------------------------- */
+
+#Shopping-cart {
+  cursor: var(--cursor-pointer);
+  width: 2.3vmax;
+  height: var(--height-fit-content);
+  display: var(--display--flex);
+  margin: var(--margin);
+  padding: var(--padding);
+  margin-right: var(--margin-right);
+}
+
+#shoppingCartMenu {
+  width: 30%;
+  height: 100%;
+  background-color: #fff;
+  margin: var(--margin);
+  padding: var(--padding);
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  color: black;
+}
+
+#shoppingCartMenuDIV {
+  display: var(--display--flex);
+  align-items: var(--align-items);
+  justify-content: space-between;
+}
+
+#shoppingCartMenuHeader {
+  margin: var(--margin);
+  padding: var(--padding);
+  font-size: 1.2rem;
+  margin-left: 2vmax;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#shoppingCartMenuX {
+  cursor: var(--cursor-pointer);
+  font-size: 1.5rem;
+  margin-right: var(--margin-right);
+  font-family: cursive;
+  transform: rotate(90deg);
+}
+
+#shoppingCartMenuInnerDiv {
+  display: var(--display--flex);
+  align-items: var(--align-items);
+  justify-content: var(--justify-content);
+  flex-direction: column;
+  width: var(--width);
+  margin: var(--margin);
+  padding: var(--padding);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ------------------ */
+
+#Main_Container_Registry {
+  display: var(--display--flex);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  width: var(--width);
+  height: 768.8px;
+}
+
+#Registry_Container {
+  display: var(--display--flex);
+  align-items: var(--align-items);
+  justify-content: var(--justify-content);
+  flex-direction: column;
+  background: #fff;
+  height: 500px;
+  width: 400px;
+  min-width: 300px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+}
+
+#Registry_Form {
+  display: var(--display--flex);
+  flex-direction: column;
+  width: var(--width);
+}
+
+#Registry_Title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#Registry_Subtitle {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.input_registry {
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: var(--font-size);
+  width: var(--width);
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------- */
+
+#Submit_Btn_DIV {
+  width: var(--width);
+}
+
+#Submit_Btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: var(--color);
+  font-size: var(--font-size);
+  border: none;
+  border-radius: 4px;
+  cursor: var(--cursor-pointer);
+  transition: background-color 0.3s ease;
+  width: var(--width);
+}
+
+#Submit_Btn:hover {
+  background-color: #0056b3;
+}
+
+#error_message {
+  color: red;
+}
+
+#Navigate_To_Login {
+  padding: var(--padding);
+  margin: var(--margin);
+}
+/* --------------------- */
+
+/* Navbar*/
+#navbarDIV {
+  width: var(--width);
+  margin: var(--margin);
+  padding: var(--padding);
+  overflow: hidden;
+  margin-bottom: 1vmax;
+  position: relative;
+  top: 1vmax;
+}
+
+#navbar {
+  display: var(--display--flex);
+  justify-content: flex-end;
+  width: var(--width);
+  height: 100%;
+  margin: var(--margin);
+  padding: var(--padding);
+}
+
+/* -------------------------- */
+
+#Main_Container_Login {
+  width: var(--width);
+  height: 768.8px;
+  margin: var(--margin);
+  padding: var(--padding);
+  display: var(--display--flex);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+}
+
+#Login_Container {
+  position: relative;
+  margin: var(--margin);
+  padding: 2rem;
+  height: 500px;
+  width: 400px;
+  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+  border-radius: 8px;
+}
+
+#Login_Form {
+  flex-direction: column;
+  text-align: center;
+  display: var(--display--flex);
+  align-items: var(--align-items);
+  justify-content: var(--justify-content);
+  width: var(--width);
+  height: 100%;
+  gap: 20px;
+}
+
+/* Titel und Beschreibung */
+#Login_Title {
+  font-size: 2rem;
+  color: #333;
+}
+
+#Login_Description {
+  font-size: var(--font-size);
+  color: #666;
+}
+
+/* Input-Felder */
+#User_Login,
+#Password_Login {
+  width: var(--width);
+  font-size: var(--font-size);
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#Remember_Me_Container {
+  display: var(--display--flex);
+  justify-content: left;
+  align-items: var(--align-items);
+  width: var(--width);
+  gap: 10px;
+  font-size: var(--font-size);
+  color: #333;
+}
+
+#Remember_Me {
+  width: auto;
+}
+
+/* Login-Button */
+#LoginBtn {
+  width: 105%;
+  font-size: var(--font-size);
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: var(--cursor-pointer);
+  transition: background-color 0.3s;
+}
+
+#LoginBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Backend-Nachricht */
+#Message_Backend {
+  font-size: var(--font-size);
+  color: red;
+  margin: var(--margin);
+}
+
+#user_icon {
+  cursor: var(--cursor-pointer);
+  width: 2.2vmax;
+  height: var(--height-fit-content);
+  display: var(--display--flex);
+  margin: var(--margin);
+  padding: var(--padding);
+  margin-right: var(--margin-right);
+}
+
+/* -------------------------- */
+
+#Footer {
+  display: inline-flex;
+  justify-content:space-evenly;
+  align-items:end;
+  margin: var(--margin);
+  padding: var(--padding);
+  width: var(--width);
+  color: black;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 95%;
+}
+
+.Footer_Elements {
+  list-style-type: none;
+  font-size: var(--font-size);
+  cursor: var(--cursor-pointer);
+  margin: var(--margin);
+  padding: var(--padding);
+  font-weight: bolder;
+}
+
+.Footer_Elements:link {
+  color: red;
+  text-decoration: none;
+}
+
+.Footer_Elements:hover {
+  color: rgb(54, 222, 16);
+  text-decoration: none;
+}
+
+.Footer_Elements:active {
+  color: rgb(0, 218, 238);
+}
+/* ---------------------- */
+
+#burgermenuDIV {
+  position: absolute;
+  left: 0%;
+  padding: var(--padding);
+  margin: var(--margin);
+  cursor: var(--cursor-pointer);
+  width: fit-content;
+  margin-left: 10px;
+}
+
+#burgermenu {
+  width: 2.5vmax;
+}
+
+/* ---------------------------------- */
+
+.menu_Container {
+  display: none;
+  background-color: rgb(0, 0, 0);
+  min-width: var(--width);
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  position: fixed;
+  z-index: 999;
+  margin: var(--margin);
+  padding: var(--padding);
+  top: 0;
+  left: 0%;
+  transition: min-width 1s linear;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-name: ClosingMenuContainer;
+  color: var(--color);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@keyframes ClosingMenuContainer {
+  0% {
+    min-width: 0%;
+  }
+  100% {
+    min-width: var(--width);
+  }
+}
+
+@keyframes ClosingMenuContainerReverse {
+  0% {
+    min-width: var(--width);
+  }
+  100% {
+    min-width: 0%;
+  }
+}
+
+#menu_Closing {
+  opacity: 0;
+  color: white;
+  margin: var(--margin);
+  padding: var(--padding);
+  width: var(--width);
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+}
+
+#menu_content {
+  margin: var(--margin);
+  padding: var(--padding);
+  width: fit-content;
+  height: var(--height-fit-content);
+  font-size: 3vmax;
+  margin-top: 1vmax;
+  margin-left: 10px;
+  pointer-events: all;
+  cursor: var(--cursor-pointer);
+  transform: rotate(90deg);
+}
+
+#menu_Links {
+  display: var(--display--flex);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: var(--margin);
+  padding: var(--padding);
+  font-size: 2.5rem;
+  gap: 3vmax;
+  width: var(--width);
+}
+
+.Menu_Links_For_Navigation {
+  text-decoration: none;
+}
+
+.Menu_Links_For_Navigation {
+  color: var(--color);
+}
+
+#Menu_Link_Home {
+  margin: var(--margin);
+  padding: var(--padding);
+  width: fit-content;
+}
+
+#Menu_Link_ShoppingCart {
+  margin: var(--margin);
+  padding: var(--padding);
+  width: fit-content;
+}
+
+#Menu_Link_Wishlist {
+  margin: var(--margin);
+  padding: var(--padding);
+  width: fit-content;
+}
+
+#animated-I {
+  color: color-mix(in srgb, rgb(0, 251, 255) 50%, rgb(64, 255, 0) 50%);
+  position: relative;
+  left: 0%;
+  top: 0;
+  pointer-events: none;
+}
+
+.Menu_Links_For_Navigation:hover span {
+  animation-name: slideForward;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideForward {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 105%;
+  }
+
+  0% {
+    left: 0%;
+  }
+}
+/* ------------------------------ */
+
+.profile-container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Tabs-Styling */
+.profile-tabs {
+  display: var(--display--flex);
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: var(--cursor-pointer);
+}
+
+.tab.active {
+  border-bottom: 2px solid black;
+  font-weight: bold;
+}
+
+/* Profil-Styling */
+.profile-details {
+  padding: 20px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.username {
+  color: gray;
+}
+
+.profile-text {
+  margin: 10px 0;
+}
+
+.signout {
+  margin-top: 20px;
+  color: blue;
+  text-decoration: none;
+  cursor: var(--cursor-pointer);
+  font-size: var(--font-size);
+}
+/* ------------------------------ */
+
+#Container_Home {
+  margin: var(--margin);
+  padding: var(--padding);
+  margin-bottom: 2%;
+  overflow-x: hidden;
+  background: rgb(255, 255, 255);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+/* Hintergrund-FOTO */
+#backgroundDIV {
+  position: relative;
+  width: var(--width);
+  height: var(--height-fit-content);
+  margin: var(--margin);
+  margin-bottom: 4vmax;
+  margin-top: 1vmax;
+}
+
+#background-pic {
+  width: var(--width);
+  height: 18vw;
+  object-fit: cover;
+}
+
+/* Damen und Herren DIV unter dem BILD*/
+#DamenHerrenDIV {
+  position: relative;
+  width: var(--width);
+  min-width: var(--width);
+  height: auto;
+  top: 0vmax;
+  text-align: center;
+  margin: var(--margin);
+  padding: var(--padding);
+}
+
+#WonachDIV {
+  position: relative;
+  padding: var(--padding);
+  margin: var(--margin);
+}
+
+#Wonach {
+  padding: var(--padding);
+  margin: var(--margin);
+  color: black;
+  font-size: 2vmax;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  display: var(--display--flex);
+  justify-content: var(--justify-content);
+}
+
+#DamenBtn {
+  margin: var(--margin);
+  padding: var(--padding);
+  width: 16vmax;
+  height: var(--height-fit-content);
+  font-size: 1.7vmax;
+  border: solid;
+  background-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: var(--cursor-pointer);
+  margin-right: 3%;
+}
+
+#HerrenBtn {
+  margin: var(--margin);
+  padding: var(--padding);
+  width: 16vmax;
+  height: var(--height-fit-content);
+  font-size: 1.7vmax;
+  border: solid;
+  background-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: var(--cursor-pointer);
+  margin-left: 3%;
+  margin-top: 3vh;
+}
+
+/* ------------------------------ */
+
+/* LogoRotate */
+#LogoDIV {
+  position: relative;
+  width: var(--width);
+  height: var(--height-fit-content);
+  margin: var(--margin);
+  display: var(--display--flex);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  margin-top: 5vmax;
+}
+
+#LogoRotate {
+  display: var(--display--flex);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  height: 10vmax;
+  width: 10vmax;
+  border: 1vmin solid black;
+  border-radius: 100%;
+  animation: Rotate infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  transform: rotate(0deg);
+  margin: var(--margin);
+}
+
+/* Secret */
+#Secret {
+  font-size: 4vmax;
+  margin: var(--margin);
+  padding: var(--padding);
+  position: absolute;
+  top: 10.5vmax;
+}
+
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(190deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 8 Images */
+#AllImagesDiv {
+  display: var(--display--flex);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: var(--width);
+  margin-top: 5vmax;
+  padding: 0px;
+}
+
+#ImageDIV1,
+#ImageDIV2,
+#ImageDIV3,
+#ImageDIV4,
+#ImageDIV5,
+#ImageDIV6 {
+  width: 25vmax;
+  min-width: 25vmax;
+  max-width: 25vmax;
+  height: 25vmax;
+  min-height: 25vmax;
+  max-height: 25vmax;
+  margin: 7.5vmax;
+}
+
+.img {
+  width: var(--width);
+  height: 100%;
+  margin: var(--margin);
+  padding: var(--padding);
+  border-radius: 5px;
+}
+
+/* button unter den 8 Bildern */
+.Schuhe {
+  cursor: var(--cursor-pointer);
+  color: black;
+  letter-spacing: 0.5vmax;
+  font-weight: bold;
+  outline: 0.3vmax solid black;
+  width: fit-content;
+  font-size: var(--font-size);
+  margin: var(--margin);
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
+/* MARKEN bereich */
+
+#DIVumGanzeSchuh {
+  position: relative;
+  left: 0%;
+  width: 70%;
+  height: 20vmax;
+  margin: var(--margin);
+  padding: var(--padding);
+  margin-top: 4vmax;
+}
+
+#markenDIV {
+  background-color: #fbd9ac;
+  width: 60%;
+  height: 100%;
+  padding: var(--padding);
+  margin: var(--margin);
+}
+
+#markePic {
+  padding: var(--padding);
+  margin: var(--margin);
+  height: 100%;
+  width: var(--width);
+}
+
+#textBtnMarke {
+  position: relative;
+  background: linear-gradient(
+    40deg,
+    rgb(89, 113, 144) 20%,
+    rgb(47, 237, 177) 100%
+  );
+  top: -100%;
+  left: 60%;
+  width: 40%;
+  height: 100%;
+}
+
+#textMarke {
+  position: relative;
+  width: var(--width);
+  top: 30%;
+  transform: translate(0%, -20%);
+  display: var(--display--flex);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  font-size: 1.4vmax;
+  padding: var(--padding);
+  margin: var(--margin);
+}
+
+#buttonMarke {
+  position: absolute;
+  margin-top: 10%;
+  min-width: 60%;
+  min-height: 3.5vmax;
+  max-height: 4vmax;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3vmax;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: var(--cursor-pointer);
+  border: none;
+}
+
+/* Marken Nike usw */
+#BrandsDIV {
+  display: var(--display--flex);
+  justify-content: space-evenly;
+  position: relative;
+  margin: var(--margin);
+  margin-top: 6vmax;
+  width: 100vmax;
+}
+
+#Nike,
+#Adidas,
+#Jordan,
+#Puma,
+#Converse {
+  object-fit: cover;
+  width: 12vw;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-name: arrows_animation;
+  transform: translateX(-90vw);
+  margin-bottom: 5%;
+}
+
+#Nike {
+  display: var(--display--flex);
+  align-self: self-end;
+  height: var(--height-fit-content);
+}
+
+#Adidas {
+  height: var(--height-fit-content);
+  display: var(--display--flex);
+  align-self: self-end;
+}
+
+#Jordan {
+  display: var(--display--flex);
+  align-self: self-end;
+  height: var(--height-fit-content);
+}
+
+#Puma {
+  display: var(--display--flex);
+  height: var(--height-fit-content);
+  position: relative;
+  top: 2.5vw;
+}
+
+#Converse {
+  display: var(--display--flex);
+  align-self: self-end;
+  height: var(--height-fit-content);
+}
+
+@keyframes arrows_animation {
+  0% {
+    animation-timing-function: linear;
+  }
+  10% {
+    animation-timing-function: linear;
+  }
+  90% {
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateX(100vw);
+  }
 }

@@ -1,5 +1,3 @@
-import "./AGB.css";
-
 function AGB() {
   return <>
 

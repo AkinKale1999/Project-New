@@ -1,5 +1,3 @@
-import "./Terms_Conditions.css";
-
 function TermsConditions() {
   return (
     <>

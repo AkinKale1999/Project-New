@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import "./Wish_List.css";
 import { useState } from "react";
 
 function Wish_List() {

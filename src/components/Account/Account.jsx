@@ -1,8 +1,12 @@
-import React from "react";
-import "./Account.css";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 
 function Account() {
+  function SignOut() {
+    localStorage.removeItem("token");
+    localStorage.clear();
+  }
+
   const InputFile = "file";
 
   return (
@@ -25,7 +29,9 @@ function Account() {
         <h2>Profil Name</h2>
         <p className="username">@Profil Name</p>
         <p className="signout">
-          <Link to={"/Home"}>Abmelden</Link>
+          <Link to={"/Home"} onClick={SignOut}>
+            Abmelden
+          </Link>
         </p>
       </div>
     </div>

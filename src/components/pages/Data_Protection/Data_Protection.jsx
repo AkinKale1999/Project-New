@@ -1,5 +1,3 @@
-import "./Data_Protection.css"
-
 function DataProtection(){
 
 

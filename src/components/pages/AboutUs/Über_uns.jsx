@@ -1,5 +1,3 @@
-import "./Über_uns.css";
-
 function ÜberUns() {
   return (
     <>

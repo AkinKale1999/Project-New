@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import "./Burgermenu.css";
 import { Link } from "react-router-dom";
 
 function Burgermenu() {

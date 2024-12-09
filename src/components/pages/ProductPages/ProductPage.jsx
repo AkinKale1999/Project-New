@@ -1,5 +1,3 @@
-import "./ProductPage.css";
-
 function ProductPage() {
   return <>
   

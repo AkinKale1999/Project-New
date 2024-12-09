@@ -1,5 +1,3 @@
-import "./Registry.css";
-import Footer from "../Footer/Footer.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
@@ -146,7 +144,9 @@ function Register() {
               />
             </div>
             <div id="Submit_Btn_DIV">
-              <button id="Submit_Btn" ref={messageExist}>Absenden</button>
+              <button id="Submit_Btn" ref={messageExist}>
+                Absenden
+              </button>
             </div>
 
             <div>
@@ -154,15 +154,14 @@ function Register() {
             </div>
             <div>
               <div id="Navigate_To_LoginDIV">
-                  <Link to={"/Login"} id="Sign_In">
-                    Du hast bereits ein Konto ? Logge dich ein
-                  </Link>
+                <Link to={"/Login"} id="Sign_In">
+                  Du hast bereits ein Konto ? Logge dich ein
+                </Link>
               </div>
             </div>
           </form>
         </div>
       </div>
-        <Footer />
     </>
   );
 }
