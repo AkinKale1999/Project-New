@@ -80,15 +80,11 @@ function Login() {
               value={Password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <div id="Remember_Me_Container">
-              <input type="checkbox" id="Remember_Me" />
-              <label htmlFor="Remember_Me">Remember me</label>
+            <div>
+              <Link to={"/Registrierung"} style={{ color: "#007bff", textDecoration: "none" }}>Password vergessen ?</Link>
             </div>
             <div>
-              <Link to={"/Registrierung"}>Password vergessen ?</Link>
-            </div>
-            <div>
-              <Link to={"/Registrierung"}>
+              <Link to={"/Registrierung"} style={{ color: "#007bff", textDecoration: "none" }}>
                 Kein Account ? Hier zum Registrieren
               </Link>
             </div>
@@ -97,7 +93,7 @@ function Login() {
           </form>
         </div>
       </div>
-      <div style={{ marginTop: "20px" }}>
+      <div>
       </div>
     </>
   );

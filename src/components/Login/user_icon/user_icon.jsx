@@ -1,4 +1,3 @@
-import "./user_icon.css";
 import { useNavigate } from "react-router-dom";
 
 function Usericon() {

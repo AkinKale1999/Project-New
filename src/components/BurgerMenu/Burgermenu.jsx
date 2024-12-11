@@ -81,7 +81,7 @@ function Burgermenu() {
           <p id="menu_content">X</p>
         </div>
         <div id="menu_Links" ref={menu_Links}>
-          <div id="Menu_Link_Home">
+          <div>
             <Link
               className="Menu_Links_For_Navigation"
               to={"/Home"}

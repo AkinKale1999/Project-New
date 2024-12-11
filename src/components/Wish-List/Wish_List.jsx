@@ -42,24 +42,13 @@ function Wish_List() {
         <div id="WishListDIV" ref={WishListMenu}>
           <div id="WishListHeaderDIV">
             <h1
-              style={{
-                marginLeft: "2vmax",
-                fontSize: "1rem",
-                fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
-              }}
             >
               WUNSCHLISTE
             </h1>
             <p
+            id="WishListCloseButton"
+            style={{ cursor: "pointer" }}
               onClick={handleClickOnClosingWishListMenu}
-              style={{
-                cursor: "pointer",
-                width: "fit-content",
-                fontSize: "1.5rem",
-                transform: "rotate(90deg)",
-                fontFamily: "verdana, sans-serif, sans",
-                marginRight: "2vmax",
-              }}
             >
               X
             </p>

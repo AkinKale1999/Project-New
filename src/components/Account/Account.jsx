@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 function Account() {
   function SignOut() {
-    localStorage.removeItem("token");
     localStorage.clear();
   }
 
@@ -12,14 +11,14 @@ function Account() {
   return (
     <div className="profile-container">
       <nav className="profile-tabs">
-        <Link to={"/Account/Dashboard"}>
+        <Link to={"/Account"}>
           <button className="tab active">Dashboard</button>
         </Link>
         <Link to={"/Account/Profil-Details"}>
-          <button className="tab">Profile Details</button>
+          <button className="tab">Mein Profil</button>
         </Link>
         <Link to={"/Account/Passwort-Ändern"}>
-          <button className="tab">Change Password</button>
+          <button className="tab">Password ändern</button>
         </Link>
       </nav>
 
@@ -29,7 +28,7 @@ function Account() {
         <h2>Profil Name</h2>
         <p className="username">@Profil Name</p>
         <p className="signout">
-          <Link to={"/Home"} onClick={SignOut}>
+          <Link id="signout" to={"/Home"} onClick={SignOut}>
             Abmelden
           </Link>
         </p>

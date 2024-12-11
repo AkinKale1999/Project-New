@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
+// import VisibilityIcon from '@mui/icons-material/Visibility';
+// import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 function Register() {
   const [Name, setName] = useState("");
@@ -12,6 +14,7 @@ function Register() {
 
   const [ShowPassword, setShowPassword] = useState("password");
   const [message, setMessage] = useState("");
+  const [errormessage, setErrormessage] = useState("");
   const messageExist = useRef(null);
   const navigate = useNavigate();
   // ------------------------------------------------------
@@ -34,17 +37,17 @@ function Register() {
       typeof Family_Name !== "string" ||
       !/^[a-zA-Z]+$/.test(Family_Name)
     ) {
-      setMessage("Vorname und/oder Nachname darf nicht Leer sein");
+      setErrormessage("Vorname und/oder Nachname darf nicht Leer sein");
       return;
     }
 
     if (Username.length < 4) {
-      setMessage("Der Username muss mindestens 4 Zeichen haben.");
+      setErrormessage("Der Username muss mindestens 4 Zeichen haben.");
       return;
     }
 
     if (Password !== ConfirmPassword) {
-      setMessage("Passwörter stimmen nicht überein");
+      setErrormessage("Passwörter stimmen nicht überein");
       return;
     }
 
@@ -52,7 +55,7 @@ function Register() {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!-])[A-Za-z\d?!-]{8,}$/;
 
     if (Password.length < 8 || !passwordPattern.test(Password)) {
-      setMessage(
+      setErrormessage(
         "Das Passwort muss mindestens 8 Zeichen, 1 Klein-, 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen (! oder ?) haben."
       );
       return;
@@ -67,17 +70,16 @@ function Register() {
         Email,
       });
 
-      console.log(response);
       setMessage(response.data.message);
       // hier kommt "Erfolgreich Registriert" als Nachricht
       // (res.status(201) in /register(Backend))
 
       setTimeout(() => {
-        navigate("/Login");
+        navigate("/Account");
       }, 3000);
     } catch (error) {
       console.log(error);
-      setMessage(error.response.data.message);
+      setErrormessage(error.response.data.message)
       // hier kommt Benutzername existiert als Nachricht
       // res.status(400) in /register(Backend)
       return;
@@ -89,7 +91,7 @@ function Register() {
     <>
       <div id="Main_Container_Registry">
         <div id="Registry_Container">
-          <form action="" id="Registry_Form" onSubmit={handleRegister}>
+          <form action="" onSubmit={handleRegister}>
             <h1 id="Registry_Title">Registrierung</h1>
             <input
               type="text"
@@ -143,18 +145,18 @@ function Register() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </div>
-            <div id="Submit_Btn_DIV">
+            <div>
               <button id="Submit_Btn" ref={messageExist}>
                 Absenden
               </button>
             </div>
 
             <div>
-              <p id="error_message">{message}</p>
+              <p id="error_message">{errormessage}</p>
             </div>
             <div>
               <div id="Navigate_To_LoginDIV">
-                <Link to={"/Login"} id="Sign_In">
+                <Link to={"/Login"} id="Sign_In" style={{ color: "#007bff", textDecoration: "none" }}>
                   Du hast bereits ein Konto ? Logge dich ein
                 </Link>
               </div>
