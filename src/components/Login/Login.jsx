@@ -14,51 +14,43 @@ function Login() {
     e.preventDefault();
 
     try {
-      let response = await axios.post("http://localhost:5000/login", {
-        Username,
-        Password,
-      });
+      const response = await axios.post(
+        "http://localhost:5000/login",
+        { Username, Password },
+        { withCredentials: true } // WICHTIG: Cookies übermitteln
+      );
       setMessage(response.data.message);
-      // hier kommt "Erfolgreich angemeldet" als Nachricht
-
-      const token = response.data.token;
-      localStorage.setItem("token", token);
       setIsLoggedIn(true);
     } catch (error) {
       console.log(error);
 
       if (error.response && error.response.data) {
         setMessage(error.response.data.message);
-        // hier kommt "Username oder Password nicht gültig" vom Backend
       } else {
         setMessage("Ein Fehler ist aufgetreten.");
       }
     }
   };
 
+  async function fetchProtectedData() {
+    try {
+      const response = await axios.get("http://localhost:5000/protected", {
+        withCredentials: true, // Cookies übermitteln
+      });
+
+      if (response.status === 200) {
+        navigate("/Account");
+      }
+    } catch (error) {
+      console.error("Fehler beim Abrufen der geschützten Daten: ", error);
+    }
+  }
+
   useEffect(() => {
     if (isLoggedIn) {
       fetchProtectedData();
     }
   }, [isLoggedIn]);
-
-  async function fetchProtectedData() {
-    const token = localStorage.getItem("token");
-
-    try {
-      const response = await axios.get("http://localhost:5000/protected", {
-        headers: {
-          Authorization: token,
-        },
-      });
-
-      setTimeout(() => {
-        navigate("/Account");
-      }, 1000);
-    } catch (error) {
-      console.error("Fehler beim Abrufen der geschützen Daten: ", error);
-    }
-  }
 
   return (
     <>
@@ -81,21 +73,18 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <div>
-              <Link to={"/Registrierung"} style={{ color: "#007bff", textDecoration: "none" }}>Password vergessen ?</Link>
+              <Link to={"/Password-Vergessen"} style={{ color: "#007bff", textDecoration: "none", fontSize: "0.8rem", fontWeight: "900" }}>Password vergessen?</Link>
             </div>
             <div>
-              <Link to={"/Registrierung"} style={{ color: "#007bff", textDecoration: "none" }}>
-                Kein Account ? Hier zum Registrieren
-              </Link>
+              <Link to={"/Registrierung"} style={{ color: "#007bff", textDecoration: "none", fontSize: "0.8rem", fontWeight: "900" }}>Kein Account? Hier zum Registrieren</Link>
             </div>
-            <input id="LoginBtn" type="submit" value="Sign In" />
-            {message && <div id="Message_Backend">{message}</div>}
+            <input id="LoginBtn" type="submit" value="Login" />
+            {message && <div id="Error_Message_Backend">{message}</div>}
           </form>
         </div>
-      </div>
-      <div>
       </div>
     </>
   );
 }
+
 export default Login;

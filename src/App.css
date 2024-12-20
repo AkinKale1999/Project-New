@@ -25,6 +25,7 @@ body,
   min-height: var(--height);
   max-height: var(--height);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fff;
 }
 /* ----------------------------- */
 
@@ -129,30 +130,34 @@ body,
   justify-content: var(--justify-content);
   align-items: var(--align-items);
   height: 768.8px;
+  font-size: 0.9rem;
 }
 
 #Registry_Container {
-  height: 550px;
-  width: 450px;
+  height: auto;
+  width: 28vmax;
   padding: 2rem;
   box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
 }
 
 #Registry_Title {
-  background: linear-gradient(270deg, transparent 0%, #007bff 100%);
+  background-color: #007bff;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-radius: 4px;
+  padding: 10px;
+  text-align: center;
 }
 
 .input_registry {
-  padding: 10px;
+  padding: 8px;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: var(--font-size);
   width: var(--width);
   box-sizing: border-box;
+  font-size: 0.8rem;
 }
 
 #Submit_Btn {
@@ -179,21 +184,22 @@ body,
 
 /* Navbar*/
 #navbarDIV {
-  overflow: hidden;
   margin-bottom: 5px;
   position: relative;
-  top: 1vmax;
+  top: 0.5vmax;
+  height: fit-content;
 }
 
 #navbar {
   display: var(--display--flex);
   justify-content: flex-end;
+  height: fit-content;
 }
 
 /* -------------------------- */
 
 #Main_Container_Login {
-  height: 768.8px;
+  height: 770px;
   display: var(--display--flex);
   justify-content: var(--justify-content);
   align-items: var(--align-items);
@@ -201,8 +207,8 @@ body,
 
 #Login_Container {
   padding: 2rem;
-  height: 500px;
-  width: 400px;
+  height: 400px;
+  width: 28vmax;
   box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
 }
 
@@ -217,27 +223,27 @@ body,
 
 /* Titel und Beschreibung */
 #Login_Title {
-  background: linear-gradient(90deg, transparent 0%, #007bff 100%);
+  background-color: #007bff;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-radius: 4px;
-  padding: 5px;
   width: 100%;
-  text-align: right;
+  text-align: center;
+  padding: 10px;
 }
 
 #User_Login,
 #Password_Login {
   width: var(--width);
   font-size: var(--font-size);
-  padding: 15px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 /* Login-Button */
 #LoginBtn {
-  width: 105%;
+  width: 100%;
   font-size: var(--font-size);
   padding: 12px;
   border: none;
@@ -253,9 +259,9 @@ body,
 }
 
 /* Backend-Nachricht */
-#Message_Backend {
+#Error_Message_Backend {
   font-size: var(--font-size);
-  color: rgb(80, 209, 20);
+  color: red;
   margin: var(--margin);
 }
 

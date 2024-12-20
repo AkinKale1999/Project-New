@@ -97,7 +97,7 @@ function Register() {
               type="text"
               name="name"
               className="input_registry"
-              placeholder="Vorname"
+              placeholder="Vorname*"
               value={Name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -105,7 +105,7 @@ function Register() {
               type="text"
               name="family_name"
               className="input_registry"
-              placeholder="Nachname"
+              placeholder="Nachname*"
               value={Family_Name}
               onChange={(e) => setFamilyName(e.target.value)}
             />
@@ -113,7 +113,7 @@ function Register() {
               type="text"
               name="Username"
               className="input_registry"
-              placeholder="Username"
+              placeholder="Username*"
               value={Username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -130,7 +130,7 @@ function Register() {
                 type={ShowPassword}
                 name="password"
                 className="input_registry"
-                placeholder="Passwort"
+                placeholder="Passwort*"
                 value={Password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -141,7 +141,7 @@ function Register() {
                 type={ShowPassword}
                 name="confirm password"
                 className="input_registry"
-                placeholder="Passwort Bestätigen"
+                placeholder="Passwort Bestätigen*"
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </div>
