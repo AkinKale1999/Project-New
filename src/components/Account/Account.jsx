@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 function Account() {
   function SignOut() {
-    localStorage.clear();
+    document.cookie = "token=; path=/; max-age=0";
+    // Setzt den Cookie-Wert auf leer, setzt path auf '/' und max-age auf 0, um den Cookie zu löschen
   }
+
 
   const InputFile = "file";
 

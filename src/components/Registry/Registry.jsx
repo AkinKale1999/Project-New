@@ -68,7 +68,10 @@ function Register() {
         Username,
         Password,
         Email,
-      });
+      },
+        { withCredentials: true }
+        // WICHTIG: Cookies übermitteln
+      );
 
       setMessage(response.data.message);
       // hier kommt "Erfolgreich Registriert" als Nachricht
