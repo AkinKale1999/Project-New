@@ -1,7 +1,8 @@
-import Shopping_Cart from "../Shopping-Cart/Shopping_Cart";
-import Wish_List from "../Wish-List/Wish_List";
+import ShoppingCart from "../Shopping-Cart/Shopping_Cart";
+import WishList from "../Wish-List/Wish_List";
 import Burgermenu from "../BurgerMenu/Burgermenu";
-import Usericon from "../Login/user_icon/user_icon";
+import Usericon from "../UserIcon/UserIcon";
+import ChangeMode from "../ChangeMode/ChangeMode";
 
 function Navbar() {
   return (
@@ -11,12 +12,17 @@ function Navbar() {
           <Burgermenu />
           {/* ------------------------------------ */}
 
-          <Usericon />
+          <ChangeMode />
           {/* ------------------------------------ */}
-          <Wish_List />
 
+          <WishList />
           {/* ------------------------------------ */}
-          <Shopping_Cart />
+
+          <ShoppingCart />
+          {/* ------------------------------------ */}
+
+          <Usericon />
+
         </nav>
       </div>
     </>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./components/pages/Contact/Contact.jsx";
 import ÜberUns from "./components/pages/AboutUs/Über_uns.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
