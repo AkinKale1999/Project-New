@@ -160,7 +160,7 @@ function Register() {
             <div>
               <div id="Navigate_To_LoginDIV">
                 <Link to={"/Login"} id="Sign_In" style={{ color: "#007bff", textDecoration: "none" }}>
-                  Du hast bereits ein Konto ? Logge dich ein
+                  Bereits Registriert ? Zum Login
                 </Link>
               </div>
             </div>
