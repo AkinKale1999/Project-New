@@ -90,14 +90,14 @@ function Register() {
 
   return (
     <>
-      <div id="Main_Container_Registry">
-        <div id="Registry_Container">
+      <div id="MainContainerRegistry">
+        <div id="RegistryContainer">
           <form action="" onSubmit={handleRegister}>
-            <h1 id="Registry_Title">Registrierung</h1>
+            <h1 style={{ color: "#007bff", textAlign: "center" }}>Registrierung</h1>
             <input
               type="text"
               name="name"
-              className="input_registry"
+              className="InputRegistry"
               placeholder="Vorname*"
               value={Name}
               onChange={(e) => setName(e.target.value)}
@@ -105,7 +105,7 @@ function Register() {
             <input
               type="text"
               name="family_name"
-              className="input_registry"
+              className="InputRegistry"
               placeholder="Nachname*"
               value={Family_Name}
               onChange={(e) => setFamilyName(e.target.value)}
@@ -113,7 +113,7 @@ function Register() {
             <input
               type="text"
               name="Username"
-              className="input_registry"
+              className="InputRegistry"
               placeholder="Username*"
               value={Username}
               onChange={(e) => setUsername(e.target.value)}
@@ -121,7 +121,7 @@ function Register() {
             <input
               type="text"
               name="Email"
-              className="input_registry"
+              className="InputRegistry"
               placeholder="E-mail"
               value={Email}
               onChange={(e) => setEmail(e.target.value)}
@@ -130,36 +130,37 @@ function Register() {
               <input
                 type={ShowPassword}
                 name="password"
-                className="input_registry"
+                className="InputRegistry"
                 placeholder="Passwort*"
                 value={Password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
-            <div id="password_container">
+            <div>
               <input
                 type={ShowPassword}
                 name="confirm password"
-                className="input_registry"
+                className="InputRegistry"
                 placeholder="Passwort Bestätigen*"
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </div>
             <div>
-              <button id="Submit_Btn" ref={messageExist}>
+              <button id="SubmitBtn" ref={messageExist}>
                 Absenden
               </button>
             </div>
 
             <div>
-              <p id="error_message">{errormessage}</p>
+              <p id="errorMessage">{errormessage}</p>
             </div>
             <div>
-              <div id="Navigate_To_LoginDIV">
-                <Link to={"/Login"} id="Sign_In" style={{ color: "#007bff", textDecoration: "none" }}>
+              <div style={{ textAlign: "center" }}>
+                <Link to={"/Login"} style={{ color: "#007bff", textDecoration: "none" }}>
                   Bereits Registriert ? Zum Login
                 </Link>
+
               </div>
             </div>
           </form>

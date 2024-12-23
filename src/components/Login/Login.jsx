@@ -73,7 +73,7 @@ function Login() {
       <div id="Main_Container_Login" ref={Main_Container}>
         <div id="Login_Container">
           <form action="/login" id="Login_Form" onSubmit={handleLogin}>
-            <h1 id="Login_Title">Anmelden</h1>
+            <h1 style={{ margin: "0", color: "#007bff" }}>Anmelden</h1>
             <input
               type="text"
               id="User_Login"
@@ -88,20 +88,24 @@ function Login() {
               value={Password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <div>
-              <Link to={"/Password-Vergessen"} style={{ color: "#007bff", textDecoration: "none", fontSize: "0.8rem", fontWeight: "900" }}>Password vergessen?</Link>
-            </div>
-            <div>
-              <Link to={"/Registrierung"} style={{ color: "#007bff", textDecoration: "none", fontSize: "0.8rem", fontWeight: "900" }}>Kein Account? Hier zum Registrieren</Link>
-            </div>
+
             <input id="LoginBtn" type="submit" value={buttonText} disabled={isLoading} />
             {/* disabled={isLoading} bedeutet das wenn isLoading = true ist das man mit dem Button nicht 
             Interagieren kann, wenn er false ist dann schon*/}
 
             {(Errormessage || Successmessage) && <div id="MessageBackend">{Errormessage || Successmessage}</div>}
+
+            <div>
+              <Link style={{ textDecoration: "none", color: "#007bff" }} to={"/Password-Vergessen"}>Password vergessen?</Link>
+            </div>
+
           </form >
-        </div >
-      </div >
+
+        </div>
+        <hr id="BreakPoint" />
+        <div id="RegisterLink">
+          <Link style={{ textDecoration: "none", color: "#007bff" }} to={"/Registrierung"}>Kein Account? Hier zum Registrieren</Link></div>
+      </div>
     </>
   );
 }
