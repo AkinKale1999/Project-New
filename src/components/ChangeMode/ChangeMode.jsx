@@ -16,6 +16,7 @@ export default function ChangeMode() {
 
         // Setze die Hintergrundfarbe von body, header und footer
         document.body.style.backgroundColor = newMode ? "#000" : "#fff";
+        document.body.style.color = newMode ? "#fff" : "#000";
 
         const header = document.getElementById("navbarDIV");
         const footer = document.getElementById("Footer");

@@ -7,9 +7,10 @@ import Register from "./components/Registry/Registry.jsx";
 import DataProtection from "./components/pages/Data_Protection/Data_Protection.jsx";
 import AGB from "./components/pages/AGB/AGB.jsx";
 import TermsConditions from "./components/pages/Terms_Conditions/Terms_Conditions.jsx";
-import "./App.css";
 import Account from "./components/Account/Account.jsx";
 import Footer from "./components/Footer/Footer.jsx"
+import "./App.css";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword.jsx";
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
         <Route path="/AGB" element={<AGB />} />
 
         <Route path="/Impressum" element={<TermsConditions />} />
+
+        <Route path="/Password-Vergessen" element={<ForgotPassword />} />
 
       </Routes>
       <Footer />
