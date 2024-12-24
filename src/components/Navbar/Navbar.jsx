@@ -1,5 +1,5 @@
-import ShoppingCart from "../Shopping-Cart/Shopping_Cart";
-import WishList from "../Wish-List/Wish_List";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import WishList from "../WishList/WishList";
 import Burgermenu from "../BurgerMenu/Burgermenu";
 import Usericon from "../UserIcon/UserIcon";
 import ChangeMode from "../ChangeMode/ChangeMode";

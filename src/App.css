@@ -22,7 +22,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #fff;
   --color-dark: #000;
   width: 100%;
   height: auto;
@@ -84,30 +83,21 @@ body {
   height: 53px;
   background-color: #007bff;
   width: 100%;
+  color: #fff;
 }
 
 #navbar {
   display: var(--display--flex);
   align-items: center;
   height: 100%;
-  fill: rgba(255, 255, 255, 0.9);
 }
 
 .NavbarElements {
-  cursor: var(--cursor-pointer);
   display: var(--display--flex);
+  cursor: var(--cursor-pointer);
   margin: var(--margin);
   padding: var(--padding);
   margin-right: var(--margin-right);
-  width: 25px;
-}
-
-#UserIcon {
-  width: 19px;
-}
-
-#WishList {
-  width: 30px;
 }
 
 /* -------------------------- */

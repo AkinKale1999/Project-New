@@ -28,7 +28,7 @@ function Login() {
     setIsLoading(true)
     try {
       const response = await axios.post(
-        "http://localhost:5000/login",
+        `${process.env.BACKEND_URL}/login`,
         { Username: trimmedUsername, Password: trimmedPasswort },
         { withCredentials: true }
         // WICHTIG: Cookies übermitteln
@@ -48,7 +48,7 @@ function Login() {
     if (isLoggedIn) {
       const fetchProtectedData = async () => {
         try {
-          const response = await axios.get("http://localhost:5000/protected", {
+          const response = await axios.get(`${process.env.BACKEND_URL}/protected`, {
             withCredentials: true,
           });
           if (response.status === 200) {

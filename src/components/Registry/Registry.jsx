@@ -60,7 +60,8 @@ function Register() {
     }
 
     try {
-      let response = await axios.post("http://localhost:5000/register", {
+      let response = await axios.post(`${process.env.BACKEND.URL}/register`, {
+
         Name,
         Family_Name,
         Username,
@@ -80,7 +81,7 @@ function Register() {
       }, 3000);
     } catch (error) {
       console.log(error);
-      setErrormessage(error.response.data.message)
+      setErrormessage(error)
       // hier kommt Benutzername existiert als Nachricht
       // res.status(400) in /register(Backend)
       return;
