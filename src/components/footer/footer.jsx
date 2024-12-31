@@ -1,34 +1,32 @@
 import { useNavigate } from "react-router-dom";
 
 function Footer() {
-  const Navigate_Impressum = useNavigate();
-  const Navigate_AGB = useNavigate();
-  const Navigate_Datenschutz = useNavigate();
+  const navigate = useNavigate();
 
   function NavigateToImpressum() {
-    Navigate_Impressum("/Impressum");
+    navigate("/impressum");
   }
 
   function NavigateToAGB() {
-    Navigate_AGB("/AGB");
+    navigate("/agb");
   }
 
   function NavigateToDatenschutz() {
-    Navigate_Datenschutz("/Datenschutz");
+    navigate("/datenschutz");
   }
 
   return (
     <>
       <div id="Footer">
-        <li className="Footer_Elements" onClick={NavigateToImpressum}>
+        <li className="FooterElements" onClick={NavigateToImpressum}>
           Impressum
         </li>
 
-        <li className="Footer_Elements" onClick={NavigateToAGB}>
+        <li className="FooterElements" onClick={NavigateToAGB}>
           AGB
         </li>
 
-        <li className="Footer_Elements" onClick={NavigateToDatenschutz}>
+        <li className="FooterElements" onClick={NavigateToDatenschutz}>
           Datenschutz
         </li>
       </div>

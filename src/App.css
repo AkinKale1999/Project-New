@@ -16,15 +16,15 @@
 }
 
 html,
-body {
+body,
+#root {
   scrollbar-width: auto;
   scrollbar-color: rgb(72, 230, 235) black;
   margin: 0;
   padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  --color-dark: #000;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 #MainContainerRegistry {
@@ -43,20 +43,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
 
 }
 
 .InputRegistry {
-  padding: 8px;
+  padding: 12px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 93%;
+  width: 92%;
 }
 
 #SubmitBtn {
-  padding: 10px;
+  padding: 12px;
   background-color: #007bff;
   color: var(--color);
   font-size: var(--font-size);
@@ -92,6 +91,7 @@ body {
   display: var(--display--flex);
   align-items: center;
   height: 100%;
+  border-bottom: 1px solid #ffffff;
 }
 
 .NavbarElements {
@@ -104,7 +104,7 @@ body {
 
 /* -------------------------- */
 
-#Main_Container_Login {
+#MainContainerLogin {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,18 +113,17 @@ body {
   min-height: 820px;
 }
 
-#Login_Container {
+#LoginContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
   width: 300px;
-  margin-top: 120px;
-  border-radius: 10px;
+  margin-top: 40px;
 }
 
-#Login_Form {
+#LoginForm {
   flex-direction: column;
   display: var(--display--flex);
   justify-content: center;
@@ -134,16 +133,17 @@ body {
   width: 100%;
 }
 
-#User_Login,
-#Password_Login {
-  width: var(--width);
-  padding: 5px;
+#UserLogin,
+#PasswordLogin {
+  width: 270px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  outline: none;
 }
 
 #LoginBtn {
-  width: 100%;
+  width: 300px;
   font-size: var(--font-size);
   padding: 12px;
   border: none;
@@ -188,7 +188,6 @@ body {
 
 #forgotPwdForm {
   padding: 30px;
-  border-radius: 8px;
   box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
   max-width: 400px;
   text-align: center;
@@ -200,6 +199,7 @@ body {
   margin-top: 25px;
   cursor: pointer;
   border: none;
+  font-weight: 600;
 }
 
 #ContainerSuccessMessagePWDForgot {
@@ -264,14 +264,16 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid #fff;
 
 }
 
-.Footer_Elements {
+.FooterElements {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  width: fit-content;
   height: 100%;
   cursor: var(--cursor-pointer);
   color: #fff;
@@ -389,60 +391,43 @@ body {
 
 /* ------------------------------ */
 
-.profile-container {
-  max-width: 100%;
-  width: 100%;
-  min-width: 100%;
-  margin: 50px auto;
-  text-align: center;
+.profileContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
-/* Tabs-Styling */
-.profile-tabs {
+.profileTabs {
   display: var(--display--flex);
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 20px;
+  width: 100%;
+  margin-top: 60px;
 }
 
 .tab {
   padding: 10px 20px;
   border: none;
   background: none;
-  font-size: 1rem;
   cursor: var(--cursor-pointer);
+  font-size: 1rem;
 }
 
 .tab:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
-.tab.active {
-  border-bottom: 2px solid black;
-}
-
-/* Profil-Styling */
-.profile-details {
-  height: 650px;
+.profileDetails {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.profile-image {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-
-.username {
-  color: gray;
-}
-
-.profile-text {
-  margin: 10px 0;
-}
 
 #signout {
   color: #007bff;

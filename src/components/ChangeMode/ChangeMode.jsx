@@ -6,29 +6,50 @@ export default function ChangeMode() {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        const bodyColor = window.getComputedStyle(document.body).backgroundColor;
-        setIsDarkMode(bodyColor === "rgb(0, 0, 0)");
-    }, []);
+        // Lese gespeicherte Werte aus dem localStorage
+        const savedBgColor = localStorage.getItem("bgColor") || "#fff";
+        const savedTextColor = localStorage.getItem("textColor") || "#000";
+        const savedHdColor = localStorage.getItem("hdColor") || "#007bff";
+        const savedFtColor = localStorage.getItem("ftColor") || "#007bff";
+
+        // Wende die gespeicherten Werte an
+        document.body.style.backgroundColor = savedBgColor;
+        document.body.style.color = savedTextColor;
+
+        const header = document.getElementById("navbarDIV");
+        const footer = document.getElementById("Footer");
+
+        if (header) header.style.backgroundColor = savedHdColor;
+        if (footer) footer.style.backgroundColor = savedFtColor;
+
+        // Prüfe, ob der Modus Dark Mode ist
+        setIsDarkMode(savedBgColor === "#000");
+    }, []); // Nur beim ersten Rendern ausführen
 
     const toggleMode = () => {
         const newMode = !isDarkMode;
         setIsDarkMode(newMode);
 
-        // Setze die Hintergrundfarbe von body, header und footer
-        document.body.style.backgroundColor = newMode ? "#000" : "#fff";
-        document.body.style.color = newMode ? "#fff" : "#000";
+        const newBgColor = newMode ? "#000" : "#fff";
+        const newTextColor = newMode ? "#fff" : "#000";
+        const newHdColor = newMode ? "#000" : "#007bff";
+        const newFtColor = newMode ? "#000" : "#007bff";
+
+        // Speichere die neuen Farben im localStorage
+        localStorage.setItem("bgColor", newBgColor);
+        localStorage.setItem("textColor", newTextColor);
+        localStorage.setItem("hdColor", newHdColor);
+        localStorage.setItem("ftColor", newFtColor);
+
+        // Wende die neuen Farben an
+        document.body.style.backgroundColor = newBgColor;
+        document.body.style.color = newTextColor;
 
         const header = document.getElementById("navbarDIV");
         const footer = document.getElementById("Footer");
 
-        // Setze die Hintergrundfarbe des Headers und Footers basierend auf dem Modus
-        if (header) {
-            header.style.backgroundColor = newMode ? "#000" : "#007bff";
-        }
-
-        if (footer) {
-            footer.style.backgroundColor = newMode ? "#000" : "#007bff";
-        }
+        if (header) header.style.backgroundColor = newHdColor;
+        if (footer) footer.style.backgroundColor = newFtColor;
     };
 
     return (

@@ -5,7 +5,7 @@ export default function UserIcon() {
   const navigate = useNavigate();
 
   function NavigateToLogin() {
-    navigate("/login")
+    navigate("/app/login")
   }
 
   return (

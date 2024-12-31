@@ -158,7 +158,7 @@ function Register() {
             </div>
             <div>
               <div style={{ textAlign: "center" }}>
-                <Link to={"/Login"} style={{ color: "#007bff", textDecoration: "none" }}>
+                <Link to={"/app/login"} style={{ color: "#007bff", textDecoration: "none" }}>
                   Bereits Registriert ? Zum Login
                 </Link>
 

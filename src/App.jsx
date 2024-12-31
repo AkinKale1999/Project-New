@@ -9,8 +9,10 @@ import AGB from "./components/pages/AGB/AGB.jsx";
 import TermsConditions from "./components/pages/Terms_Conditions/Terms_Conditions.jsx";
 import Account from "./components/Account/Account.jsx";
 import Footer from "./components/Footer/Footer.jsx"
-import "./App.css";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword.jsx";
+import WishList from "./components/WishList/WishList.jsx";
+import ShoppingCart from "./components/ShoppingCart/ShoppingCart.jsx";
+import "./App.css";
 
 function App() {
 
@@ -19,31 +21,34 @@ function App() {
       <Navbar />
       <Routes>
 
-        <Route path="/Account" element={
+        <Route path="/app/account" element={
           <Account />
         } />
 
-        <Route path="/login" element={<Login />} />
+        <Route path="/app/login" element={<Login />} />
 
-        <Route path="/Registrierung" element={<Register />} />
+        <Route path="/app/registrierung" element={<Register />} />
 
-        <Route path="/Kontakt" element={<Contact />} />
+        <Route path="/kontakt" element={<Contact />} />
 
-        <Route path="/Über-uns" element={<ÜberUns />} />
+        <Route path="/über-uns" element={<ÜberUns />} />
 
-        <Route path="/Datenschutz" element={<DataProtection />} />
+        <Route path="/datenschutz" element={<DataProtection />} />
 
-        <Route path="/AGB" element={<AGB />} />
+        <Route path="/agb" element={<AGB />} />
 
-        <Route path="/Impressum" element={<TermsConditions />} />
+        <Route path="/impressum" element={<TermsConditions />} />
 
-        <Route path="/Password-Vergessen" element={<ForgotPassword />} />
+        <Route path="/app/password-vergessen" element={<ForgotPassword />} />
+
+        <Route path="warenkorb" element={<ShoppingCart />} />
+
+        <Route path="wunschliste" element={<WishList />} />
 
       </Routes>
       <Footer />
     </BrowserRouter>
   )
 }
-
 
 export default App;

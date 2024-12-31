@@ -1,10 +1,14 @@
-import ShoppingCart from "../ShoppingCart/ShoppingCart";
-import WishList from "../WishList/WishList";
 import Burgermenu from "../BurgerMenu/Burgermenu";
 import Usericon from "../UserIcon/UserIcon";
 import ChangeMode from "../ChangeMode/ChangeMode";
+import { useNavigate } from "react-router-dom";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
-function Navbar() {
+
+export default function Navbar() {
+
+  const navigate = useNavigate()
   return (
     <>
       <div id="navbarDIV">
@@ -15,10 +19,16 @@ function Navbar() {
           <ChangeMode />
           {/* ------------------------------------ */}
 
-          <WishList />
+          <button style={{ margin: "0", padding: "0", backgroundColor: "inherit", border: "none", color: "inherit" }} onClick={() => navigate("/wunschliste")}>
+            <FavoriteIcon className="NavbarElements" />
+
+          </button>
           {/* ------------------------------------ */}
 
-          <ShoppingCart />
+          <button style={{ margin: "0", padding: "0", backgroundColor: "inherit", border: "none", color: "inherit" }} onClick={() => navigate("/warenkorb")}>
+            <ShoppingBagIcon className="NavbarElements" />
+          </button>
+
           {/* ------------------------------------ */}
 
           <Usericon />
@@ -28,5 +38,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;

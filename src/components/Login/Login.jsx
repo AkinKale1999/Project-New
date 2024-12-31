@@ -70,20 +70,20 @@ function Login() {
 
   return (
     <>
-      <div id="Main_Container_Login" ref={Main_Container}>
-        <div id="Login_Container">
-          <form action="/login" id="Login_Form" onSubmit={handleLogin}>
+      <div id="MainContainerLogin" ref={Main_Container}>
+        <div id="LoginContainer">
+          <form action="/login" id="LoginForm" onSubmit={handleLogin}>
             <h1 style={{ margin: "0", color: "#007bff" }}>Anmelden</h1>
             <input
               type="text"
-              id="User_Login"
+              id="UserLogin"
               placeholder="Email *"
               value={Username}
               onChange={(e) => setUsername(e.target.value)}
             />
             <input
               type="password"
-              id="Password_Login"
+              id="PasswordLogin"
               placeholder="Password *"
               value={Password}
               onChange={(e) => setPassword(e.target.value)}
@@ -96,7 +96,7 @@ function Login() {
             {(Errormessage || Successmessage) && <div id="MessageBackend">{Errormessage || Successmessage}</div>}
 
             <div>
-              <Link style={{ textDecoration: "none", color: "#007bff" }} to={"/Password-Vergessen"}>Password vergessen?</Link>
+              <Link style={{ textDecoration: "none", color: "#007bff" }} to={"/app/password-vergessen"}>Password vergessen?</Link>
             </div>
 
           </form >
@@ -104,7 +104,7 @@ function Login() {
         </div>
         <hr id="BreakPoint" />
         <div id="RegisterLink">
-          <Link style={{ textDecoration: "none", color: "#007bff" }} to={"/Registrierung"}>Kein Account? Hier zum Registrieren</Link></div>
+          <Link style={{ textDecoration: "none", color: "#007bff" }} to={"/app/registrierung"}>Kein Account? Hier zum Registrieren</Link></div>
       </div>
     </>
   );

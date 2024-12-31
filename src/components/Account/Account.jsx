@@ -1,30 +1,31 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Account() {
   function SignOut() {
     document.cookie = "token=; path=/; max-age=0";
-    // Setzt den Cookie-Wert auf leer, setzt path auf '/' und max-age auf 0, um den Cookie zu löschen
   }
+
+  const [SelectPic, setSelectPic] = useState()
 
 
   const InputFile = "file";
 
   return (
-    <div className="profile-container">
-      <nav className="profile-tabs">
-        <Link to={"/Account"}>
-          <button className="tab active">Dashboard</button>
+    <div className="profileContainer">
+      <nav className="profileTabs">
+        <Link to={"/app/account"}>
+          <button className="tab">Dashboard</button>
         </Link>
-        <Link to={"/Account/Profil-Details"}>
+        <Link to={"/app/account/profil-details"}>
           <button className="tab">Mein Profil</button>
         </Link>
-        <Link to={"/Account/Passwort-Ändern"}>
+        <Link to={"/app/account/passwort-ändern"}>
           <button className="tab">Password ändern</button>
         </Link>
       </nav>
 
-      <div className="profile-details">
+      <div className="profileDetails">
         <input type={InputFile} name="Profil-Pic" id="" />
 
         <h2>Profil Name</h2>

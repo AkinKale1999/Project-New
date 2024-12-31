@@ -33,7 +33,7 @@ export default function ForgotPassword() {
         <>
             <div id="ContainerPwdForgot">
                 <form id="forgotPwdForm" onSubmit={handleSubmit}>
-                    <h1 style={{ fontSize: "24px", marginBottom: "20px" }}>
+                    <h1 style={{ fontSize: "24px", marginBottom: "20px", color: "#007bff" }}>
                         Passwort vergessen
                     </h1>
 
@@ -61,9 +61,9 @@ export default function ForgotPassword() {
                     <button type="submit" id="SubmitBtnPWDForgot">
                         E-Mail senden
                     </button>
-                    
+
                     <button
-                        onClick={() => navigate("/Login")}
+                        onClick={() => navigate("/app/login")}
                         id="BackToLoginBtn"
                     >
                         Zurück zum Login?
