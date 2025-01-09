@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
 
 export default function ForgotPassword() {
     const navigate = useNavigate();
@@ -42,12 +43,13 @@ export default function ForgotPassword() {
                     )}
 
                     {errorMessage && (
-                        <div id="ContainerErrorMessagePWDForgot">{errorMessage}</div>
+                        <div id="ContainerSuccessMessagePWDForgot ContainerErrorMessagePWDForgot">{errorMessage}</div>
                     )}
 
                     <label htmlFor="email" id="LabelPWDForgot">
                         E-Mail-Adresse
                     </label>
+
                     <input
                         type="email"
                         id="EmailPWDForgot"
@@ -58,16 +60,9 @@ export default function ForgotPassword() {
                         onChange={(e) => setEmail(e.target.value)}
                     />
 
-                    <button type="submit" id="SubmitBtnPWDForgot">
-                        E-Mail senden
-                    </button>
+                    <Button btnType={"submit"} text={"E-Mail senden"} />
 
-                    <button
-                        onClick={() => navigate("/app/login")}
-                        id="BackToLoginBtn"
-                    >
-                        Zurück zum Login?
-                    </button>
+                    <Button onClick={() => navigate("/app/login")} text={"Zurück zum Login?"} />
                 </form>
 
             </div>

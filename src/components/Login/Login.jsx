@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
 
 function Login() {
   const [Username, setUsername] = useState("");
@@ -89,7 +90,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <input id="LoginBtn" type="submit" value={buttonText} disabled={isLoading} />
+            <Button btnType={"submit"} className={""} text={"Login"} />
             {/* disabled={isLoading} bedeutet das wenn isLoading = true ist das man mit dem Button nicht 
             Interagieren kann, wenn er false ist dann schon*/}
 
