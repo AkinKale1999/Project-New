@@ -20,7 +20,7 @@ body,
 #root {
   scrollbar-width: auto;
   scrollbar-color: rgb(72, 230, 235) black;
-  margin: 0;
+  margin: var(--margin);
   padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: var(--width);
@@ -83,14 +83,15 @@ body,
   left: 0;
   height: 53px;
   background-color: #007bff;
-  width: 100%;
+  width: var(--width);
+  ;
   color: #fff;
 }
 
 #navbar {
   display: var(--display--flex);
   align-items: var(--align-items);
-  height: 100%;
+  height: var(--height);
   border-bottom: 1px solid #ffffff;
 }
 
@@ -109,7 +110,7 @@ body,
   justify-content: var(--justify-content);
   align-items: var(--align-items);
   flex-direction: column;
-  width: 100%;
+  width: var(--width);
   min-height: 820px;
 }
 
@@ -130,7 +131,8 @@ body,
   justify-content: var(--justify-content);
   gap: 30px;
   height: 300px;
-  width: 100%;
+  width: var(--width);
+  ;
 }
 
 #UserLogin,
@@ -144,11 +146,16 @@ body,
 
 
 /* --------------------DEFAULT BUTTON------------------------------- */
+
+.DefaultContainerBtn {
+  width: var(--width);
+}
+
 .button--default {
   display: var(--display--flex);
   justify-content: var(--justify-content);
   align-items: var(--align-items);
-  width: 100%;
+  width: var(--width);
   font-size: var(--font-size);
   padding: 12px;
   border: none;
@@ -165,10 +172,12 @@ body,
 
 /* --------------------INDIVIDUELL DESIGNED BUTTON------------------------------- */
 
-#ForgotPwdBtn {
-  margin-top: 20px;
-  justify-content: flex-start;
+#ForgotPwdBtnGoBack {
+  position: relative;
+  top: 125px;
+  font-size: 1rem;
   width: fit-content;
+  border-radius: 0px;
 }
 
 /* --------------------INDIVIDUELL DESIGNED BUTTON------------------------------- */
@@ -196,16 +205,22 @@ body,
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
+  flex-direction: var(--flex-direction);
   height: var(--height);
   width: var(--width);
-  flex-direction: var(--flex-direction);
 }
 
 #forgotPwdForm {
   padding: 30px;
   box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
   max-width: 400px;
-  text-align: center;
+  width: var(--width);
+  max-height: 250px;
+  height: var(--height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #ContainerSuccessMessagePWDForgot {
@@ -220,16 +235,18 @@ body,
 }
 
 #LabelPWDForgot {
-  display: block;
   text-align: left;
-  font-size: 16px;
+  width: var(--width);
+  ;
+  font-size: 1.2rem;
   margin-bottom: 8px;
+  color: #555;
 }
 
 #EmailPWDForgot {
-  width: 100%;
+  width: var(--width);
   padding: 10px;
-  font-size: 16px;
+  font-size: 1.1rem;
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -248,7 +265,7 @@ body,
   display: var(--display--flex);
   background-color: #007bff;
   height: 53px;
-  width: 100%;
+  width: var(--width);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -262,7 +279,7 @@ body,
   display: var(--display--flex);
   align-items: var(--align-items);
   width: fit-content;
-  height: 100%;
+  height: var(--height);
   cursor: var(--cursor-pointer);
   color: #fff;
 }
@@ -270,7 +287,7 @@ body,
 /* -------------------------------------- */
 
 #burgermenuDIV {
-  width: 100%;
+  width: var(--width);
 }
 
 #burgermenu {
@@ -284,9 +301,9 @@ body,
   background-color: rgb(229, 229, 229, 0.5);
   backdrop-filter: blur(5px);
   min-width: 250px;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
+  height: var(--height);
+  min-height: var(--height);
+  max-height: var(--height);
   position: fixed;
   z-index: 999;
   top: 0;
@@ -378,7 +395,7 @@ body,
 /* ------------------------------ */
 
 .profileContainer {
-  height: 100%;
+  height: var(--height);
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: flex-start;
@@ -390,7 +407,7 @@ body,
   justify-content: space-evenly;
   align-items: var(--align-items);
   border-bottom: 1px solid #ccc;
-  width: 100%;
+  width: var(--width);
   margin-top: 60px;
 }
 
@@ -407,7 +424,7 @@ body,
 }
 
 .profileDetails {
-  height: 100%;
+  height: var(--height);
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
@@ -419,6 +436,6 @@ body,
   color: #007bff;
   text-decoration: none;
   cursor: var(--cursor-pointer);
-  margin: 0;
+  margin: var(--margin);
   padding: 0;
 }
