@@ -62,9 +62,9 @@ export default function ForgotPassword() {
 
                     <Button btnType={"submit"} text={"E-Mail senden"} />
 
-                    <Button onClick={() => navigate("/app/login")} text={"Zurück zum Login?"} />
                 </form>
 
+                <Button onClick={() => navigate("/app/login")} id={"ForgotPwdBtn"} text={"←"} />
             </div>
         </>
     );
