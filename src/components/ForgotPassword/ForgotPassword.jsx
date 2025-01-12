@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
+import InputFields from "../InputFields/InputFields";
 
 export default function ForgotPassword() {
     const navigate = useNavigate();
@@ -52,15 +53,8 @@ export default function ForgotPassword() {
                         E-Mail-Adresse
                     </label>
 
-                    <input
-                        type="email"
-                        id="EmailPWDForgot"
-                        name="email"
-                        required
-                        placeholder="Geben Sie Ihre E-Mail-Adresse ein"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
+
+                    <InputFields type={"email"} id={"EmailPWDForgot"} name={"email"} placeholder={"Geben Sie Ihre E-Mail-Adresse ein"} value={email} onChange={(e) => setEmail(e.target.value)} required />
 
                     <Button btnType={"submit"} text={"E-Mail senden"} />
                 </form>

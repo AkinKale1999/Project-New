@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
+import InputFields from "../InputFields/InputFields"
+import Button from "../Button/Button"
 
 function Register() {
   const [Name, setName] = useState("");
@@ -95,63 +97,20 @@ function Register() {
         <div id="RegistryContainer">
           <form action="" onSubmit={handleRegister}>
             <h1 style={{ color: "#007bff", textAlign: "center" }}>Registrierung</h1>
-            <input
-              type="text"
-              name="name"
-              className="InputRegistry"
-              placeholder="Vorname*"
-              value={Name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <input
-              type="text"
-              name="family_name"
-              className="InputRegistry"
-              placeholder="Nachname*"
-              value={Family_Name}
-              onChange={(e) => setFamilyName(e.target.value)}
-            />
-            <input
-              type="text"
-              name="Username"
-              className="InputRegistry"
-              placeholder="Username*"
-              value={Username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <input
-              type="text"
-              name="Email"
-              className="InputRegistry"
-              placeholder="E-mail"
-              value={Email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <div id="password_container">
-              <input
-                type={ShowPassword}
-                name="password"
-                className="InputRegistry"
-                placeholder="Passwort*"
-                value={Password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
 
-            <div>
-              <input
-                type={ShowPassword}
-                name="confirm password"
-                className="InputRegistry"
-                placeholder="Passwort Bestätigen*"
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-            </div>
-            <div>
-              <button id="SubmitBtn" ref={messageExist}>
-                Absenden
-              </button>
-            </div>
+            <InputFields type={"text"} name={"name"} className={"InputRegistry"} placeholder={"Vorname *"} value={Name} onChange={(e) => setName(e.target.value)} />
+
+            <InputFields type={"text"} name={"family_name"} className={"InputRegistry"} placeholder={"Nachname *"} value={Family_Name} onChange={(e) => setFamilyName(e.target.value)} />
+
+            <InputFields type={"text"} name={"Username"} className={"InputRegistry"} placeholder={"Username *"} value={Username} onChange={(e) => setUsername(e.target.value)} />
+
+            <InputFields type={"email"} name={"email"} className={"InputRegistry"} placeholder={"E-mail *"} value={Email} onChange={(e) => setEmail(e.target.value)} />
+
+            <InputFields type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} />
+
+            <InputFields type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+
+            <Button type={"submit"} ref={messageExist} />
 
             <div>
               <p id="errorMessage">{errormessage}</p>

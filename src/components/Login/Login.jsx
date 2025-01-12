@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
+import InputFields from "../InputFields/InputFields";
 
 function Login() {
   const [Username, setUsername] = useState("");
@@ -75,20 +76,11 @@ function Login() {
         <div id="LoginContainer">
           <form action="/login" id="LoginForm" onSubmit={handleLogin}>
             <h1 style={{ margin: "0", color: "#007bff" }}>Anmelden</h1>
-            <input
-              type="text"
-              id="UserLogin"
-              placeholder="Email *"
-              value={Username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <input
-              type="password"
-              id="PasswordLogin"
-              placeholder="Password *"
-              value={Password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+
+
+            <InputFields type={"text"} id={"UserLogin"} placeholder={"Email *"} value={Username} onChange={(e) => setUsername(e.target.value)} required={"required"} />
+
+            <InputFields type={"password"} id={"PasswordLogin"} placeholder={"Password *"} value={Password} onChange={(e) => setPassword(e.target.value)} required={"required"} />
 
             <Button btnType={"submit"} className={""} text={"Login"} disabled={buttonText} />
             {/* disabled={buttonText} bedeutet das wenn buttonText = true ist das man mit dem Button nicht 
