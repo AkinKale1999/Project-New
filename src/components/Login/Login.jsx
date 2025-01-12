@@ -90,16 +90,17 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Button btnType={"submit"} className={""} text={"Login"} />
-            {/* disabled={isLoading} bedeutet das wenn isLoading = true ist das man mit dem Button nicht 
+            <Button btnType={"submit"} className={""} text={"Login"} disabled={buttonText} />
+            {/* disabled={buttonText} bedeutet das wenn buttonText = true ist das man mit dem Button nicht 
             Interagieren kann, wenn er false ist dann schon*/}
 
-            {(Errormessage || Successmessage) && <div id="MessageBackend">{Errormessage || Successmessage}</div>}
-
             <div>
-              <Link style={{ textDecoration: "none", color: "#007bff" }} to={"/app/password-vergessen"}>Password vergessen?</Link>
+              <Link style={{ textDecoration: "none", color: "#007bff", }} to={"/app/password-vergessen"}>Password vergessen?</Link>
             </div>
 
+            {(Errormessage) && <div className="ResponseMessage" id="ErrorMessageBackend">{Errormessage}</div>}
+
+            {(Successmessage) && <div className="ResponseMessage" id="SuccessMessageBackend">{Successmessage}</div>}
           </form >
 
         </div>

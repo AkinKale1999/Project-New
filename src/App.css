@@ -18,8 +18,6 @@
 html,
 body,
 #root {
-  scrollbar-width: auto;
-  scrollbar-color: rgb(72, 230, 235) black;
   margin: var(--margin);
   padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -32,7 +30,8 @@ body,
   justify-content: var(--justify-content);
   align-items: var(--align-items);
   width: var(--width);
-  height: 870px;
+  height: 600px;
+  min-height: 100%;
 }
 
 #RegistryContainer {
@@ -43,7 +42,6 @@ body,
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
-
 }
 
 .InputRegistry {
@@ -78,13 +76,9 @@ body,
 
 /* Navbar*/
 #navbarDIV {
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 53px;
   background-color: #007bff;
   width: var(--width);
-  ;
   color: #fff;
 }
 
@@ -111,7 +105,8 @@ body,
   align-items: var(--align-items);
   flex-direction: column;
   width: var(--width);
-  min-height: 820px;
+  height: 600px;
+  min-height: 100%;
 }
 
 #LoginContainer {
@@ -174,14 +169,13 @@ body,
 
 #ForgotPwdBtnGoBack {
   position: relative;
-  top: 125px;
+  top: 80px;
   font-size: 1rem;
   width: fit-content;
   border-radius: 0px;
 }
 
 /* --------------------INDIVIDUELL DESIGNED BUTTON------------------------------- */
-
 
 #BreakPoint {
   color: black;
@@ -208,6 +202,8 @@ body,
   flex-direction: var(--flex-direction);
   height: var(--height);
   width: var(--width);
+  height: 600px;
+  min-height: 100%;
 }
 
 #forgotPwdForm {
@@ -254,8 +250,21 @@ body,
 
 /* -------------------------- */
 
-#MessageBackend {
+.ResponseMessage {
+  position: relative;
+  top: -15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ErrorMessageBackend {
   color: red;
+}
+
+#SuccessMessageBackend {
+  color: green;
 }
 
 /* -------------------------- */
@@ -264,13 +273,9 @@ body,
   background-color: #007bff;
   height: 53px;
   width: var(--width);
-  position: fixed;
-  bottom: 0;
-  left: 0;
   justify-content: space-evenly;
   align-items: var(--align-items);
   border-top: 1px solid #fff;
-
 }
 
 .FooterElements {
