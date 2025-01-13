@@ -37,7 +37,7 @@ export default function ForgotPassword() {
             <div id="ContainerPwdForgot">
                 <form id="forgotPwdForm" onSubmit={handleSubmit}>
 
-                    <h1 style={{ fontSize: "24px", marginBottom: "20px", color: "#007bff" }}>
+                    <h1 className="forgotPwdHeader">
                         Passwort vergessen
                     </h1>
 

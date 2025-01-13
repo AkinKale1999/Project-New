@@ -1,14 +1,13 @@
 import Burgermenu from "../BurgerMenu/Burgermenu";
 import Usericon from "../UserIcon/UserIcon";
 import ChangeMode from "../ChangeMode/ChangeMode";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 export default function Navbar() {
 
-  const navigate = useNavigate()
   return (
     <>
       <div id="navbarDIV">
@@ -19,15 +18,15 @@ export default function Navbar() {
           <ChangeMode />
           {/* ------------------------------------ */}
 
-          <button style={{ margin: "0", padding: "0", backgroundColor: "inherit", border: "none", color: "inherit" }} onClick={() => navigate("/wunschliste")}>
+          <Link className="NavbarIconLinks" to="/wunschliste" >
             <FavoriteIcon className="NavbarElements" />
+          </Link>
 
-          </button>
           {/* ------------------------------------ */}
 
-          <button style={{ margin: "0", padding: "0", backgroundColor: "inherit", border: "none", color: "inherit" }} onClick={() => navigate("/warenkorb")}>
+          <Link className="NavbarIconLinks" to="/Warenkorb" >
             <ShoppingBagIcon className="NavbarElements" />
-          </button>
+          </Link>
 
           {/* ------------------------------------ */}
 

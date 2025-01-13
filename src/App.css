@@ -1,3 +1,9 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --font-size: 1rem;
   --height: 100%;
@@ -20,7 +26,6 @@ body,
 #root {
   margin: var(--margin);
   padding: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: var(--width);
   height: var(--height);
 }
@@ -52,23 +57,7 @@ body,
   width: 92%;
 }
 
-#SubmitBtn {
-  padding: 12px;
-  background-color: #007bff;
-  color: var(--color);
-  font-size: var(--font-size);
-  border: none;
-  border-radius: 4px;
-  cursor: var(--cursor-pointer);
-  transition: background-color 0.3s ease;
-  width: var(--width);
-}
-
-#Submit_Btn:hover {
-  background-color: #0056b3;
-}
-
-#errorMessage {
+#RegistryErrorMessage {
   color: red;
 }
 
@@ -130,6 +119,11 @@ body,
   gap: 20px;
   height: 300px;
   width: var(--width);
+}
+
+#LoginHeader {
+  margin: 0;
+  color: #007bff
 }
 
 #UserLogin,
@@ -196,6 +190,56 @@ body,
 
 /* -------------------------- */
 
+.ShoppingCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 850px;
+  width: 100%;
+}
+
+.ShoppingCardContainerAroundContent {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+  display: flex;
+  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+  border-radius: 20px;
+}
+
+.LeftContainerShoppingCart {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.LeftContainerShoppingCartContent {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.LeftContainerShoppingCartContent h2 {
+  letter-spacing: 2px
+}
+
+.LeftContainerShoppingCartContent h4 {
+  color: rgb(146, 146, 146)
+}
+
+.RightContainerShoppingCartContent {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 30%;
+  height: 100%;
+  background-color: #ccc;
+}
+
+/* -------------------------- */
+
 
 #ContainerPwdForgot {
   display: var(--display--flex);
@@ -220,6 +264,17 @@ body,
   flex-direction: var(--flex-direction);
 }
 
+.forgotPwdHeader {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff
+}
+
+.ForgotPwdLink {
+  text-decoration: none;
+  color: #007bff
+}
+
 #ContainerSuccessMessagePWDForgot {
   color: #155724;
   padding: 10px;
@@ -236,7 +291,6 @@ body,
   width: var(--width);
   font-size: 1.2rem;
   margin-bottom: 8px;
-  color: #555;
 }
 
 #EmailPWDForgot {
@@ -250,6 +304,22 @@ body,
 }
 
 /* -------------------------- */
+
+#NotFoundContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 93vh;
+  width: 100%;
+  gap: 20px;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+
+#NotFoundContainer a {
+  color: #0056b3
+}
 
 .ResponseMessage {
   position: relative;
@@ -268,7 +338,51 @@ body,
   color: green;
 }
 
+.NavbarIconLinks {
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  color: inherit
+}
+
 /* -------------------------- */
+
+#WishlistContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 800px;
+  padding: 10px
+}
+
+/* -------------------------- */
+
+#RegistryHeader {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#RegistryContainerLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#RegistryLink {
+  color: #007bff;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+/* -------------------------- */
+
+
 #Footer {
   display: var(--display--flex);
   background-color: #007bff;

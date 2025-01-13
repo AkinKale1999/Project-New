@@ -95,8 +95,8 @@ function Register() {
     <>
       <div id="MainContainerRegistry">
         <div id="RegistryContainer">
-          <form action="" onSubmit={handleRegister}>
-            <h1 style={{ color: "#007bff", textAlign: "center" }}>Registrierung</h1>
+          <form action="post" onSubmit={handleRegister}>
+            <h1 id="RegistryHeader">Registrierung</h1>
 
             <InputFields type={"text"} name={"name"} className={"InputRegistry"} placeholder={"Vorname *"} value={Name} onChange={(e) => setName(e.target.value)} />
 
@@ -113,14 +113,13 @@ function Register() {
             <Button type={"submit"} ref={messageExist} />
 
             <div>
-              <p id="errorMessage">{errormessage}</p>
+              <p id="RegistryErrorMessage">{errormessage}</p>
             </div>
             <div>
-              <div style={{ textAlign: "center" }}>
-                <Link to={"/app/login"} style={{ color: "#007bff", textDecoration: "none" }}>
-                  Bereits Registriert ? Zum Login
+              <div id="RegistryContainerLink">
+                <Link to={"/app/login"} id="RegistryLink">
+                  Bereits Registriert? Zum Login
                 </Link>
-
               </div>
             </div>
           </form>

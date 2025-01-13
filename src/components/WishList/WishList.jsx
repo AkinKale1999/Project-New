@@ -1,6 +1,6 @@
 export default function WishList() {
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", height: "800px", padding: "10px" }}>
+    <div id="WishlistContainer">
 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ut accusantium molestias quos, libero totam minima aperiam similique aspernatur impedit expedita placeat temporibus. Debitis sint perspiciatis, consequuntur numquam odit commodi.
         Eum et facilis dolores veritatis numquam, distinctio optio amet molestiae hic soluta eos pariatur fugiat est ut nisi quod, officia, sit tempore ratione voluptatibus voluptates? Distinctio omnis atque facilis laboriosam.

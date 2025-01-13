@@ -75,7 +75,7 @@ function Login() {
       <div id="MainContainerLogin" ref={Main_Container}>
         <div id="LoginContainer">
           <form action="/login" id="LoginForm" onSubmit={handleLogin}>
-            <h1 style={{ margin: "0", color: "#007bff" }}>Anmelden</h1>
+            <h1 id="LoginHeader"yy>Anmelden</h1>
 
 
             <InputFields type={"text"} id={"UserLogin"} placeholder={"Email *"} value={Username} onChange={(e) => setUsername(e.target.value)} required={"required"} />
@@ -87,7 +87,7 @@ function Login() {
             Interagieren kann, wenn er false ist dann schon*/}
 
             <div>
-              <Link style={{ textDecoration: "none", color: "#007bff", }} to={"/app/password-vergessen"}>Password vergessen?</Link>
+              <Link className="ForgotPwdLink" to={"/app/password-vergessen"}>Password vergessen?</Link>
             </div>
 
             {(Errormessage) && <div className="ResponseMessage" id="ErrorMessageBackend">{Errormessage}</div>}
@@ -98,7 +98,7 @@ function Login() {
         </div>
         <hr id="BreakPoint" />
         <div id="RegisterLink">
-          <Link style={{ textDecoration: "none", color: "#007bff" }} to={"/app/registrierung"}>Kein Account? Hier zum Registrieren</Link></div>
+          <Link className="ForgotPwdLink" to={"/app/registrierung"}>Kein Account? Hier zum Registrieren</Link></div>
       </div>
     </>
   );
