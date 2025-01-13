@@ -18,13 +18,13 @@ export default function Navbar() {
           <ChangeMode />
           {/* ------------------------------------ */}
 
-          <Link className="NavbarIconLinks" to="/wunschliste" >
+          <Link to="/wunschliste" >
             <FavoriteIcon className="NavbarElements" />
           </Link>
 
           {/* ------------------------------------ */}
 
-          <Link className="NavbarIconLinks" to="/Warenkorb" >
+          <Link to="/Warenkorb" >
             <ShoppingBagIcon className="NavbarElements" />
           </Link>
 
