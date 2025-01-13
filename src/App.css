@@ -106,7 +106,7 @@ body,
   display: var(--display--flex);
   justify-content: var(--justify-content);
   align-items: var(--align-items);
-  flex-direction: column;
+  flex-direction: var(--flex-direction);
   width: var(--width);
   height: 600px;
   min-height: 100%;
@@ -123,14 +123,13 @@ body,
 }
 
 #LoginForm {
-  flex-direction: column;
+  flex-direction: var(--flex-direction);
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
   gap: 20px;
   height: 300px;
   width: var(--width);
-  ;
 }
 
 #UserLogin,
@@ -218,7 +217,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: var(--flex-direction);
 }
 
 #ContainerSuccessMessagePWDForgot {
@@ -254,7 +253,7 @@ body,
 
 .ResponseMessage {
   position: relative;
-  top: -15px;
+  top: 0px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -361,7 +360,7 @@ body,
   display: var(--display--flex);
   justify-content: var(--justify-content);
   align-items: var(--align-items);
-  flex-direction: column;
+  flex-direction: var(--flex-direction);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -406,7 +405,7 @@ body,
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: var(--flex-direction);
 }
 
 .profileTabs {
@@ -435,7 +434,7 @@ body,
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
-  flex-direction: column;
+  flex-direction: var(--flex-direction);
 }
 
 
