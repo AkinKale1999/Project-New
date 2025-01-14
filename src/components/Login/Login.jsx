@@ -117,7 +117,7 @@ function Login() {
 
         </div>
         <hr id="BreakPoint" />
-        <div id="RegisterLink">
+        <div className="GoToRegisterDiv">
           <Link className="ForgotPwdLink" to={"/app/registrierung"}>Kein Account? Hier zum Registrieren</Link></div>
       </div>
     </>
