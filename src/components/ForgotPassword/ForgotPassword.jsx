@@ -29,7 +29,7 @@ export default function ForgotPassword() {
             if (response.status === 200) {
                 setSuccessMessage("Vielen Dank! Ihre E-Mail wurde erfolgreich gesendet. Bitte überprüfen Sie in Kürze Ihr Postfach")
             }
-
+            
         } catch (error) {
             setErrorMessage("Es gab ein Problem bei der Anfrage." + error);
         }
@@ -62,10 +62,10 @@ export default function ForgotPassword() {
 
                     <Button btnType={"submit"} text={"E-Mail senden"} />
 
-                    <div id="BackToLoginContainerForgot">
-                        <Button onClick={() => navigate("/login")} id={"ForgotPwdBtnGoBack"} text={"Zurück zum Login"} />
-                    </div>
                 </form>
+                <div id="BackToLoginContainerForgot">
+                    <Button onClick={() => navigate("/login")} id={"ForgotPwdBtnGoBack"} text={"Zurück zum Login"} />
+                </div>
             </div>
         </>
     );

@@ -2,6 +2,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
+  font-weight: 100;
 }
 
 :root {
@@ -54,6 +55,11 @@ body,
   margin-right: 20px;
   margin-left: 20px;
   border-radius: 12px;
+}
+
+#RegistryContainer h1 {
+  font-size: 1.5rem;
+
 }
 
 .InputRegistry {
@@ -351,17 +357,26 @@ nav a {
   color: #007bff;
 }
 
-#ContainerPwdForgot div {
+#ContainerPwdForgot button {
   display: var(--display--flex);
   justify-content: center;
-  max-width: 90%;
+  width: 90%;
+}
+
+#BackToLoginContainerForgot {
+  margin-top: 40px;
+  background-color: inherit;
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 #BackToLoginContainerForgot button {
-  color: inherit;
-  margin-top: 20px;
-  background-color: inherit;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0;
+  width: fit-content;
+  margin-top: 60px;
 }
 
 #ForgotPwdBtnGoBack {
