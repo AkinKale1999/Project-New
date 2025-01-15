@@ -16,27 +16,30 @@ import ShoppingCart from "./components/ShoppingCart/ShoppingCart.jsx";
 import Home from "./components/pages/Home/Home.jsx";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/app/account" element={<Account />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/" element={<Navigate to="/Home" replace />} />
-        <Route path="/app/login" element={<Login />} />
-        <Route path="/app/registrierung" element={<Register />} />
-        <Route path="/kontakt" element={<Contact />} />
-        <Route path="/über-uns" element={<ÜberUns />} />
-        <Route path="/datenschutz" element={<DataProtection />} />
-        <Route path="/agb" element={<AGB />} />
-        <Route path="/impressum" element={<TermsConditions />} />
-        <Route path="/app/password-vergessen" element={<ForgotPassword />} />
-        <Route path="/warenkorb" element={<ShoppingCart />} />
-        <Route path="/wunschliste" element={<WishList />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );
+
+  if (!document.cookie)
+    return (
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+
+          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Navigate to="/Home" replace />} />
+          <Route path="/kontakt" element={<Contact />} />
+          <Route path="/über-uns" element={<ÜberUns />} />
+          <Route path="/datenschutz" element={<DataProtection />} />
+          <Route path="/agb" element={<AGB />} />
+          <Route path="/impressum" element={<TermsConditions />} />
+          <Route path="/warenkorb" element={<ShoppingCart />} />
+          <Route path="/wunschliste" element={<WishList />} />
+          <Route path="/app/account" element={<Account />} />
+          <Route path="/app/login" element={<Login />} />
+          <Route path="/app/registrierung" element={<Register />} />
+          <Route path="/app/password-vergessen" element={<ForgotPassword />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    );
 }
 
 export default App;
