@@ -13,6 +13,7 @@ import ForgotPassword from "./components/ForgotPassword/ForgotPassword.jsx";
 import WishList from "./components/WishList/WishList.jsx";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart.jsx";
 import "./App.css";
+import Home from "./components/pages/Home/Home.jsx";
 
 function App() {
 
@@ -21,9 +22,9 @@ function App() {
       <Navbar />
       <Routes>
 
-        <Route path="/app/account" element={
-          <Account />
-        } />
+        <Route path="/app/account" element={<Account />} />
+
+        <Route path="/Home" element={<Home />} />
 
         <Route path="/app/login" element={<Login />} />
 

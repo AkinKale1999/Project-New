@@ -66,7 +66,6 @@ function Burgermenu() {
   return (
     <>
       <div id="burgermenuDIV">
-
         <MenuIcon
           id="burgermenu"
           ref={burgermenu}
@@ -87,6 +86,11 @@ function Burgermenu() {
           >
             Home
           </Link>
+
+          <div>
+            <hr />
+          </div>
+
           <Link
             className="Menu_Links_For_Navigation"
             to={"/Ueberuns"}

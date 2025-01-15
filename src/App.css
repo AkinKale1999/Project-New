@@ -28,6 +28,16 @@ body,
   height: 100%;
 }
 
+/* -----------------HOME------------------------ */
+
+
+#Home {
+  height: 100%;
+}
+
+
+/* -----------------REGISTRY------------------------ */
+
 #MainContainerRegistry {
   display: var(--display--flex);
   justify-content: var(--justify-content);
@@ -89,9 +99,8 @@ body,
   }
 }
 
-/* --------------------- */
+/* --------------------------NAVBAR--------------------------- */
 
-/* Navbar*/
 #navbarDIV {
   height: 7%;
   min-height: 53px;
@@ -118,7 +127,7 @@ nav a {
 }
 
 
-/* -------------------------- */
+/* ---------------------LOGIN---------------------------- */
 
 #MainContainerLogin {
   display: var(--display--flex);
@@ -254,37 +263,7 @@ nav a {
   margin-left: 20px;
 }
 
-
-/* --------------------DEFAULT BUTTON------------------------------- */
-
-.DefaultContainerBtn {
-  width: var(--width);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button--default {
-  display: var(--display--flex);
-  justify-content: var(--justify-content);
-  align-items: var(--align-items);
-  width: var(--width);
-  font-size: var(--font-size);
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  cursor: var(--cursor-pointer);
-  transition: background-color 0.3s ease;
-}
-
-.button--default:hover {
-  background-color: #0056b3;
-}
-
-/* --------------------DEFAULT BUTTON------------------------------- */
-
+/* ---------------------SHOPPINGCART----------------------------- */
 
 .ShoppingCardContainer {
   display: flex;
@@ -335,8 +314,7 @@ nav a {
   background-color: #ccc;
 }
 
-/* -------------------------- */
-
+/* --------------------------PWDFORGOT----------------------------- */
 
 #ContainerPwdForgot {
   display: var(--display--flex);
@@ -419,43 +397,7 @@ nav a {
   box-sizing: border-box;
 }
 
-/* -------------------------- */
-
-#NotFoundContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 93vh;
-  width: var(--width);
-  gap: 20px;
-  flex-direction: column;
-  font-size: 1.5rem;
-}
-
-
-#NotFoundContainer a {
-  color: #0056b3
-}
-
-.ResponseMessage {
-  position: relative;
-  top: 0px;
-  width: var(--width);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#ErrorMessageBackend {
-  color: red;
-}
-
-#SuccessMessageBackend {
-  color: green;
-}
-
-
-/* -----------Wishlistbereich--------------- */
+/* -----------------------------WISHLIST-------------------------------- */
 
 #WishlistContainer {
   display: flex;
@@ -471,7 +413,7 @@ nav a {
   padding: 20px;
 }
 
-/* ------------Registrierungsbereich-------------- */
+/* --------------------REGISTERPAGE-------------------------- */
 
 #RegistryHeader {
   color: #007bff;
@@ -490,7 +432,7 @@ nav a {
 }
 
 
-/* ------------Footerbereich-------------- */
+/* ------------------------FOOTER------------------------------ */
 
 #Footer {
   display: var(--display--flex);
@@ -509,7 +451,7 @@ nav a {
   font-size: 1rem;
 }
 
-/* -------------------------------------- */
+/* ----------------BURGERMENU/SIDEBAR---------------------- */
 
 #burgermenuDIV {
   width: var(--width);
@@ -592,7 +534,7 @@ nav a {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 @keyframes slideForward {
@@ -609,7 +551,7 @@ nav a {
   }
 }
 
-/* ------------------------------ */
+/* ----------------------PROFILEPAGE--------------------------- */
 
 .profileContainer {
   height: var(--height);
@@ -652,4 +594,67 @@ nav a {
   color: #007bff;
   text-decoration: none;
   cursor: var(--cursor-pointer);
+}
+
+/* --------------------------ERRORPAGE----------------------------- */
+
+#NotFoundContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 93vh;
+  width: var(--width);
+  gap: 20px;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+
+#NotFoundContainer a {
+  color: #0056b3
+}
+
+.ResponseMessage {
+  position: relative;
+  top: 0px;
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ErrorMessageBackend {
+  color: red;
+}
+
+#SuccessMessageBackend {
+  color: green;
+}
+
+/* --------------------DEFAULT BUTTON------------------------------- */
+
+.DefaultContainerBtn {
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button--default {
+  display: var(--display--flex);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  width: var(--width);
+  font-size: var(--font-size);
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: var(--cursor-pointer);
+  transition: background-color 0.3s ease;
+}
+
+.button--default:hover {
+  background-color: #0056b3;
 }

@@ -93,7 +93,7 @@ function Login() {
             </div>
 
             <div className="BreakpointLogins">
-              <span className="OrDifferentLogin">oder</span>
+              <span className="OrDifferentLogin">Oder</span>
 
             </div>
 
