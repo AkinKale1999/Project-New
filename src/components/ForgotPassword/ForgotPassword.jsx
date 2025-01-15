@@ -23,9 +23,13 @@ export default function ForgotPassword() {
         }
 
         try {
-            const response = axios.post(`${process.env.BACKEND_URL}/PwdForgot`,
+            const response = await axios.post(`${process.env.BACKEND_URL}/PwdForgot`,
                 email)
-            setSuccessMessage("Email zum zurücksetzen erfolgreich gesendet.");
+
+            if (response.status === 200) {
+                setSuccessMessage("Vielen Dank! Ihre E-Mail wurde erfolgreich gesendet. Bitte überprüfen Sie in Kürze Ihr Postfach")
+            }
+
         } catch (error) {
             setErrorMessage("Es gab ein Problem bei der Anfrage." + error);
         }
@@ -33,9 +37,10 @@ export default function ForgotPassword() {
 
     return (
         <>
-
             <div id="ContainerPwdForgot">
                 <form id="forgotPwdForm" onSubmit={handleSubmit}>
+
+                    <img src="/img/warning-icon.png" alt="warning-icon" />
 
                     <h1 className="forgotPwdHeader">
                         Passwort vergessen
@@ -53,15 +58,14 @@ export default function ForgotPassword() {
                         E-Mail-Adresse
                     </label>
 
-
                     <InputFields type={"email"} id={"EmailPWDForgot"} name={"email"} placeholder={"Geben Sie Ihre E-Mail-Adresse ein"} value={email} onChange={(e) => setEmail(e.target.value)} required />
 
                     <Button btnType={"submit"} text={"E-Mail senden"} />
-                </form>
 
-                <div id="BackToLoginContainerForgot">
-                    <Button onClick={() => navigate("/login")} id={"ForgotPwdBtnGoBack"} text={"Zurück zum Login"} />
-                </div>
+                    <div id="BackToLoginContainerForgot">
+                        <Button onClick={() => navigate("/login")} id={"ForgotPwdBtnGoBack"} text={"Zurück zum Login"} />
+                    </div>
+                </form>
             </div>
         </>
     );

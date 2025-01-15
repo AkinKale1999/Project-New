@@ -43,20 +43,17 @@ body,
   justify-content: var(--justify-content);
   align-items: var(--align-items);
   width: var(--width);
-  height: 600px;
-  min-height: 100%;
+  height: 750px;
+  min-height: 85.952%;
 }
 
 #RegistryContainer {
-  padding: 20px;
+  padding: min(3rem, 1.9rem);
   box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
-  width: var(--width);
-  max-width: 350px;
-  display: var(--display--flex);
-  align-items: var(--align-items);
-  justify-content: var(--justify-content);
+  max-width: 400px;
   margin-right: 20px;
   margin-left: 20px;
+  border-radius: 12px;
 }
 
 .InputRegistry {
@@ -134,9 +131,8 @@ nav a {
   justify-content: var(--justify-content);
   align-items: var(--align-items);
   flex-direction: var(--flex-direction);
-  width: var(--width);
-  height: 800px;
-  min-height: 100%;
+  height: 750px;
+  min-height: 85.9%;
 }
 
 #LoginContainer {
@@ -146,7 +142,6 @@ nav a {
   box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
   width: 92%;
   max-width: 450px;
-  margin-top: 40px;
   border-radius: 12px;
   margin-right: 20px;
   margin-left: 20px;
@@ -323,49 +318,54 @@ nav a {
   justify-content: var(--justify-content);
   flex-direction: var(--flex-direction);
   width: var(--width);
-  height: 800px;
-  min-height: 100%;
+  height: 750px;
+  min-height: 85.9%;
 }
 
 #forgotPwdForm {
-  padding: 30px;
-  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
-  max-width: 400px;
-  width: 80%;
-  height: var(--height);
-  max-height: 250px;
   display: var(--display--flex);
-  justify-content: var(--justify-content);
   align-items: var(--align-items);
+  justify-content: var(--justify-content);
   flex-direction: var(--flex-direction);
-  padding-right: 20px;
-  padding-left: 20px;
+  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+  width: 93%;
+  max-width: 450px;
+  border-radius: 12px;
+  max-height: 500px;
+  height: 100%;
+}
+
+#forgotPwdForm img {
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 .forgotPwdHeader {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color: #007bff
+  color: #007bff;
 }
 
 .ForgotPwdLink {
   text-decoration: none;
-  color: #007bff
+  color: #007bff;
 }
 
 #ContainerPwdForgot div {
-  width: 100%;
   display: var(--display--flex);
-  justify-content: flex-start;
+  justify-content: center;
+  max-width: 90%;
+  width: 100%;
 }
 
-#BackToLoginContainerForgot {
-  margin-top: 50px;
+#BackToLoginContainerForgot button {
+  color: inherit;
+  margin-top: 20px;
+  background-color: inherit;
 }
 
 #ForgotPwdBtnGoBack {
   position: relative;
-  font-size: 1rem;
   width: fit-content;
   border-radius: 0px;
 }
@@ -383,12 +383,13 @@ nav a {
 
 #LabelPWDForgot {
   text-align: left;
-  width: var(--width);
   font-size: 1.2rem;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
+  width: 90%;
 }
 
 #EmailPWDForgot {
+  max-width: 90%;
   width: var(--width);
   padding: 10px;
   font-size: 1.1rem;
