@@ -437,11 +437,11 @@ nav a {
 #Footer {
   display: var(--display--flex);
   background-color: #007bff;
-  min-height: 53px;
-  max-height: 53px;
   justify-content: space-evenly;
   align-items: var(--align-items);
   border-top: 1px solid #fff;
+  height: 7%;
+  min-height: 53px;
 }
 
 .FooterElements {
@@ -608,7 +608,6 @@ nav a {
   flex-direction: column;
   font-size: 1.5rem;
 }
-
 
 #NotFoundContainer a {
   color: #0056b3
