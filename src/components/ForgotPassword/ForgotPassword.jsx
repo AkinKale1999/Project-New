@@ -60,7 +60,7 @@ export default function ForgotPassword() {
                 </form>
 
                 <div id="BackToLoginContainerForgot">
-                    <Button onClick={() => navigate("/app/login")} id={"ForgotPwdBtnGoBack"} text={"Zurück zum Login"} />
+                    <Button onClick={() => navigate("/login")} id={"ForgotPwdBtnGoBack"} text={"Zurück zum Login"} />
                 </div>
             </div>
         </>

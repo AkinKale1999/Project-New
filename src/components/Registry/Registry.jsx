@@ -117,7 +117,7 @@ function Register() {
             </div>
             <div>
               <div id="RegistryContainerLink">
-                <Link to={"/app/login"} id="RegistryLink">
+                <Link to={"/login"} id="RegistryLink">
                   Bereits Registriert? Zum Login
                 </Link>
               </div>

@@ -107,7 +107,7 @@ function Login() {
             Interagieren kann, wenn er false ist dann schon*/}
 
             <div>
-              <Link className="ForgotPwdLink" to={"/app/password-vergessen"}>Password vergessen?</Link>
+              <Link className="ForgotPwdLink" to={"/password-vergessen"}>Password vergessen?</Link>
             </div>
 
             {(Errormessage) && <div className="ResponseMessage" id="ErrorMessageBackend">{Errormessage}</div>}
@@ -118,7 +118,7 @@ function Login() {
         </div>
         <hr id="BreakPoint" />
         <div className="GoToRegisterDiv">
-          <Link className="ForgotPwdLink" to={"/app/registrierung"}>Kein Account? Hier zum Registrieren</Link></div>
+          <Link className="ForgotPwdLink" to={"/registrierung"}>Kein Account? Hier zum Registrieren</Link></div>
       </div>
     </>
   );

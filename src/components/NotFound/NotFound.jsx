@@ -9,7 +9,7 @@ export default function NotFound() {
                 404 Page Not Found
             </div>
 
-            <Link style={{ color: "#0056b3" }} to="/login">Zum Login</Link>
+            <Link to="/Home">Zur Home seite</Link>
         </div>
     </>
     )
