@@ -80,15 +80,20 @@ function Burgermenu() {
           <p id="menu_content">X</p>
         </div>
         <div id="menu_Links" ref={menu_Links}>
-          <div>
-            <Link
-              className="Menu_Links_For_Navigation"
-              to={"/Home"}
-              onClick={removeMenu}
-            >
-              <span id="animated-I">I</span> Home
-            </Link>
-          </div>
+          <Link
+            className="Menu_Links_For_Navigation"
+            to={"/Home"}
+            onClick={removeMenu}
+          >
+            Home
+          </Link>
+          <Link
+            className="Menu_Links_For_Navigation"
+            to={"/Ueberuns"}
+            onClick={removeMenu}
+          >
+            Überuns
+          </Link>
         </div>
       </div>
     </>
