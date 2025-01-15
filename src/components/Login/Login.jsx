@@ -79,17 +79,17 @@ function Login() {
             <h1 id="LoginHeader">Login</h1>
 
             <div className="LoginWithGithubOrGoogle">
-              <form action="">
+              <div>
                 <IconGithubAndGoogle src={"/img/github.png"} alt={"Github-Icon"} />
                 <Button text={"GitHub anmelden"}>
                 </Button>
-              </form>
+              </div>
 
-              <form action="">
+              <div>
                 <IconGithubAndGoogle src={"/img/github.png"} alt={"Google-Icon"} />
                 <Button text={"Google anmelden"}>
                 </Button>
-              </form>
+              </div>
             </div>
 
             <div className="BreakpointLogins">

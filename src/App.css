@@ -187,7 +187,7 @@ nav a {
   border-radius: 8px;
 }
 
-.LoginWithGithubOrGoogle form button {
+.LoginWithGithubOrGoogle div button {
   background-color: #eee;
   color: black;
   border-radius: 8px;
