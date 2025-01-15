@@ -28,7 +28,7 @@ export default function ChangeMode() {
         const newMode = !isDarkMode;
         setIsDarkMode(newMode);
 
-        const newBgColor = newMode ? "#000" : "#fff";
+        const newBgColor = newMode ? "#000" : "#f0f0f0";
         const newTextColor = newMode ? "#fff" : "#000";
         const newHdColor = newMode ? "#000" : "#007bff";
         const newFtColor = newMode ? "#000" : "#007bff";

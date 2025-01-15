@@ -190,6 +190,7 @@ nav a {
 .LoginWithGithubOrGoogle form button {
   background-color: rgb(245, 246, 250);
   color: black;
+  border-radius: 8px;
 }
 
 .LoginWithGithubOrGoogle form button:hover {
@@ -525,6 +526,7 @@ nav a {
   height: 90%;
   font-size: 1.5rem;
   gap: 10px;
+  color: rgb(0, 0, 0);
 }
 
 .Menu_Links_For_Navigation {
