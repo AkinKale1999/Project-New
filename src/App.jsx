@@ -25,10 +25,6 @@ function App() {
       <Routes>
 
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Navigate to="/home" replace />} />
-        {/* replace-Attribut = sorgt dafür, dass die aktuelle Route 
-          im Browser-Verlauf ersetzt wird, anstatt einen neuen Eintrag 
-          hinzuzufügen. So kann der Nutzer nicht zur alten Route zurückkehren. */}
         <Route path="/kontakt" element={<Contact />} />
         <Route path="/über-uns" element={<ÜberUns />} />
         <Route path="/datenschutz" element={<DataProtection />} />
@@ -39,6 +35,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registrierung" element={<Register />} />
         <Route path="/password-vergessen" element={<ForgotPassword />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        {/* replace-Attribut = sorgt dafür, dass die aktuelle Route 
+          im Browser-Verlauf ersetzt wird, anstatt einen neuen Eintrag 
+          hinzuzufügen. So kann der Nutzer nicht zur alten Route zurückkehren. */}
 
         {/* ----------------------ProtectedRoute-------------------------- */}
 
@@ -46,7 +47,6 @@ function App() {
 
         {/* ----------------------ProtectedRoute-------------------------- */}
 
-        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
