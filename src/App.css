@@ -76,6 +76,7 @@ body,
   height: 0px;
   width: 100%;
   justify-content: flex-end;
+  color: black;
 }
 
 .ShowPasswordIcon {
