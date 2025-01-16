@@ -49,7 +49,7 @@ export default function ForgotPassword() {
 
                     <label htmlFor="email" id="LabelPWDForgot">E-Mail-Adresse</label>
 
-                    <InputFields autocomplete={"email"} type={"email"} id={"EmailPWDForgot"} name={"email"} placeholder={"Geben Sie Ihre E-Mail-Adresse ein"} value={email} onChange={(e) => setEmail(e.target.value)} required />
+                    <InputFields autoComplete={"email"} type={"email"} id={"EmailPWDForgot"} name={"email"} placeholder={"Geben Sie Ihre E-Mail-Adresse ein"} value={email} onChange={(e) => setEmail(e.target.value)} required />
 
                     <Button btnType={"submit"} text={"E-Mail senden"} />
                 </form>

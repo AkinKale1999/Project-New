@@ -101,21 +101,21 @@ function Register() {
           <form onSubmit={handleRegister}>
             <h1 id="RegistryHeader">Registrierung</h1>
 
-            <InputFields autocomplete={"name"} type={"text"} name={"name"} className={"InputRegistry"} placeholder={"Vorname *"} value={Name} onChange={(e) => setName(e.target.value)} />
+            <InputFields autoComplete={"name"} type={"text"} name={"name"} className={"InputRegistry"} placeholder={"Vorname *"} value={Name} onChange={(e) => setName(e.target.value)} />
 
-            <InputFields autocomplete={"family-name"} type={"text"} name={"family_name"} className={"InputRegistry"} placeholder={"Nachname *"} value={Family_Name} onChange={(e) => setFamilyName(e.target.value)} />
+            <InputFields autoComplete={"family-name"} type={"text"} name={"family_name"} className={"InputRegistry"} placeholder={"Nachname *"} value={Family_Name} onChange={(e) => setFamilyName(e.target.value)} />
 
-            <InputFields autocomplete={"username"} type={"text"} name={"Username"} className={"InputRegistry"} placeholder={"Username *"} value={Username} onChange={(e) => setUsername(e.target.value)} />
+            <InputFields autoComplete={"username"} type={"text"} name={"Username"} className={"InputRegistry"} placeholder={"Username *"} value={Username} onChange={(e) => setUsername(e.target.value)} />
 
-            <InputFields autocomplete={"email"} type={"email"} name={"email"} className={"InputRegistry"} placeholder={"E-mail *"} value={Email} onChange={(e) => setEmail(e.target.value)} />
+            <InputFields autoComplete={"email"} type={"email"} name={"email"} className={"InputRegistry"} placeholder={"E-mail *"} value={Email} onChange={(e) => setEmail(e.target.value)} />
 
-            <InputFields autocomplete={"new-password"} type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} />
+            <InputFields autoComplete={"new-password"} type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} />
 
             <div className="ShowPasswordContainer">
               {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
             </div>
 
-            <InputFields autocomplete={"new-password"} type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+            <InputFields autoComplete={"new-password"} type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
 
             <div className="ShowPasswordContainer">
               {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
