@@ -31,11 +31,9 @@ body,
 
 /* -----------------HOME------------------------ */
 
-
 #Home {
   height: var(--height);
 }
-
 
 /* -----------------REGISTRY------------------------ */
 
@@ -61,14 +59,17 @@ body,
   font-size: 1.5rem;
 }
 
+#RegistryContainer button {
+  width: 100%;
+}
+
 .InputRegistry {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 91%;
+  width: 92%;
   padding: 15px;
 }
-
 
 .ShowPasswordContainer {
   display: flex;
@@ -90,31 +91,59 @@ body,
   color: red;
 }
 
-@media (max-width: 421px) {
+@media (max-width: 485px) {
+
+  .InputRegistry {
+    width: 91.35%;
+  }
+}
+
+@media (max-width: 454px) {
+
+  .InputRegistry {
+    width: 90.7%;
+  }
+}
+
+@media (max-width: 429px) {
 
   .InputRegistry {
     width: 90.4%;
   }
 }
 
-@media (max-width: 391px) {
+@media (max-width: 401px) {
 
   .InputRegistry {
-    width: 89.3%;
+    width: 90%;
   }
-}
 
-@media (max-width: 370px) {
+  @media (max-width: 380px) {
 
-  .InputRegistry {
-    width: 88.5%;
+    .InputRegistry {
+      width: 89%;
+    }
   }
-}
 
-@media (max-width: 348px) {
+  @media (max-width: 361px) {
 
-  .InputRegistry {
-    width: 87.4%;
+    .InputRegistry {
+      width: 88.6%;
+    }
+  }
+
+  @media (max-width: 344px) {
+
+    .InputRegistry {
+      width: 87%;
+    }
+  }
+
+  @media (max-width: 328px) {
+
+    .InputRegistry {
+      width: 86.5%;
+    }
   }
 }
 
