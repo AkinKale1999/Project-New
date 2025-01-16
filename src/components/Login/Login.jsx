@@ -34,7 +34,7 @@ function Login() {
     }
 
     catch (error) {
-      setErrorMessage(error);
+      setErrorMessage(error.message || "Ein unbekannter Fehler ist aufgetreten.");
     }
     finally {
       setIsLoading(false);
@@ -69,9 +69,9 @@ function Login() {
               <span className="OrDifferentLogin">Oder</span>
             </div>
 
-            <InputFields type={"text"} id={"UserLogin"} placeholder={"Email *"} value={Username} onChange={(e) => setUsername(e.target.value)} required={"required"} />
+            <InputFields autocomplete={"username"} type={"text"} id={"UserLogin"} placeholder={"Email *"} value={Username} onChange={(e) => setUsername(e.target.value)} required={"required"} />
 
-            <InputFields type={"password"} id={"PasswordLogin"} placeholder={"Password *"} value={Password} onChange={(e) => setPassword(e.target.value)} required={"required"} />
+            <InputFields autocomplete={"current-password"} type={"password"} id={"PasswordLogin"} placeholder={"Password *"} value={Password} onChange={(e) => setPassword(e.target.value)} required={"required"} />
 
             <Button btnType={"submit"} id="BtnLogin" text={buttonText} disabled={isLoading} />
             {/* disabled={isLoading} bedeutet das wenn isLoading = true ist das man mit dem Button nicht 
