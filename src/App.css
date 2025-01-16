@@ -1,15 +1,18 @@
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 100;
-  margin: 0;
-  padding: 0;
+  margin: var(--margin);
+  padding: var(--padding);
 }
 
 :root {
   /* ----------------Margin-and-Padding-------------------- */
-  --margin: 0;
   --padding: 0;
+  --padding--10px: 10px;
+  --margin: 0;
   --margin-right: 2vmax;
+  --margin-bottom-15px: 15px;
+  --margin-bottom-20px: 20px;
 
   /* ----------------Cursor-------------------- */
   --cursor-pointer: pointer;
@@ -20,8 +23,10 @@
 
   /* ----------------Height-and-Width-------------------- */
   --height: 100%;
-  --width: 100%;
   --height-fit-content: fit-content;
+  --width: 100%;
+  --width-fit-content: fit-content;
+  --max-width: 425px;
 
   /* ----------------Display-Flex-------------------- */
   --display--flex: flex;
@@ -29,6 +34,7 @@
   --align-items: center;
   --flex-direction: column;
   --justify-content-flex-end: flex-end;
+  --justify-content-flex-start: flex-start;
 
   /* ----------------Colors-------------------- */
   --color--white: #fff;
@@ -43,6 +49,7 @@
   /* ----------------Border-------------------- */
   --border--radius-4px: 4px;
   --border--none: none;
+  --box--shadow: 0px 0px 10px 5px #ccc;
 
   /* ----------------Position-------------------- */
   --position--relative: relative;
@@ -74,7 +81,7 @@ body,
 
 #RegistryContainer {
   padding: min(3rem, 1.9rem);
-  box-shadow: 0px 0px 10px 5px var(--ccc--grey);
+  box-shadow: var(--box--shadow);
   max-width: 400px;
   margin-right: 20px;
   margin-left: 20px;
@@ -84,7 +91,7 @@ body,
 #RegistryContainer h1 {
   font-size: var(--font-size-1--5);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-bottom-20px);
 }
 
 #RegistryContainer button {
@@ -92,9 +99,8 @@ body,
 }
 
 .InputRegistry {
-  margin-bottom: 15px;
+  margin-bottom: var(--margin-bottom-15px);
   border: 1px solid var(--ccc--grey);
-  border-radius: 4px;
   width: 92%;
   padding: 15px;
 }
@@ -113,7 +119,7 @@ body,
   margin-right: 10px;
   cursor: pointer;
   z-index: 1;
-  width: fit-content;
+  width: var(--width-fit-content);
 }
 
 #RegistryErrorMessage {
@@ -219,7 +225,7 @@ nav a {
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
-  box-shadow: 0px 0px 10px 5px var(--ccc--grey);
+  box-shadow: var(--box--shadow);
   width: 92%;
   max-width: 450px;
   border-radius: 12px;
@@ -248,7 +254,7 @@ nav a {
 }
 
 .GithubGoogleIcon {
-  width: fit-content;
+  width: var(--width-fit-content);
   height: 30px;
   background-color: var(--color-dark);
   border-radius: 50px;
@@ -331,7 +337,7 @@ nav a {
   height: 2px;
   width: 95%;
   margin-top: 40px;
-  border: none;
+  border: var(--border--none);
 }
 
 .GoToRegisterDiv {
@@ -343,7 +349,7 @@ nav a {
 }
 
 .GoToRegisterDiv a {
-  padding: 10px 40px;
+  padding: var(--padding--10px) 40px;
   border-radius: 50px;
   box-shadow: 0px 0px 20px 0px var(--ccc--grey);
   max-width: 360px;
@@ -369,7 +375,7 @@ nav a {
   height: 600px;
   margin-top: 20px;
   display: var(--display--flex);
-  box-shadow: 0px 0px 10px 5px var(--ccc--grey);
+  box-shadow: var(--box--shadow);
   border-radius: 20px;
 }
 
@@ -382,7 +388,7 @@ nav a {
 }
 
 .LeftContainerShoppingCartContent {
-  padding: 10px;
+  padding: var(--padding--10px);
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: space-between;
@@ -421,7 +427,7 @@ nav a {
   align-items: var(--align-items);
   justify-content: var(--justify-content);
   flex-direction: var(--flex-direction);
-  box-shadow: 0px 0px 10px 5px var(--ccc--grey);
+  box-shadow: var(--box--shadow);
   width: 93%;
   max-width: 450px;
   border-radius: 12px;
@@ -432,12 +438,14 @@ nav a {
 
 #forgotPwdForm img {
   width: 100px;
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-bottom-20px);
+  ;
 }
 
 .forgotPwdHeader {
   font-size: var(--font-size-1--5);
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-bottom-20px);
+  ;
 }
 
 .ForgotPwdLink {
@@ -456,28 +464,28 @@ nav a {
   background-color: inherit;
   width: var(--width);
   display: var(--display--flex);
-  justify-content: flex-start;
+  justify-content: var(--justify-content-flex-start);
 }
 
 #BackToLoginContainerForgot button {
-  justify-content: flex-start;
+  justify-content: var(--justify-content-flex-start);
   position: absolute;
   left: 0;
-  width: fit-content;
+  width: var(--width-fit-content);
   margin-top: 60px;
 }
 
 #ForgotPwdBtnGoBack {
   position: var(--position--relative);
-  width: fit-content;
+  width: var(--width-fit-content);
   border-radius: 0px;
 }
 
 #ContainerSuccessMessagePWDForgot {
   color: #155724;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 15px;
+  padding: var(--padding--10px);
+  border-radius: var(--border--radius-4px);
+  margin-bottom: var(--margin-bottom-15px);
 }
 
 #ContainerErrorMessagePWDForgot {
@@ -487,18 +495,18 @@ nav a {
 #LabelPWDForgot {
   text-align: left;
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  margin-bottom: var(--margin-bottom-15px);
   width: 90%;
 }
 
 #EmailPWDForgot {
   max-width: 90%;
   width: var(--width);
-  padding: 10px;
+  padding: var(--padding--10px);
   font-size: 1.1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  border: 1px solid var(--ccc--grey);
+  border-radius: var(--border--radius-4px);
+  margin-bottom: var(--margin-bottom-20px);
   box-sizing: border-box;
 }
 
@@ -508,7 +516,7 @@ nav a {
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
-  height: fit-content;
+  height: var(--height-fit-content);
   width: var(--width);
   min-height: var(--height);
 }
@@ -522,7 +530,7 @@ nav a {
 
 #RegistryHeader {
   color: var(--lighter--blue);
-  margin-bottom: 15px;
+  margin-bottom: var(--margin-bottom-15px);
 }
 
 #RegistryContainerLink {
@@ -541,9 +549,9 @@ nav a {
 
 #Footer {
   display: var(--display--flex);
-  background-color: var(--lighter--blue);
   justify-content: space-evenly;
   align-items: var(--align-items);
+  background-color: var(--lighter--blue);
   border-top: 1px solid var(--color--white);
   height: 7%;
   min-height: 53px;
@@ -560,7 +568,7 @@ nav a {
 
 #burgermenuDIV {
   display: var(--display--flex);
-  justify-content: flex-start;
+  justify-content: var(--justify-content-flex-start);
   align-items: var(--align-items);
   width: var(--width);
   font-size: 2rem;
@@ -576,7 +584,7 @@ nav a {
   display: none;
   background-color: rgb(229, 229, 229, 0.5);
   backdrop-filter: blur(15px);
-  max-width: 425px;
+  max-width: var(--max-width);
   width: var(--width);
   height: var(--height);
   min-height: var(--height);
@@ -598,13 +606,13 @@ nav a {
   }
 
   100% {
-    max-width: 425px;
+    max-width: var(--max-width);
   }
 }
 
 @keyframes ClosingMenuContainerReverse {
   0% {
-    max-width: 425px;
+    max-width: var(--max-width);
   }
 
   100% {
@@ -613,12 +621,12 @@ nav a {
 }
 
 #menu_Closing {
-  width: fit-content;
+  width: var(--width-fit-content);
   color: var(--color-dark);
 }
 
 #menu_content {
-  width: fit-content;
+  width: var(--width-fit-content);
   font-size: var(--font-size-1--5);
   margin-top: 15px;
   margin-left: 15px;
@@ -648,7 +656,7 @@ nav a {
 
 @keyframes slideForward {
   0% {
-    left: 0%;
+    left: 0;
   }
 
   50% {
@@ -656,7 +664,7 @@ nav a {
   }
 
   0% {
-    left: 0%;
+    left: 0;
   }
 }
 
@@ -666,7 +674,7 @@ nav a {
   height: var(--height);
   display: var(--display--flex);
   align-items: var(--align-items);
-  justify-content: flex-start;
+  justify-content: var(--justify-content-flex-start);
   flex-direction: var(--flex-direction);
 }
 
@@ -680,8 +688,8 @@ nav a {
 }
 
 .tab {
-  padding: 10px 20px;
-  border: none;
+  padding: var(--padding--10px) 20px;
+  border: var(--border--none);
   background: none;
   cursor: var(--cursor-pointer);
   font-size: var(--font-size);
@@ -755,8 +763,8 @@ nav a {
   width: var(--width);
   font-size: var(--font-size);
   padding: 12px;
-  border: none;
-  border-radius: 4px;
+  border: var(--border--none);
+  border-radius: var(--border--radius-4px);
   background-color: var(--lighter--blue);
   color: var(--color--white);
   cursor: var(--cursor-pointer);
