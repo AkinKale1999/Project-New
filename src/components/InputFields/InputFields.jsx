@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function InputFields({ type, id, name, placeholder, value, onChange, className, required, autoComplete }) {
+export default function InputFields({ type, id, name, placeholder, value, onChange, className, required, autoComplete, arialabel }) {
 
     return (
         <>
@@ -14,6 +14,7 @@ export default function InputFields({ type, id, name, placeholder, value, onChan
                 value={value}
                 onChange={onChange}
                 autoComplete={autoComplete}
+                aria-label={arialabel}
             />
         </>
     )

@@ -34,8 +34,9 @@ function Login() {
     }
 
     catch (error) {
-      setErrorMessage(error.message || "Ein unbekannter Fehler ist aufgetreten.");
+      setErrorMessage(error.response?.data?.message || "Ein unbekannter Fehler ist aufgetreten.");
     }
+
     finally {
       setIsLoading(false);
     }
@@ -69,9 +70,8 @@ function Login() {
               <span className="OrDifferentLogin">Oder</span>
             </div>
 
-            <InputFields autoComplete={"username"} type={"text"} id={"UserLogin"} placeholder={"Email *"} value={Username} onChange={(e) => setUsername(e.target.value)} required={"required"} />
-
-            <InputFields autoComplete={"current-password"} type={"password"} id={"PasswordLogin"} placeholder={"Password *"} value={Password} onChange={(e) => setPassword(e.target.value)} required={"required"} />
+            <InputFields arialabel={"Benutzername"} autoComplete={"username"} type={"text"} id={"UserLogin"} placeholder={"Email *"} value={Username} onChange={(e) => setUsername(e.target.value)} required />
+            <InputFields arialabel={"Passwort"} autoComplete={"current-password"} type={"password"} id={"PasswordLogin"} placeholder={"Password *"} value={Password} onChange={(e) => setPassword(e.target.value)} required />
 
             <Button btnType={"submit"} id="BtnLogin" text={buttonText} disabled={isLoading} />
             {/* disabled={isLoading} bedeutet das wenn isLoading = true ist das man mit dem Button nicht 

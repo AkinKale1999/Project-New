@@ -126,6 +126,11 @@ body,
   color: red;
 }
 
+#RegistrySuccessMessage {
+  color: green;
+}
+
+
 @media (max-width: 485px) {
 
   .InputRegistry {

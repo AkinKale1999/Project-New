@@ -45,9 +45,11 @@ function Register() {
 
     if (
       typeof Name !== "string" ||
-      !/^[a-zA-Z]+$/.test(Name) ||
+      !/^[a-zA-Z- ]+$/
+        .test(Name) ||
       typeof Family_Name !== "string" ||
-      !/^[a-zA-Z]+$/.test(Family_Name)
+      !/^[a-zA-Z- ]+$/
+        .test(Family_Name)
     ) {
       setErrormessage("Vorname und/oder Nachname darf nicht Leer sein");
       return;
@@ -89,7 +91,7 @@ function Register() {
       }, 3000);
 
     } catch (error) {
-      setErrormessage("Ein Fehler ist aufgetreten. Bitte versuche es später erneut.");
+      setErrormessage(error.response?.data?.message || "Ein Fehler ist aufgetreten. Bitte versuche es später erneut.");
     }
   }
   // ------------------------------------------------------
@@ -101,31 +103,22 @@ function Register() {
           <form onSubmit={handleRegister}>
             <h1 id="RegistryHeader">Registrierung</h1>
 
-            <InputFields autoComplete={"name"} type={"text"} name={"name"} className={"InputRegistry"} placeholder={"Vorname *"} value={Name} onChange={(e) => setName(e.target.value)} />
-
-            <InputFields autoComplete={"family-name"} type={"text"} name={"family_name"} className={"InputRegistry"} placeholder={"Nachname *"} value={Family_Name} onChange={(e) => setFamilyName(e.target.value)} />
-
-            <InputFields autoComplete={"username"} type={"text"} name={"Username"} className={"InputRegistry"} placeholder={"Username *"} value={Username} onChange={(e) => setUsername(e.target.value)} />
-
-            <InputFields autoComplete={"email"} type={"email"} name={"email"} className={"InputRegistry"} placeholder={"E-mail *"} value={Email} onChange={(e) => setEmail(e.target.value)} />
-
-            <InputFields autoComplete={"new-password"} type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} />
+            <InputFields arialabel={"Vorname"} autoComplete={"name"} type={"text"} name={"name"} className={"InputRegistry"} placeholder={"Vorname *"} value={Name} onChange={(e) => setName(e.target.value)} required />
+            <InputFields arialabel={"Nachname"} autoComplete={"family-name"} type={"text"} name={"family_name"} className={"InputRegistry"} placeholder={"Nachname *"} value={Family_Name} onChange={(e) => setFamilyName(e.target.value)} required />
+            <InputFields arialabel={"Benutzername (min. 4 Zeichen)"} autoComplete={"username"} type={"text"} name={"Username"} className={"InputRegistry"} placeholder={"Username *"} value={Username} onChange={(e) => setUsername(e.target.value)} required />
+            <InputFields arialabel={"E-mail-Adresse"} autoComplete={"email"} type={"email"} name={"email"} className={"InputRegistry"} placeholder={"E-mail *"} value={Email} onChange={(e) => setEmail(e.target.value)} required />
+            <InputFields arialabel={"Passwort"} autoComplete={"new-password"} type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} required />
 
             <div className="ShowPasswordContainer">
               {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
             </div>
 
-            <InputFields autoComplete={"new-password"} type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+            <InputFields arialabel={"Passwort bestätigen"} autoComplete={"new-password"} type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
 
-            <div className="ShowPasswordContainer">
-              {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
-            </div>
+            <Button type={"submit"} />
 
-            <Button type={"submit"} ref={messageExist} />
-
-            <div>
-              <p id="RegistryErrorMessage">{errormessage}</p>
-            </div>
+            {errormessage && <p id="RegistryErrorMessage">{errormessage}</p>}
+            {message && <p id="RegistrySuccessMessage" ref={messageExist}>{message}</p>}
 
             <div id="RegistryContainerLink">
               <Link to={"/login"} id="RegistryLink">
