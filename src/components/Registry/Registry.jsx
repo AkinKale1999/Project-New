@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { registryApi } from "./Registry_Api";
 import InputFields from "../InputFields/InputFields"
 import Button from "../Button/Button"
-import { registryApi } from "./Registry_Api";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
@@ -18,7 +18,6 @@ function Register() {
   const [errormessage, setErrormessage] = useState("");
   const messageExist = useRef(null);
   const navigate = useNavigate();
-  
   // ------------------------------------------------------
 
   useEffect(() => {
@@ -31,7 +30,6 @@ function Register() {
   // ------------------------------------------------------
 
   function handleTypePassword() {
-
     if (ShowPassword === "password") {
       setShowPassword("text")
     }
@@ -39,7 +37,6 @@ function Register() {
       setShowPassword("password")
     }
   }
-
 
   // ------------------------------------------------------
 
