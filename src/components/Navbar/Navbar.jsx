@@ -24,7 +24,7 @@ export default function Navbar() {
 
           {/* ------------------------------------ */}
 
-          <Link to="/Warenkorb" >
+          <Link to="/warenkorb" >
             <ShoppingBagIcon className="NavbarElements" />
           </Link>
 
