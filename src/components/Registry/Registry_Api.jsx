@@ -7,8 +7,8 @@ export const registryApi = async (userData) => {
             userData,
             { withCredentials: true }
         );
-        return response.data; 
+        return response.data;
     } catch (error) {
-        throw error; 
+        throw error;
     }
 };

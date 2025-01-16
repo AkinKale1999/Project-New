@@ -13,12 +13,12 @@ function Register() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
-
   const [ShowPassword, setShowPassword] = useState("password");
   const [message, setMessage] = useState("");
   const [errormessage, setErrormessage] = useState("");
   const messageExist = useRef(null);
   const navigate = useNavigate();
+  
   // ------------------------------------------------------
 
   useEffect(() => {
