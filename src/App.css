@@ -237,13 +237,13 @@ nav a {
 }
 
 .LoginWithGithubOrGoogle div button {
-  background-color: #eee;
   color: black;
+  background-color: #eee;
   border-radius: 8px;
 }
 
-.LoginWithGithubOrGoogle form button:hover {
-  background-color: #ddd;
+.LoginWithGithubOrGoogle button:hover {
+  background-color: #ccc;
 }
 
 .BreakpointLogins {

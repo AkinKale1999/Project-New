@@ -62,14 +62,12 @@ function Login() {
             <div className="LoginWithGithubOrGoogle">
               <div>
                 <IconGithubAndGoogle src={"/img/github.png"} alt={"Github-Icon"} />
-                <Button text={"GitHub anmelden"}>
-                </Button>
+                <Button text={"GitHub anmelden"}/>
               </div>
 
               <div>
                 <IconGithubAndGoogle src={"/img/github.png"} alt={"Google-Icon"} />
-                <Button text={"Google anmelden"}>
-                </Button>
+                <Button text={"Google anmelden"}/>
               </div>
             </div>
 
