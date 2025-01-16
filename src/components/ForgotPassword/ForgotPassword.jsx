@@ -55,8 +55,6 @@ export default function ForgotPassword() {
                         <div className="ContainerMessagePWDForgot" id="ContainerErrorMessagePWDForgot">{errorMessage}</div>)}
                 </form>
 
-
-
                 <div id="BackToLoginContainerForgot">
                     <Button onClick={() => navigate("/login")} id={"ForgotPwdBtnGoBack"} text={"Zurück zum Login"} />
                 </div>

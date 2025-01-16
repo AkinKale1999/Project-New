@@ -487,9 +487,8 @@ nav a {
 }
 
 .ContainerMessagePWDForgot {
+  text-align: center;
   width: 90%;
-  display: flex;
-  justify-content: center;
 }
 
 #ContainerSuccessMessagePWDForgot {
@@ -739,12 +738,7 @@ nav a {
 }
 
 .ResponseMessage {
-  position: var(--position--relative);
-  top: 0px;
-  width: var(--width);
-  display: var(--display--flex);
-  justify-content: var(--justify-content);
-  align-items: var(--align-items);
+  text-align: center;
 }
 
 #ErrorMessageBackend {
