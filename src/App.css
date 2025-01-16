@@ -519,12 +519,17 @@ nav a {
 /* ----------------BURGERMENU/SIDEBAR---------------------- */
 
 #burgermenuDIV {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: var(--width);
+  font-size: 2rem;
 }
 
 #burgermenu {
   cursor: var(--cursor-pointer);
   margin-left: 10px;
+  font-size: 2rem;
 }
 
 .menu_Container {
