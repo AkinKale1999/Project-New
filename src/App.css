@@ -486,15 +486,18 @@ nav a {
   border-radius: 0px;
 }
 
+.ContainerMessagePWDForgot {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
 #ContainerSuccessMessagePWDForgot {
-  color: #155724;
-  padding: var(--padding--10px);
-  border-radius: var(--border--radius-4px);
-  margin-bottom: var(--margin-bottom-15px);
+  color: green;
 }
 
 #ContainerErrorMessagePWDForgot {
-  color: #721c24;
+  color: red;
 }
 
 #LabelPWDForgot {

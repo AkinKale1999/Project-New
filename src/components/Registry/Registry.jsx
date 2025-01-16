@@ -14,16 +14,18 @@ function Register() {
   const [Password, setPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
   const [ShowPassword, setShowPassword] = useState("password");
-  const [message, setMessage] = useState("");
-  const [errormessage, setErrormessage] = useState("");
-  const messageExist = useRef(null);
+  const [message, setMessage] = useState();
+  const [errormessage, setErrormessage] = useState();
+  const messageExist = useRef();
   const navigate = useNavigate();
   // ------------------------------------------------------
 
   useEffect(() => {
     if (message !== "") {
-      messageExist.current.style.display = "block";
-      messageExist.current.style.marginTop = "0";
+      if (messageExist.current) {
+        messageExist.current.style.display = "block";
+        messageExist.current.style.marginTop = "0";
+      }
     }
   }, [message]);
 
@@ -51,28 +53,24 @@ function Register() {
       !/^[a-zA-Z- ]+$/
         .test(Family_Name)
     ) {
-      setErrormessage("Vorname und/oder Nachname darf nicht Leer sein");
-      return;
+      return setErrormessage("Vorname und/oder Nachname darf nicht Leer sein")
     }
 
     if (Username.length < 4) {
-      setErrormessage("Der Username muss mindestens 4 Zeichen haben.");
-      return;
+      return setErrormessage("Der Username muss mindestens 4 Zeichen haben.");
     }
 
     if (Password !== ConfirmPassword) {
-      setErrormessage("Passwörter stimmen nicht überein");
-      return;
+      return setErrormessage("Passwörter stimmen nicht überein");
     }
 
     const passwordPattern =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!-])[A-Za-z\d?!-]{8,}$/;
 
     if (Password.length < 8 || !passwordPattern.test(Password)) {
-      setErrormessage(
+      return setErrormessage(
         "Das Passwort muss mindestens 8 Zeichen, 1 Klein-, 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen (! oder ?) haben."
       );
-      return;
     }
 
     try {
@@ -84,16 +82,17 @@ function Register() {
         Email
       })
 
-      setMessage(response?.data?.message);
+      setMessage(response?.data?.message)
 
       setTimeout(() => {
-        navigate("/Account");
+        navigate("/login");
       }, 3000);
 
     } catch (error) {
       setErrormessage(error.response?.data?.message || "Ein Fehler ist aufgetreten. Bitte versuche es später erneut.");
     }
   }
+
   // ------------------------------------------------------
 
   return (
@@ -117,8 +116,8 @@ function Register() {
 
             <Button type={"submit"} />
 
+            {message && <p id="RegistrySuccessMessage">{message}</p>}
             {errormessage && <p id="RegistryErrorMessage">{errormessage}</p>}
-            {message && <p id="RegistrySuccessMessage" ref={messageExist}>{message}</p>}
 
             <div id="RegistryContainerLink">
               <Link to={"/login"} id="RegistryLink">

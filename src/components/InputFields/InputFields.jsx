@@ -9,7 +9,6 @@ export default function InputFields({ type, id, name, placeholder, value, onChan
                 className={className}
                 id={id}
                 name={name}
-                required={required}
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}

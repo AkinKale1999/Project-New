@@ -41,18 +41,21 @@ export default function ForgotPassword() {
                     <img src="/img/warning-icon.png" alt="warning-icon" />
                     <h1 className="forgotPwdHeader">Passwort vergessen</h1>
 
-                    {successMessage && (
-                        <div id="ContainerSuccessMessagePWDForgot">{successMessage}</div>)}
-
-                    {errorMessage && (
-                        <div id="ContainerSuccessMessagePWDForgot ContainerErrorMessagePWDForgot">{errorMessage}</div>)}
-
                     <label htmlFor="email" id="LabelPWDForgot">E-Mail-Adresse</label>
 
                     <InputFields arialabel={"E-mail-Adresse"} autoComplete={"email"} type={"email"} id={"EmailPWDForgot"} name={"email"} placeholder={"Geben Sie Ihre E-Mail-Adresse ein *"} value={email} onChange={(e) => setEmail(e.target.value)} required />
 
                     <Button btnType={"submit"} text={"E-Mail senden"} />
+
+                    <br />
+                    {successMessage && (
+                        <div className="ContainerMessagePWDForgot" id="ContainerSuccessMessagePWDForgot">{successMessage}</div>)}
+
+                    {errorMessage && (
+                        <div className="ContainerMessagePWDForgot" id="ContainerErrorMessagePWDForgot">{errorMessage}</div>)}
                 </form>
+
+
 
                 <div id="BackToLoginContainerForgot">
                     <Button onClick={() => navigate("/login")} id={"ForgotPwdBtnGoBack"} text={"Zurück zum Login"} />
