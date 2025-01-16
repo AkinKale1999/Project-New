@@ -10,6 +10,19 @@ export default function ForgotPassword() {
     const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate();
 
+    const validEmailDomains = [
+        "@hotmail.de",
+        "@hotmail.com",
+        "@gmail.com",
+        "@gmail.de",
+        "@yahoo.com",
+        "@yahoo.de",
+        "@outlook.de",
+        "@outlook.com"
+    ];
+
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -21,13 +34,21 @@ export default function ForgotPassword() {
             return;
         }
 
+
+        if (!validEmailDomains.some(domain => email.endsWith(domain))) {
+            setErrorMessage("Ihre Email muss mit einer gültigen Domain enden.")
+            return;
+        }
+
         try {
-            const response = await axios.post(`${process.env.BACKEND_URL}/PwdForgot`,
-                email)
+            const response = await axios.post(`${process.env.BACKEND_URL}/PwdForgot`, email)
 
             if (response.status === 200) {
                 setSuccessMessage("Vielen Dank! Ihre E-Mail wurde erfolgreich gesendet. Bitte überprüfen Sie in Kürze Ihr Postfach")
+                setEmail("")
             }
+
+
         } catch (error) {
             setErrorMessage("Es gab ein Problem bei der Anfrage." + error);
         }
