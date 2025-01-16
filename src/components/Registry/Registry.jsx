@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import InputFields from "../InputFields/InputFields"
 import Button from "../Button/Button"
+import { registryApi } from "./Registry_Api";
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 function Register() {
   const [Name, setName] = useState("");
@@ -25,6 +27,19 @@ function Register() {
       messageExist.current.style.marginTop = "0";
     }
   }, [message]);
+
+  // ------------------------------------------------------
+
+  function handleTypePassword() {
+
+    if (ShowPassword === "password") {
+      setShowPassword("text")
+    }
+    else {
+      setShowPassword("password")
+    }
+  }
+
 
   // ------------------------------------------------------
 
@@ -62,31 +77,22 @@ function Register() {
     }
 
     try {
-      let response = await axios.post(`${process.env.BACKEND.URL}/register`, {
-
+      const response = await registryApi({
         Name,
         Family_Name,
         Username,
         Password,
-        Email,
-      },
-        { withCredentials: true }
-        // WICHTIG: Cookies übermitteln
-      );
+        Email
+      })
 
-      setMessage(response.data.message);
-      // hier kommt "Erfolgreich Registriert" als Nachricht
-      // (res.status(201) in /register(Backend))
+      setMessage(response?.data?.message);
 
       setTimeout(() => {
         navigate("/Account");
       }, 3000);
+
     } catch (error) {
-      console.log(error);
-      setErrormessage(error)
-      // hier kommt Benutzername existiert als Nachricht
-      // res.status(400) in /register(Backend)
-      return;
+      setErrormessage("Ein Fehler ist aufgetreten. Bitte versuche es später erneut.");
     }
   }
   // ------------------------------------------------------
@@ -95,7 +101,7 @@ function Register() {
     <>
       <div id="MainContainerRegistry">
         <div id="RegistryContainer">
-          <form action="post" onSubmit={handleRegister}>
+          <form onSubmit={handleRegister}>
             <h1 id="RegistryHeader">Registrierung</h1>
 
             <InputFields type={"text"} name={"name"} className={"InputRegistry"} placeholder={"Vorname *"} value={Name} onChange={(e) => setName(e.target.value)} />
@@ -106,22 +112,34 @@ function Register() {
 
             <InputFields type={"email"} name={"email"} className={"InputRegistry"} placeholder={"E-mail *"} value={Email} onChange={(e) => setEmail(e.target.value)} />
 
-            <InputFields type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} />
+            <div>
+              <InputFields type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} />
 
-            <InputFields type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+              <div className="ShowPasswordContainer">
+                {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
+              </div>
+            </div>
+
+            <div>
+              <InputFields type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+
+              <div className="ShowPasswordContainer">
+                {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
+              </div>
+            </div>
 
             <Button type={"submit"} ref={messageExist} />
 
             <div>
               <p id="RegistryErrorMessage">{errormessage}</p>
             </div>
-            <div>
-              <div id="RegistryContainerLink">
-                <Link to={"/login"} id="RegistryLink">
-                  Bereits Registriert? Zum Login
-                </Link>
-              </div>
+
+            <div id="RegistryContainerLink">
+              <Link to={"/login"} id="RegistryLink">
+                Bereits Registriert? Zum Login
+              </Link>
             </div>
+
           </form>
         </div>
       </div>

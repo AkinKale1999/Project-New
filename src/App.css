@@ -59,7 +59,6 @@ body,
 
 #RegistryContainer h1 {
   font-size: 1.5rem;
-
 }
 
 .InputRegistry {
@@ -68,6 +67,23 @@ body,
   border-radius: 4px;
   width: 91%;
   padding: 15px;
+}
+
+
+.ShowPasswordContainer {
+  display: flex;
+  height: 1px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.ShowPasswordIcon {
+  position: relative;
+  top: -50px;
+  margin-right: 10px;
+  cursor: pointer;
+  z-index: 1;
+  width: fit-content;
 }
 
 #RegistryErrorMessage {
