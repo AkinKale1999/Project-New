@@ -535,7 +535,6 @@ nav a {
   width: 100%;
   height: var(--height);
   min-height: var(--height);
-  max-height: var(--height);
   position: fixed;
   z-index: 999;
   top: 0;
@@ -550,7 +549,7 @@ nav a {
 
 @keyframes ClosingMenuContainer {
   0% {
-    max-width: 5%;
+    max-width: 3%;
   }
 
   100% {
@@ -569,8 +568,8 @@ nav a {
 }
 
 #menu_Closing {
-  color: white;
   width: fit-content;
+  color: black;
 }
 
 #menu_content {
@@ -600,7 +599,6 @@ nav a {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   text-decoration: none;
-  color: inherit;
 }
 
 @keyframes slideForward {
