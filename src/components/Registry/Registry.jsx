@@ -112,20 +112,16 @@ function Register() {
 
             <InputFields type={"email"} name={"email"} className={"InputRegistry"} placeholder={"E-mail *"} value={Email} onChange={(e) => setEmail(e.target.value)} />
 
-            <div>
-              <InputFields type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} />
+            <InputFields type={ShowPassword} name={"password"} className={"InputRegistry"} placeholder={"Passwort *"} value={Password} onChange={(e) => setPassword(e.target.value)} />
 
-              <div className="ShowPasswordContainer">
-                {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
-              </div>
+            <div className="ShowPasswordContainer">
+              {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
             </div>
 
-            <div>
-              <InputFields type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+            <InputFields type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
 
-              <div className="ShowPasswordContainer">
-                {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
-              </div>
+            <div className="ShowPasswordContainer">
+              {ShowPassword === "password" ? <VisibilityIcon onClick={handleTypePassword} className="ShowPasswordIcon" /> : <VisibilityOffIcon onClick={handleTypePassword} className="ShowPasswordIcon" />}
             </div>
 
             <Button type={"submit"} ref={messageExist} />
