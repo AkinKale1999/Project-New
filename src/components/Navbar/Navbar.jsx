@@ -18,20 +18,21 @@ export default function Navbar() {
           <ChangeMode />
           {/* ------------------------------------ */}
 
-          <Link to="/wunschliste" >
+          <Link to="/wunschliste" title="Wunschliste">
             <FavoriteIcon className="NavbarElements" />
           </Link>
 
           {/* ------------------------------------ */}
 
-          <Link to="/warenkorb" >
+          <Link to="/warenkorb" title="Warenkorb" >
             <ShoppingBagIcon className="NavbarElements" />
           </Link>
 
           {/* ------------------------------------ */}
 
-          <Usericon />
-
+          <div title="Login">
+            <Usericon />
+          </div>
         </nav>
       </div>
     </>
