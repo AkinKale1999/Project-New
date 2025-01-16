@@ -21,8 +21,6 @@ export default function ForgotPassword() {
         "@outlook.com"
     ];
 
-
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -33,7 +31,6 @@ export default function ForgotPassword() {
             setErrorMessage("Bitte geben Sie eine E-Mail-Adresse ein.");
             return;
         }
-
 
         if (!validEmailDomains.some(domain => email.endsWith(domain))) {
             setErrorMessage("Ihre Email muss mit einer gültigen Domain enden.")
@@ -47,7 +44,6 @@ export default function ForgotPassword() {
                 setSuccessMessage("Vielen Dank! Ihre E-Mail wurde erfolgreich gesendet. Bitte überprüfen Sie in Kürze Ihr Postfach")
                 setEmail("")
             }
-
 
         } catch (error) {
             setErrorMessage("Es gab ein Problem bei der Anfrage." + error);

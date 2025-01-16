@@ -18,6 +18,20 @@ function Register() {
   const [errormessage, setErrormessage] = useState();
   const messageExist = useRef();
   const navigate = useNavigate();
+
+  // ------------------------------------------------------
+
+  const validEmailDomains = [
+    "@hotmail.de",
+    "@hotmail.com",
+    "@gmail.com",
+    "@gmail.de",
+    "@yahoo.com",
+    "@yahoo.de",
+    "@outlook.de",
+    "@outlook.com"
+  ];
+
   // ------------------------------------------------------
 
   useEffect(() => {
@@ -44,6 +58,10 @@ function Register() {
 
   async function handleRegister(e) {
     e.preventDefault();
+
+    if (!validEmailDomains.some(domain => Email.endsWith(domain))) {
+      setErrormessage("Ihre Email muss mit einer gültigen Domain enden.")
+    }
 
     if (
       typeof Name !== "string" ||
@@ -113,7 +131,6 @@ function Register() {
             </div>
 
             <InputFields arialabel={"Passwort bestätigen"} autoComplete={"new-password"} type={ShowPassword} name={"confirm password"} className={"InputRegistry"} placeholder={"Passwort Bestätigen *"} value={ConfirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
-
             <Button type={"submit"} />
 
             {message && <p id="RegistrySuccessMessage">{message}</p>}
