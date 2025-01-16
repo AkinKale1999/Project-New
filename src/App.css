@@ -1,25 +1,51 @@
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
   margin: 0;
   padding: 0;
-  font-weight: 100;
 }
 
 :root {
-  --font-size: 1rem;
-  --height: 100%;
-  --height-fit-content: fit-content;
-  --margin-right: 2vmax;
-  --width: 100%;
+  /* ----------------Margin-and-Padding-------------------- */
   --margin: 0;
   --padding: 0;
+  --margin-right: 2vmax;
+
+  /* ----------------Cursor-------------------- */
   --cursor-pointer: pointer;
-  --color: #fff;
-  --color-dark: #fff;
+
+  /* ----------------Fonts-------------------- */
+  --font-size: 1rem;
+  --font-size-1--5: 1.5rem;
+
+  /* ----------------Height-and-Width-------------------- */
+  --height: 100%;
+  --width: 100%;
+  --height-fit-content: fit-content;
+
+  /* ----------------Display-Flex-------------------- */
   --display--flex: flex;
   --justify-content: center;
   --align-items: center;
   --flex-direction: column;
+  --justify-content-flex-end: flex-end;
+
+  /* ----------------Colors-------------------- */
+  --color--white: #fff;
+  --color-dark: #000;
+  --lighter--blue: #007bff;
+  --darker-blue: #0056b3;
+  --ccc--grey: #ccc;
+
+  /* ----------------Text-Decoration-------------------- */
+  --text--decoration--none: none;
+
+  /* ----------------Border-------------------- */
+  --border--radius-4px: 4px;
+  --border--none: none;
+
+  /* ----------------Position-------------------- */
+  --position--relative: relative;
 }
 
 html,
@@ -48,7 +74,7 @@ body,
 
 #RegistryContainer {
   padding: min(3rem, 1.9rem);
-  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+  box-shadow: 0px 0px 10px 5px var(--ccc--grey);
   max-width: 400px;
   margin-right: 20px;
   margin-left: 20px;
@@ -56,33 +82,33 @@ body,
 }
 
 #RegistryContainer h1 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-1--5);
   text-align: center;
   margin-bottom: 20px;
 }
 
 #RegistryContainer button {
-  width: 100%;
+  width: var(--width);
 }
 
 .InputRegistry {
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--ccc--grey);
   border-radius: 4px;
   width: 92%;
   padding: 15px;
 }
 
 .ShowPasswordContainer {
-  display: flex;
+  display: var(--display--flex);
   height: 0px;
-  width: 100%;
+  width: var(--width);
   justify-content: flex-end;
-  color: black;
+  color: var(--color-dark);
 }
 
 .ShowPasswordIcon {
-  position: relative;
+  position: var(--position--relative);
   top: -50px;
   margin-right: 10px;
   cursor: pointer;
@@ -156,14 +182,14 @@ body,
   height: 7%;
   min-height: 53px;
   width: var(--width);
-  color: #fff;
+  color: var(--color--white);
 }
 
 #navbar {
   display: var(--display--flex);
   align-items: var(--align-items);
   height: var(--height);
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--color--white);
 }
 
 .NavbarElements {
@@ -193,7 +219,7 @@ nav a {
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
-  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+  box-shadow: 0px 0px 10px 5px var(--ccc--grey);
   width: 92%;
   max-width: 450px;
   border-radius: 12px;
@@ -212,38 +238,52 @@ nav a {
 }
 
 #LoginHeader {
-  color: #007bff;
-  font-size: 1.5rem;
+  color: var(--lighter--blue);
+  font-size: var(--font-size-1--5);
+}
+
+#GithubGoogleIconContainer {
+  width: 20px;
+  margin-right: 20px;
 }
 
 .GithubGoogleIcon {
   width: fit-content;
   height: 30px;
-  background-color: black;
+  background-color: var(--color-dark);
   border-radius: 50px;
-  border: 1px solid black;
+  border: 3px solid var(--color-dark);
   position: absolute;
   display: var(--display--flex);
   align-items: var(--align-items);
   justify-content: var(--justify-content);
 }
 
+#GoogleIcon img {
+  background-color: var(--color--white);
+}
+
 .LoginWithGithubOrGoogle {
   width: 85%;
   display: var(--display--flex);
   flex-direction: var(--flex-direction);
-  gap: 10px;
-  border-radius: 8px;
+  gap: 15px;
+}
+
+.LoginWithGithubOrGoogle div {
+  width: var(--width);
+  display: var(--display--flex);
+  align-items: var(--align-items);
 }
 
 .LoginWithGithubOrGoogle div button {
-  color: black;
+  color: var(--color-dark);
   background-color: #eee;
   border-radius: 8px;
 }
 
 .LoginWithGithubOrGoogle button:hover {
-  background-color: #ccc;
+  background-color: var(--ccc--grey);
 }
 
 .BreakpointLogins {
@@ -267,7 +307,7 @@ nav a {
   content: "";
   flex-grow: 1;
   height: 1px;
-  background-color: #ccc;
+  background-color: var(--ccc--grey);
   margin: 0 9px;
   box-sizing: inherit;
 }
@@ -276,7 +316,7 @@ nav a {
 #PasswordLogin {
   width: 79%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--ccc--grey);
   border-radius: 8px;
   outline: none;
 }
@@ -287,7 +327,7 @@ nav a {
 }
 
 #BreakPoint {
-  background-color: #ccc;
+  background-color: var(--ccc--grey);
   height: 2px;
   width: 95%;
   margin-top: 40px;
@@ -305,7 +345,7 @@ nav a {
 .GoToRegisterDiv a {
   padding: 10px 40px;
   border-radius: 50px;
-  box-shadow: 0px 0px 20px 0px grey;
+  box-shadow: 0px 0px 20px 0px var(--ccc--grey);
   max-width: 360px;
   width: var(--width);
   text-align: center;
@@ -329,7 +369,7 @@ nav a {
   height: 600px;
   margin-top: 20px;
   display: var(--display--flex);
-  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+  box-shadow: 0px 0px 10px 5px var(--ccc--grey);
   border-radius: 20px;
 }
 
@@ -337,8 +377,8 @@ nav a {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   width: 70%;
-  height: 100%;
-  background-color: #fff;
+  height: var(--height);
+  background-color: var(--color--white);
 }
 
 .LeftContainerShoppingCartContent {
@@ -353,15 +393,15 @@ nav a {
 }
 
 .LeftContainerShoppingCartContent h4 {
-  color: rgb(146, 146, 146)
+  color: var(--ccc--grey);
 }
 
 .RightContainerShoppingCartContent {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 30%;
-  height: 100%;
-  background-color: #ccc;
+  height: var(--height);
+  background-color: var(--ccc--grey);
 }
 
 /* --------------------------PWDFORGOT----------------------------- */
@@ -381,12 +421,13 @@ nav a {
   align-items: var(--align-items);
   justify-content: var(--justify-content);
   flex-direction: var(--flex-direction);
-  box-shadow: 0px 0px 10px 5px rgb(209, 209, 209);
+  box-shadow: 0px 0px 10px 5px var(--ccc--grey);
   width: 93%;
   max-width: 450px;
   border-radius: 12px;
   max-height: 500px;
-  height: 100%;
+  height: var(--height);
+  color: var(--lighter--blue);
 }
 
 #forgotPwdForm img {
@@ -395,27 +436,26 @@ nav a {
 }
 
 .forgotPwdHeader {
-  font-size: 1.5rem;
+  font-size: var(--font-size-1--5);
   margin-bottom: 20px;
-  color: #007bff;
 }
 
 .ForgotPwdLink {
-  text-decoration: none;
-  color: #007bff;
+  text-decoration: var(--text--decoration--none);
+  color: var(--lighter--blue);
 }
 
 #ContainerPwdForgot button {
   display: var(--display--flex);
-  justify-content: center;
+  justify-content: var(--justify-content);
   width: 90%;
 }
 
 #BackToLoginContainerForgot {
   margin-top: 40px;
   background-color: inherit;
-  width: 100%;
-  display: flex;
+  width: var(--width);
+  display: var(--display--flex);
   justify-content: flex-start;
 }
 
@@ -428,7 +468,7 @@ nav a {
 }
 
 #ForgotPwdBtnGoBack {
-  position: relative;
+  position: var(--position--relative);
   width: fit-content;
   border-radius: 0px;
 }
@@ -470,7 +510,7 @@ nav a {
   justify-content: var(--justify-content);
   height: fit-content;
   width: var(--width);
-  min-height: 100%;
+  min-height: var(--height);
 }
 
 #WishlistContainer p {
@@ -481,7 +521,7 @@ nav a {
 /* --------------------REGISTERPAGE-------------------------- */
 
 #RegistryHeader {
-  color: #007bff;
+  color: var(--lighter--blue);
   margin-bottom: 15px;
 }
 
@@ -492,8 +532,8 @@ nav a {
 }
 
 #RegistryLink {
-  color: #007bff;
-  text-decoration: none;
+  color: var(--lighter--blue);
+  text-decoration: var(--text--decoration--none);
 }
 
 
@@ -501,10 +541,10 @@ nav a {
 
 #Footer {
   display: var(--display--flex);
-  background-color: #007bff;
+  background-color: var(--lighter--blue);
   justify-content: space-evenly;
   align-items: var(--align-items);
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--color--white);
   height: 7%;
   min-height: 53px;
 }
@@ -512,16 +552,16 @@ nav a {
 .FooterElements {
   display: var(--display--flex);
   cursor: var(--cursor-pointer);
-  color: #fff;
-  font-size: 1rem;
+  color: var(--color--white);
+  font-size: var(--font-size);
 }
 
 /* ----------------BURGERMENU/SIDEBAR---------------------- */
 
 #burgermenuDIV {
-  display: flex;
+  display: var(--display--flex);
   justify-content: flex-start;
-  align-items: center;
+  align-items: var(--align-items);
   width: var(--width);
   font-size: 2rem;
 }
@@ -537,7 +577,7 @@ nav a {
   background-color: rgb(229, 229, 229, 0.5);
   backdrop-filter: blur(15px);
   max-width: 425px;
-  width: 100%;
+  width: var(--width);
   height: var(--height);
   min-height: var(--height);
   position: fixed;
@@ -574,12 +614,12 @@ nav a {
 
 #menu_Closing {
   width: fit-content;
-  color: black;
+  color: var(--color-dark);
 }
 
 #menu_content {
   width: fit-content;
-  font-size: 1.5rem;
+  font-size: var(--font-size-1--5);
   margin-top: 15px;
   margin-left: 15px;
   cursor: var(--cursor-pointer);
@@ -592,9 +632,9 @@ nav a {
   align-items: var(--align-items);
   flex-direction: var(--flex-direction);
   height: 90%;
-  font-size: 1.5rem;
+  font-size: var(--font-size-1--5);
   gap: 10px;
-  color: rgb(0, 0, 0);
+  color: var(--color-dark);
 }
 
 .Menu_Links_For_Navigation {
@@ -603,7 +643,7 @@ nav a {
   animation-timing-function: linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  text-decoration: none;
+  text-decoration: var(--text--decoration--none);
 }
 
 @keyframes slideForward {
@@ -634,7 +674,7 @@ nav a {
   display: var(--display--flex);
   justify-content: space-evenly;
   align-items: var(--align-items);
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--ccc--grey);
   width: var(--width);
   margin-top: 60px;
 }
@@ -644,11 +684,11 @@ nav a {
   border: none;
   background: none;
   cursor: var(--cursor-pointer);
-  font-size: 1rem;
+  font-size: var(--font-size);
 }
 
 .tab:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--color-dark);
 }
 
 .profileDetails {
@@ -660,8 +700,8 @@ nav a {
 }
 
 #signout {
-  color: #007bff;
-  text-decoration: none;
+  color: var(--lighter--blue);
+  text-decoration: var(--text--decoration--none);
   cursor: var(--cursor-pointer);
 }
 
@@ -675,15 +715,15 @@ nav a {
   height: 93vh;
   width: var(--width);
   gap: 20px;
-  font-size: 1.5rem;
+  font-size: var(--font-size-1--5);
 }
 
 #NotFoundContainer a {
-  color: #0056b3
+  color: var(--darker-blue)
 }
 
 .ResponseMessage {
-  position: relative;
+  position: var(--position--relative);
   top: 0px;
   width: var(--width);
   display: var(--display--flex);
@@ -717,12 +757,12 @@ nav a {
   padding: 12px;
   border: none;
   border-radius: 4px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--lighter--blue);
+  color: var(--color--white);
   cursor: var(--cursor-pointer);
   transition: background-color 0.3s ease;
 }
 
 .button--default:hover {
-  background-color: #0056b3;
+  background-color: var(--darker-blue);
 }

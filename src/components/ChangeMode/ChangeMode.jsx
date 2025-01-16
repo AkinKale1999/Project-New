@@ -30,8 +30,8 @@ export default function ChangeMode() {
 
         const newBgColor = newMode ? "#000" : "#fff";
         const newTextColor = newMode ? "#fff" : "#000";
-        const newHdColor = newMode ? "#000" : "#007bff";
-        const newFtColor = newMode ? "#000" : "#007bff";
+        const newHdColor = newMode ? "#000" : "#0056b3";
+        const newFtColor = newMode ? "#000" : "#0056b3";
 
         localStorage.setItem("bgColor", newBgColor);
         localStorage.setItem("textColor", newTextColor);

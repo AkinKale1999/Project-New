@@ -60,15 +60,9 @@ function Login() {
             <h1 id="LoginHeader">Login</h1>
 
             <div className="LoginWithGithubOrGoogle">
-              <div>
-                <IconGithubAndGoogle src={"/img/github.png"} alt={"Github-Icon"} />
-                <Button text={"GitHub anmelden"}/>
-              </div>
+              <IconGithubAndGoogle text={"Github anmelden"} src={"/img/github.png"} alt={"Github-Icon"} />
 
-              <div>
-                <IconGithubAndGoogle src={"/img/github.png"} alt={"Google-Icon"} />
-                <Button text={"Google anmelden"}/>
-              </div>
+              <IconGithubAndGoogle id={"GoogleIcon"} text={"Google anmelden"} src={"/img/google.png"} alt={"Google-Icon"} />
             </div>
 
             <div className="BreakpointLogins">
@@ -88,7 +82,6 @@ function Login() {
             </div>
 
             {(Errormessage) && <div className="ResponseMessage" id="ErrorMessageBackend">{Errormessage}</div>}
-
             {(Successmessage) && <div className="ResponseMessage" id="SuccessMessageBackend">{Successmessage}</div>}
           </form >
 
