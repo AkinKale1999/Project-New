@@ -40,7 +40,7 @@ function App() {
         {/* replace-Attribut = sorgt dafür, dass die aktuelle Route 
           im Browser-Verlauf ersetzt wird, anstatt einen neuen Eintrag 
           hinzuzufügen. So kann der Nutzer nicht zur alten Route zurückkehren. */}
-
+{/* -- */}
         {/* ----------------------ProtectedRoute-------------------------- */}
 
         <Route path="/app/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
