@@ -194,7 +194,7 @@ body,
   height: 7%;
   min-height: 53px;
   width: var(--width);
-  margin-bottom: 5px;
+  background-color: #eee;
 }
 
 #navbar {
@@ -558,11 +558,10 @@ nav a {
   width: fit-content;
   margin-left: 10px;
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* ---------------------SecretAnimation------------------------ */
-
-
 
 #SecretAnimation>div {
   min-width: 100%;
@@ -609,6 +608,7 @@ nav a {
   border-top: 1px solid var(--color--white);
   height: 7%;
   min-height: 53px;
+  background-color: #eee;
 }
 
 .FooterElements {
