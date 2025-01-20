@@ -1,9 +1,8 @@
-import Burgermenu from "../BurgerMenu/Burgermenu";
 import Usericon from "../UserIcon/UserIcon";
-import ChangeMode from "../ChangeMode/ChangeMode";
 import { Link } from "react-router-dom";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import SecretLogo from "../SecretLogo/SecretLogo";
 
 
 export default function Navbar() {
@@ -12,26 +11,26 @@ export default function Navbar() {
     <>
       <div id="navbarDIV">
         <nav id="navbar">
-          <Burgermenu />
+          <SecretLogo />
           {/* ------------------------------------ */}
 
-          <ChangeMode />
-          {/* ------------------------------------ */}
+          <div id="navbarContentRightSide">
 
-          <Link to="/wunschliste" title="Wunschliste">
-            <FavoriteIcon className="NavbarElements" />
-          </Link>
+            <Link to="/wunschliste" title="Wunschliste">
+              <FavoriteIcon className="NavbarElements" />
+            </Link>
 
-          {/* ------------------------------------ */}
+            {/* ------------------------------------ */}
 
-          <Link to="/warenkorb" title="Warenkorb" >
-            <ShoppingBagIcon className="NavbarElements" />
-          </Link>
+            <Link to="/warenkorb" title="Warenkorb" >
+              <ShoppingBagIcon className="NavbarElements" />
+            </Link>
 
-          {/* ------------------------------------ */}
+            {/* ------------------------------------ */}
 
-          <div title="Login">
-            <Usericon />
+            <div title="Login">
+              <Usericon />
+            </div>
           </div>
         </nav>
       </div>
