@@ -14,7 +14,7 @@ export default function SecretAnimation() {
         const options = {
             root: null, // Beobachte das Element relativ zum gesamten Viewport (Standard).
             rootMargin: "0px", // Kein zusätzlicher Rand außerhalb des Viewports.
-            threshold: 0.30, // Triggert, wenn mindestens 30 % des Videos sichtbar sind.
+            threshold: 0.10, // Triggert, wenn mindestens 30 % des Videos sichtbar sind.
         };
 
         // Funktion, die ausgeführt wird, wenn sich der Sichtbarkeitsstatus des Videos ändert.
