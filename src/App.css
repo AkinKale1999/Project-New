@@ -556,7 +556,8 @@ nav a {
 #SecretLogo img {
   height: 50px;
   width: fit-content;
-  padding: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 /* ---------------------SecretAnimation------------------------ */
