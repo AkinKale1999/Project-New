@@ -69,18 +69,18 @@ body,
   width: 100%;
 }
 
-#Home div {
+#Home>div {
   min-width: 100%;
   height: 100%;
   margin-top: 20px;
 }
 
-#Home div div {
+#Home>div>div {
   width: 100%;
   height: 40vmax;
 }
 
-#Home div div video {
+#Home>div>div>video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -567,8 +567,10 @@ nav a {
 }
 
 #SecretLogo img {
-  width: auto;
-  height: 100%
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: fit-content;
 }
 
 /* --------------------REGISTERPAGE-------------------------- */
@@ -710,6 +712,72 @@ nav a {
     left: 0;
   }
 }
+
+
+/* -----------------------ShopByCategoryContainer-------------------------- */
+
+
+#ShopByCategoryContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
+
+#ShopByCategoryContainer>div {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#ShopByCategoryContainer .category-container {
+  display: flex;
+  height: 100px;
+  width: 95%;
+  gap: 15px;
+}
+
+.category-item {
+  gap: 5px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #ddd;
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+.category-item a:first-child {
+  min-width: 50px;
+  width: 100%;
+  max-width: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.category-item a:last-child {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+#ShopByCategoryContainer .all-products {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+#ShopByCategoryContainer a {
+  text-decoration: none;
+  color: #22c7c2;
+}
+
 
 /* ----------------------PROFILEPAGE--------------------------- */
 
