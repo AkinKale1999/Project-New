@@ -69,23 +69,6 @@ body,
   width: 100%;
 }
 
-#Home>div {
-  min-width: 100%;
-  height: 100%;
-  margin-top: 20px;
-}
-
-#Home>div>div {
-  width: 100%;
-  height: 40vmax;
-}
-
-#Home>div>div>video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* -----------------REGISTRY------------------------ */
 
 #MainContainerRegistry {
@@ -211,13 +194,13 @@ body,
   height: 7%;
   min-height: 53px;
   width: var(--width);
+  margin-bottom: 5px;
 }
 
 #navbar {
   display: var(--display--flex);
   align-items: var(--align-items);
   height: var(--height);
-  border-bottom: 1px solid var(--color--white);
 }
 
 .NavbarElements {
@@ -303,7 +286,7 @@ nav a {
   align-items: var(--align-items);
 }
 
-.LoginWithGithubOrGoogle div button {
+.LoginWithGithubOrGoogle div>button {
   color: var(--color-dark);
   background-color: #eee;
   border-radius: 8px;
@@ -559,19 +542,43 @@ nav a {
   padding: 20px;
 }
 
+
 /* ---------------------SecretLogoNavbar------------------------ */
 
 #SecretLogo {
   height: 100%;
   width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 #SecretLogo img {
   height: 50px;
-  margin-top: 5px;
-  margin-left: 5px;
   width: fit-content;
+  padding: 20px;
 }
+
+/* ---------------------SecretAnimation------------------------ */
+
+
+
+#SecretAnimation>div {
+  min-width: 100%;
+  height: 100%;
+}
+
+#SecretAnimation>div {
+  width: 100%;
+  height: 45vmax;
+}
+
+#SecretAnimation>div>video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* --------------------REGISTERPAGE-------------------------- */
 
@@ -722,7 +729,7 @@ nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: fit-content;
+  justify-content: center;
 }
 
 #ShopByCategoryContainer>div {
@@ -730,7 +737,6 @@ nav a {
   text-align: center;
   font-size: 1rem;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 #ShopByCategoryContainer .category-container {
@@ -749,7 +755,6 @@ nav a {
   align-items: center;
   border: 3px solid #ddd;
   border-radius: 15px;
-  flex-wrap: wrap;
 }
 
 .category-item a:first-child {
@@ -769,13 +774,28 @@ nav a {
   width: 100%;
   height: fit-content;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 35px;
   font-size: 1rem;
 }
 
 #ShopByCategoryContainer a {
   text-decoration: none;
   color: #22c7c2;
+}
+
+@media (max-width:371px) {
+
+  #ShopByCategoryContainer .category-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:371px) {
+
+  #ShopByCategoryContainer .all-products {
+    margin-top: 160px;
+  }
+
 }
 
 
