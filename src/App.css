@@ -651,7 +651,7 @@ body,
 /* ----------------------NEW-PRODUCTS--------------------------- */
 
 #NewProductsContainer {
-  margin-top: 50px;
+  margin-top: 30px;
   height: auto;
   width: 100%;
 }
@@ -660,7 +660,6 @@ body,
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
   margin-top: 20px;
 }
 
@@ -681,13 +680,59 @@ body,
 }
 
 #NewProductsContainer>div h3 {
-  color: #1ba7a2;
   line-height: 22px;
+  color: var(--color-dark);
 }
 
 #NewProductsContainer>div+div+div {
   font-size: 1.5rem;
   text-decoration: underline;
+}
+
+/* ----------------------MALE-OR-FEMALE-AREA--------------------------- */
+
+#MaleOrFemaleAreaContainer {
+  height: auto;
+  margin-top: 30px;
+  width: 100%;
+}
+
+#MaleOrFemaleAreaDiv {
+  height: 500px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr 2fr);
+}
+
+#MaleOrFemaleAreaContainer>div>div>div>h3 {
+  width: 100%;
+  color: black;
+  background-color: var(---Light---Turquoise);
+}
+
+
+#MaleOrFemaleAreaContainer>div>div {
+  height: 100%;
+  width: 100%;
+  background-color: var(---Light---Turquoise);
+  color: black;
+}
+
+#MaleOrFemaleAreaContainer>div>div+div {
+  height: 100%;
+  width: 100%;
+}
+
+#MaleOrFemaleAreaContainer>div>div+div>div {
+  height: 50%;
+  width: 100%;
+  background-color: #fff;
+}
+
+#MaleOrFemaleAreaContainer>div>div+div>div+div {
+  height: 50%;
+  width: 100%;
+  background-color: green;
 }
 
 /* ----------------------PROFILEPAGE--------------------------- */

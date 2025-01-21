@@ -29,7 +29,7 @@ export default function ShopByCategory() {
                 </div>
 
                 <div className="all-products">
-                    <Link to="/Produkt">Alle Produkte anzeigen</Link>
+                    <Link to="/Product">Alle Produkte anzeigen</Link>
                 </div>
             </div>
         </>
