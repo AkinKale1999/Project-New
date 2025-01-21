@@ -10,10 +10,7 @@ export default function UserIcon() {
 
   return (
     <div onClick={NavigateToLogin}>
-
-      <LoginIcon className="NavbarElements" id="UserIcon"
-      />
+      <LoginIcon className="NavbarElements" id="UserIcon" />
     </div>
-
   );
 }

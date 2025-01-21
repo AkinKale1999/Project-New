@@ -1,3 +1,4 @@
+import NewProducts from "../../NewProducts/NewProducts.jsx";
 import SecretAnimation from "../../SecretAnimation/SecretAnimation.jsx"
 import ShopByCategory from "../../ShopByCategory/ShopByCategory.jsx";
 
@@ -8,6 +9,7 @@ export default function Home() {
             <div id="Home">
                 <SecretAnimation />
                 <ShopByCategory />
+                <NewProducts/>
 
             </div>
         </>

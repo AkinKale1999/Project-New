@@ -5,9 +5,9 @@ export default function NotFound() {
     return (<>
         <div id="NotFoundContainer">
 
-            <div>
+            <h1>
                 404 Page Not Found
-            </div>
+            </h1>
 
             <Link to="/Home">Zur Home seite</Link>
         </div>

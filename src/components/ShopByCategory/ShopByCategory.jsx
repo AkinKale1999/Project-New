@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as MenIcon } from "../../assets/MenIcon.svg";
-import { ReactComponent as WomanIcon } from "../../assets/WomanIcon.svg";
 
 export default function ShopByCategory() {
     const Category = [
-        { Icon: <MenIcon />, text: "Herren" },
-        { Icon: <WomanIcon />, text: "Frauen" },
-    ]
+        { Icon: "/img/imgShopByCategory/Man.png", text: "Herren", alt: "Bild eines Mannes", slug: "men" },
+        { Icon: "/img/imgShopByCategory/Frau.png", text: "Frauen", alt: "Bild einer Frau", slug: "women" },
+        { Icon: "/img/imgShopByCategory/Mädchen.png", text: "Mädchen", alt: "Bild eines Mädchens", slug: "girls" },
+        { Icon: "/img/imgShopByCategory/Junge.png", text: "Junge", alt: "Bild eines Jungen", slug: "boys" },
+    ];
 
     return (
         <>
@@ -18,10 +18,10 @@ export default function ShopByCategory() {
                 <div className="category-container">
                     {Category.map((content, index) => (
                         <div key={index} className="category-item">
-                            <Link>
-                                {content.Icon}
-                            </Link>
-                            <Link to={content.text === "Herren" ? "/Produkt/Men" : "/Produkt/Frauen"}>
+                            {/* Lazy Loading mit native loading="lazy" */}
+                            <img src={content.Icon} alt={content.alt} loading="lazy" />
+
+                            <Link to={`/Produkt/${content.slug}`}>
                                 {content.text}
                             </Link>
                         </div>
@@ -33,5 +33,5 @@ export default function ShopByCategory() {
                 </div>
             </div>
         </>
-    )
+    );
 }
