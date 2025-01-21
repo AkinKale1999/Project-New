@@ -648,6 +648,8 @@ body,
   height: fit-content;
   text-align: center;
   font-size: 1rem;
+  font-size: 1.5rem;
+
 }
 
 /* ----------------------NEW-PRODUCTS--------------------------- */
@@ -745,7 +747,12 @@ body,
   height: 93vh;
   width: var(--width);
   gap: 20px;
-  font-size: var(--font-size-1--5);
+  font-size: var(--font-size);
+}
+
+#NotFoundContainer a {
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .ResponseMessage {
