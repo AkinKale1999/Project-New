@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 export default function NewProducts() {
 
     const NewProducts = [
-        { Product: "/img/imgNewProducts/New-Product1.png", alt: "Jacken1", header: "Gant", text: "Steppjacke mit Label-Patch", price: "299,99€" },
-        { Product: "/img/imgNewProducts/New-Product2.png", alt: "Jacken2", header: "Blauer Usa", text: "Steppjacke mit Kapuze Modell", price: "379,99€" },
-        { Product: "/img/imgNewProducts/New-Product3.png", alt: "Jacken3", header: "Gant", text: "Steppjacke mit Reißverschluss", price: "349,99€" },
-        { Product: "/img/imgNewProducts/New-Product4.png", alt: "Pullover1", header: "Christian Berg Men", text: "Sweatjacke mit Label-Stitching", price: "59,99€" },
-        { Product: "/img/imgNewProducts/New-Product5.png", alt: "Pullover2", header: "Adidas Originals", text: "Hoodie aus reiner Baumwolle", price: "59.99€" },
-        { Product: "/img/imgNewProducts/New-Product6.png", alt: "Pullover3", header: "Polo Ralph Lauren", text: "Sweatshirt mit Logo-Stitching", price: "169.99€" }]
-
+        { Product: "/img/imgNewProducts/New-Product1.png", alt: "Pullover1", header: "Polo Ralph Lauren", text: "Sweatshirt mit Logo-Stitching", price: "169,99€" },
+        { Product: "/img/imgNewProducts/New-Product2.png", alt: "Pullover2", header: "Adidas Originals", text: "Hoodie aus reiner Baumwolle", price: "59,99€" },
+        { Product: "/img/imgNewProducts/New-Product4.png", alt: "Jacke1", header: "Gant", text: "Steppjacke mit Label-Patch", price: "349,99€" },
+        { Product: "/img/imgNewProducts/New-Product5.png", alt: "Jacke2", header: "Blauer Usa", text: "Steppjacke mit Kapuze Modell", price: "379.99€" },
+    ]
     return (
         <>
             <div id="NewProductsContainer">

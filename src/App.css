@@ -676,15 +676,14 @@ body,
 }
 
 #NewProductsContainer>div img {
-  width: 250px;
+  width: 300px;
   height: auto;
   object-fit: cover;
-  padding: 5px;
 }
 
 #NewProductsContainer>div h3 {
   color: #1ba7a2;
-  margin-top: 5px;
+  line-height: 25px;
 }
 
 #NewProductsContainer>div+div+div {
