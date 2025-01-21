@@ -25,7 +25,7 @@ export default function ForgotPassword() {
         e.preventDefault();
 
         setSuccessMessage("");
-        setErrorMessage("");
+        setErrorMessage("")
 
         if (!email) {
             setErrorMessage("Bitte geben Sie eine E-Mail-Adresse ein.");
