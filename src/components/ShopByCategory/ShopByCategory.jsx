@@ -12,7 +12,7 @@ export default function ShopByCategory() {
         <>
             <div id="ShopByCategoryContainer">
                 <div>
-                    <h1>Unsere Kategorien</h1>
+                    <h1>Für wen?</h1>
                 </div>
 
                 <div className="category-container">
@@ -20,10 +20,10 @@ export default function ShopByCategory() {
                         <div key={index} className="category-item">
                             {/* Lazy Loading mit native loading="lazy" */}
                             <img src={content.Icon} alt={content.alt} loading="lazy" />
-
                             <Link to={`/Product/${content.slug}`}>
                                 {content.text}
                             </Link>
+
                         </div>
                     ))}
                 </div>
