@@ -2,38 +2,39 @@ import { Link } from "react-router-dom";
 
 export default function NewProducts() {
 
-
     const NewProducts = [
-        { Product: "/img/imgNewProduct/NewProduct1.jpg", alt: "Jacken1" },
-        { Product: "/img/imgNewProduct/NewProduct2.jpg", alt: "Jacken2" },
-        { Product: "/img/imgNewProduct/NewProduct3.jpg", alt: "Jacken3" },
-        { Product: "/img/imgNewProduct/NewProduct4.jpg", alt: "Pullover1" },
-        { Product: "/img/imgNewProduct/NewProduct5.jpg", alt: "Pullover2" },
-        { Product: "/img/imgNewProduct/NewProduct6.jpg", alt: "Pullover3" }]
-
+        { Product: "/img/imgNewProducts/New-Product1.png", alt: "Jacken1", header: "Gant", text: "Steppjacke mit Label-Patch", price: "299,99€" },
+        { Product: "/img/imgNewProducts/New-Product2.png", alt: "Jacken2", header: "Blauer Usa", text: "Steppjacke mit Kapuze Modell", price: "379,99€" },
+        { Product: "/img/imgNewProducts/New-Product3.png", alt: "Jacken3", header: "Gant", text: "Steppjacke mit Reißverschluss", price: "349,99€" },
+        { Product: "/img/imgNewProducts/New-Product4.png", alt: "Pullover1", header: "Christian Berg Men", text: "Sweatjacke mit Label-Stitching", price: "59,99€" },
+        { Product: "/img/imgNewProducts/New-Product5.png", alt: "Pullover2", header: "Adidas Originals", text: "Hoodie aus reiner Baumwolle", price: "59.99€" },
+        { Product: "/img/imgNewProducts/New-Product6.png", alt: "Pullover3", header: "Polo Ralph Lauren", text: "Sweatshirt mit Logo-Stitching", price: "169.99€" }]
 
     return (
         <>
-
-            <div id="New-Products-Container">
-
+            <div id="NewProductsContainer">
                 <div>
                     <h1>Neue Produkte</h1>
                 </div>
-
-
-                {NewProducts.map((content, index) => (
-                    <div>
-                        <img src={content.Product} alt="" />
-                    </div>
-                ))}
+                <div>
+                    {NewProducts.map((content, index) => (
+                        <div key={index}>
+                            <Link to={"/Product/New-Products"}>
+                                <div>
+                                    <img src={content.Product} alt={content.alt} loading="lazy" />
+                                    <h3>{content.header}</h3>
+                                    <h3>{content.text}</h3>
+                                    <h3>{content.price}</h3>
+                                </div>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
 
                 <div>
                     <Link to={"/New-Products"}>Alle anzeigen</Link>
                 </div>
-
             </div>
-
         </>
     )
 }

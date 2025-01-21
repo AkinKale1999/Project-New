@@ -5,7 +5,7 @@ export default function ShopByCategory() {
         { Icon: "/img/imgShopByCategory/Man.png", text: "Herren", alt: "Bild eines Mannes", slug: "men" },
         { Icon: "/img/imgShopByCategory/Frau.png", text: "Frauen", alt: "Bild einer Frau", slug: "women" },
         { Icon: "/img/imgShopByCategory/Mädchen.png", text: "Mädchen", alt: "Bild eines Mädchens", slug: "girls" },
-        { Icon: "/img/imgShopByCategory/Junge.png", text: "Junge", alt: "Bild eines Jungen", slug: "boys" },
+        { Icon: "/img/imgShopByCategory/Junge.png", text: "Jungs", alt: "Bild eines Jungen", slug: "boys" },
     ];
 
     return (
@@ -21,7 +21,7 @@ export default function ShopByCategory() {
                             {/* Lazy Loading mit native loading="lazy" */}
                             <img src={content.Icon} alt={content.alt} loading="lazy" />
 
-                            <Link to={`/Produkt/${content.slug}`}>
+                            <Link to={`/Product/${content.slug}`}>
                                 {content.text}
                             </Link>
                         </div>

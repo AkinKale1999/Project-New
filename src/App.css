@@ -652,34 +652,45 @@ body,
 
 /* ----------------------NEW-PRODUCTS--------------------------- */
 
-#New-Products-Container {
-  margin-top: 20px;
+#NewProductsContainer {
+  margin-top: 50px;
   height: auto;
   width: 100%;
 }
 
-#New-Products-Container>div {
+#NewProductsContainer>div {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-#New-Products-Container>div+div {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  width: 95%;
-  align-content: center;
   justify-content: center;
-
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
-#New-Products-Container>div+div+div {
-  width: 100%;
+#NewProductsContainer>div+div {
   display: flex;
-  justify-content: flex-end;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px 0px;
 }
 
+#NewProductsContainer>div img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  padding: 5px;
+}
+
+#NewProductsContainer>div h3 {
+  color: #1ba7a2;
+  margin-top: 5px;
+}
+
+#NewProductsContainer>div+div+div {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
 
 /* ----------------------PROFILEPAGE--------------------------- */
 
