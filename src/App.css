@@ -4,7 +4,6 @@
   padding: var(--padding);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: var(---Light---Turquoise);
-  background-color: #eee;
 }
 
 :root {
@@ -61,8 +60,9 @@
 html,
 body,
 #root {
-  width: var(--width);
-  height: var(--height);
+  min-width: var(--width);
+  min-height: var(--height);
+  background-color: #eee;
 }
 
 /* -----------------HOME------------------------ */
@@ -693,46 +693,61 @@ body,
 
 #MaleOrFemaleAreaContainer {
   height: auto;
-  margin-top: 30px;
+  margin-top: 20px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
-#MaleOrFemaleAreaDiv {
+#MaleOrFemaleAreaContainer>div {
   height: 500px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, 2fr 2fr);
+  display: flex;
+  gap: 20px;
 }
 
-#MaleOrFemaleAreaContainer>div>div>div>h3 {
-  width: 100%;
-  color: black;
-  background-color: var(---Light---Turquoise);
-}
-
-
-#MaleOrFemaleAreaContainer>div>div {
+#MaleOrFemaleLeftContainer {
+  width: 40%;
   height: 100%;
-  width: 100%;
   background-color: var(---Light---Turquoise);
-  color: black;
+  margin-left: 17px;
+  border-radius: 15px;
 }
 
-#MaleOrFemaleAreaContainer>div>div+div {
+#MaleOrFemaleAreaImgContainer {
+  display: flex;
+  justify-content: flex-start;
+  height: 10%;
+  padding: 10px;
+}
+
+#MaleOrFemaleContent {
+  height: 86%;
+  width: 100%;
+  display: flex;
+}
+
+#MaleOrFemaleContent>div {
+  width: 100%;
   height: 100%;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#MaleOrFemaleAreaContainer>div>div+div>div {
-  height: 50%;
-  width: 100%;
-  background-color: #fff;
+#MaleOrFemaleContent>div>p {
+  color: #fff;
+  font-size: 2.5vmax;
+  padding-bottom: 20px;
 }
 
-#MaleOrFemaleAreaContainer>div>div+div>div+div {
-  height: 50%;
-  width: 100%;
-  background-color: green;
+#MaleOrFemaleRightContainer {
+  width: 60%;
+  margin-right: 17px;
+  border-radius: 15px;
+  background-color: var(---Light---Turquoise);
 }
 
 /* ----------------------PROFILEPAGE--------------------------- */
