@@ -4,31 +4,32 @@ export default function MaleOrFemaleArea() {
         <>
             <div id="MaleOrFemaleAreaContainer">
                 <div>
-                    <div id="MaleOrFemaleLeftContainer">
+                    <div className="MaleOrFemaleContainer">
                         <div id="MaleOrFemaleAreaImgContainer">
                             <img src="/img/imgHome/LogoSecretText.png" alt="" />
                         </div>
 
                         <div id="MaleOrFemaleContent">
-                            <div>
-                                <p>Dein Style,
-                                </p>
-                                <p>
-                                    Geliefert.
-                                </p>
-                                <p>
-                                    Exklusiv Online
-                                </p>
+                            <div id="MaleOrFemaleContentLeft">
+
+                                <p>Dein Style,</p>
+
+                                <br />
+
+                                <p>Geliefert.</p>
+
+                                <br />
+
+                                <p>Exklusiv Online</p>
+
+                            </div>
+                            <div id="MaleOrFemaleContentRight">
+
+                                <img src="" alt="" />
+
                             </div>
                         </div>
-
                     </div>
-
-                    <div id="MaleOrFemaleRightContainer">
-
-                    </div>
-
-
                 </div>
             </div>
 
