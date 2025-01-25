@@ -589,19 +589,11 @@ body,
 /* ------------------------FOOTER------------------------------ */
 
 #Footer {
-  min-height: 400px;
-}
-
-#Footer>div {
-  width: 100%;
-  height: 100px;
-  display: flex;
+  height: 400px;
 }
 
 #Footer>div>div {
-  width: 100%;
   background-color: #cdf3ff;
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -611,17 +603,22 @@ body,
 
 #Footer>div>div>h3 {
   color: #7b7b7b;
+  margin-top: 20px;
 }
 
-#FooterBottomElements {
+#FooterBottomElements>table {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
+  margin-top: 20px;
 }
 
-#FooterBottomElements>a {
-  margin-right: 30px;
+#FooterBottomElements>table>th {
   color: #7b7b7b;
+}
+
+#FooterBottomElements>table>th>tr {
+  color: black;
 }
 
 /* -----------------------ShopByCategoryContainer-------------------------- */

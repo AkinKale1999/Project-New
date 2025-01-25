@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
-
 function Footer() {
 
   const ArrayFooter = [
-    { Header: "Telefonnumer", text: "123456789" },
-    { Header: "E-mail-Adresse", text: "beispiel@hotmail.de" },
-    { Header: "Telefonnumeradsa", text: "" }
+    { Header: "Telefonnummer", text: "+49 15734558748" },
+    { Header: "E-mail-Adresse", text: "akinkale054@hotmail.de" },
+    { Header: "LinkedIn", text: "www.linkedin.com/in/akinkale1999" }
   ]
 
   return (
@@ -15,15 +13,22 @@ function Footer() {
           {ArrayFooter.map((content, index) => (
             <div key={index}>
               <h3>{content.Header}</h3>
-              <p>{content.text}</p>
+              {content.text === "www.linkedin.com/in/akinkale1999" ? <a href={"https://www.linkedin.com/in/akinkale1999"} target="blank">LinkedIn</a> : <p>{content.text}</p>}
+              <br />
             </div>
           ))}
         </div>
 
         <div id="FooterBottomElements">
-          <Link to="impressum">Impressum</Link>
-          <Link to="datenschutz">Datenschutz</Link>
-          <Link to="agb">AGB</Link>
+
+          <table>
+
+            <th>sdad
+              <tr>
+                sadad
+              </tr>
+            </th>
+          </table>
         </div>
       </div>
     </>
